@@ -2,13 +2,14 @@ import { getRandomInt, generateVariableName, shuffleSingle } from '@utility/math
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
-    let a = getRandomInt(-10, 10, 0);  
-    let b = getRandomInt(-30, 30, 0);
+    let a = getRandomInt(10, 20);  
+    let b = getRandomInt(-8, -2);
     let variable = generateVariableName()
-  
-    const answer = `${b + a}`;
-  
-    const math = `${variable}${a > 0 ? '+' : ''}${a}`
+
+    const math = `${variable}^{${a}${b}}`
+    const answer = `${variable}^{${a+b}}`
+    
+    
     const condition = `${variable}=${b}`
   
     return {
@@ -20,14 +21,14 @@ const createExample1 = () => {
   }
 
 const createExample2 = () => {
-    let a = getRandomInt(-5, 5, 0);  
-    let b = getRandomInt(-20, 20, 0);
-    let c = getRandomInt(-5, 5, 0);
+    let a = getRandomInt(5, 20);
+    let b = getRandomInt(2, 20);
+    let c = getRandomInt(-6, -2);;
     let variable = generateVariableName()
-
-    const answer = `${c*b + a}`;
-
-    const math = `${c}${variable}${a > 0 ? '+' : ''}${a}`
+    
+    const math = `${variable}^{${a}+${b}${c}}`
+    const answer = `${variable}^{${a+b+c}}`
+    
     const condition = `${variable}=${b}`
 
     return {
@@ -39,14 +40,13 @@ const createExample2 = () => {
 }
 
 const createExample3 = () => {
-    let a = getRandomInt(-5, 5, 0);  
-    let b = getRandomInt(-20, 20, 0);
-    let c = getRandomInt(-5, 5, 0);
+    let b = getRandomInt(2, 20);
+    let a = b*getRandomInt(2, 5);
     let variable = generateVariableName()
 
-    const answer = `${c*b + a}`;
+    const math = `${variable}^{${a}}:${variable}^{${b}}`
+    const answer = `${variable}^{${a-b}}`;
 
-    const math = `${a}${c > 0 ? '+' : ''}${c}${variable}`
     const condition = `${variable}=${b}`
 
     return {
@@ -58,14 +58,14 @@ const createExample3 = () => {
 }
 
 const createExample4 = () => {
-    let a = getRandomInt(-20, 20, 0);
-    let b = getRandomInt(-20, 20, 0);
+    let b = getRandomInt(2, 20);
+    let a = b*getRandomInt(2, 5);
     let variable = generateVariableName()
 
-    const answer = `${a+b}`
+    const math = `${variable}^{${a}}:${variable}^{${b}}`
+    const answer = `${variable}^{${a-b}}`
 
-    const math = `${variable}+k`
-    const condition = `${variable}=${a}; k=${b}`
+    const condition = `${variable}=${a}`
 
     return {
       id: uuidv4(),
@@ -76,14 +76,15 @@ const createExample4 = () => {
 }
 
 const createExample5 = () => {
-  let a = getRandomInt(-20, 20, 0);  
-  let b = getRandomInt(-20, -2);
+  let b = getRandomInt(20, 30);
+  let a = getRandomInt(2, 10);
+  let c = getRandomInt(2, 5);
   let variable = generateVariableName()
 
-  const answer = `${a-b}`
+  const math = `${variable}^{${b}}:${variable}^{${a}}:${variable}^{${c}}`
+  const answer = `${variable}^{${b-a-c}}`
 
-  const math = `${variable}-w`
-  const condition = `${variable}=${a}; w=${b}`
+  const condition = `${variable}=${a}`
 
   return {
     id: uuidv4(),
@@ -94,14 +95,14 @@ const createExample5 = () => {
 }
 
 const createExample6 = () => {
-  let a = getRandomInt(-20, 20, 0);  
-  let b = getRandomInt(-20, -20, 0);
+  let b = getRandomInt(2, 20);
+  let a = b*getRandomInt(1, 5);
   let variable = generateVariableName()
 
-  const answer = `${-1*(a+b)}`
+  const math = `\\left(\\frac{${variable}}{k}\\right)^{${a}}:\\left(\\frac {${variable}}{k}\\right)^{${b}}`
+  const answer = `\\left(\\frac{${variable}}{k}\\right)^{${a-b}}`
 
-  const math = `-${variable}-k`
-  const condition = `${variable}=${a}; k=${b}`
+  const condition = `${variable}=${a}`
 
   return {
     id: uuidv4(),
@@ -112,14 +113,14 @@ const createExample6 = () => {
 }
 
 const createExample7 = () => {
-  let a = getRandomInt(-10, 10, 0);  
-  let b = getRandomInt(-30, 30, 0);
+  let b = getRandomInt(2, 20);
+  let a = b*getRandomInt(1, 5);
   let variable = generateVariableName()
 
-  const answer = `${-1*(a+b)}`
+  const math = `(${variable}m)^{${a}}:(${variable}m)^{${b}}`
+  const answer = `(${variable}m)^{${a-b}}`
 
-  const math = `-(${variable}${a > 0 ? '+' : ''}${a})`
-  const condition = `${variable}=${b};`
+  const condition = `${variable}=${a}`
 
   return {
     id: uuidv4(),
@@ -130,14 +131,14 @@ const createExample7 = () => {
 }
 
 const createExample8 = () => {
-  let a = getRandomInt(-20, 20, 0);  
-  let b = getRandomInt(-20, 20, 0);
+  let b = getRandomInt(2, 20);
+  let a = b*getRandomInt(2, 5);
   let variable = generateVariableName()
 
-  const answer = `${-1*a+b}`
+  const math = `(-${variable})^{${a}}:(-${variable})^{${b}}`
+  const answer = `(-${variable})^{${a-b}}`
 
-  const math = `-(${variable}+k)`
-  const condition = `${variable}=${a};k=${b}`
+  const condition = `${variable}=${a}`
 
   return {
     id: uuidv4(),
@@ -148,15 +149,14 @@ const createExample8 = () => {
 }
 
 const createExample9 = () => {
-  const a = getRandomInt(-5, 5, 0);  
-  const b = getRandomInt(-20, 20, 0);
-  const c = getRandomInt(-5, 5, 0);
+  let b = getRandomInt(2, 20);
+  let a = b*getRandomInt(2, 5);
   let variable = generateVariableName()
 
-  const answer = `${c+a+b}`
+  const math = `(${variable}-k)^{${a}}:(${variable}-k)^{${b}}`
+  const answer = `(${variable}-k)^{${a-b}}`
 
-  const math = `(${c}+${variable}${a > 0 ? '+' : ''}${a})`
-  const condition = `${variable}=${b};`
+  const condition = `${variable}=${a}`
 
   return {
     id: uuidv4(),
@@ -167,14 +167,17 @@ const createExample9 = () => {
 }
 
 const createExample10 = () => {
-  const a = getRandomInt(-10, 10, 0);  
-  const b = getRandomInt(-30, 30, 0);
+  let b = getRandomInt(2, 6);
+  let a = getRandomInt(7, 20);
+  let c = getRandomInt(-30, 30, 0);
+  if(c > 0) c = '+'+c;
+
   let variable = generateVariableName()
 
-  const answer = `${b+a}`
+  const math = `(${variable}${c})^{${a}}:(${variable}${c})^{${b}}`
+  const answer = `(${variable}${c})^{${a-b}}`
 
-  const math = `(${variable}${a > 0 ? '+' : ''}${a})`
-  const condition = `${variable}=${b};`
+  const condition = `${variable}=${a}`
 
   return {
     id: uuidv4(),
@@ -183,6 +186,7 @@ const createExample10 = () => {
     answer: answer
   }
 }
+
 
 const examplesFn = [
   createExample1,

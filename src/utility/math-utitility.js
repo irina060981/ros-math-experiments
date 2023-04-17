@@ -18,10 +18,6 @@ const generateVariableName = () => {
     return getRandomPeremen(variables)
 }
 
-// преформатирует для MathJax
-const preformat = (math) => {
-  return `\\(${math}\\)`
-}
 
 // перемешиваем 2 массива
 
@@ -40,4 +36,4 @@ const shuffleSingle = (array) => {
    return array
 }
 
-export { getRandomInt, getRandomPeremen, generateVariableName, preformat, shuffle, shuffleSingle }
+export { getRandomInt, getRandomPeremen, generateVariableName, shuffle, shuffleSingle }

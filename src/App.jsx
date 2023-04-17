@@ -1,45 +1,27 @@
 import React from "react";
-import { MathJax, MathJaxContext } from "better-react-mathjax";
-
 import './App.css';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableRow from '@mui/material/TableRow';
+import { Typography, Container } from '@mui/material';
+import { createExamples as createExamples1 } from '@mathExamples/math-examples1.js'
+import { createExamples as createExamples2 } from '@mathExamples/chastnoye_stepeney.js'
 
-import { createExamples } from '@mathExamples/math-examples1.js'
+import ExampleBlock from "./components/ExampleBlock";
 
 function App() {
-  const examples = createExamples()
   return (
-    <MathJaxContext>
-      <div className="appContainer">
-        <h1>Рос математика</h1>
-        <TableContainer >
-          <Table>
-            <TableBody>
-              {
-                examples.map((example, index) => (
-                  <>
-                  <TableRow>
-                    <TableCell>{index+1}.</TableCell>
-                    <TableCell>{example.math}</TableCell>
-                    <TableCell>при {example.condition}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell></TableCell>
-                    <TableCell colSpan={2}>Ответ {example.answer}</TableCell>
-                  </TableRow>
-                  </>
-                ))
-              }
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
-    </MathJaxContext>
-  );
+    <Container id="examplesList" fixed>
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 1
+      </Typography>
+      <ExampleBlock createExamples={createExamples1}  />
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 2
+      </Typography>
+      <ExampleBlock createExamples={createExamples2}/>
+
+    </Container>
+  )
 }
 
 export default App;
+
