@@ -11,6 +11,7 @@ const createExample1 = () => {
     const condition = `${variable}=${b}`
   
     return {
+      id: 'math-1-5',
       math: preformat(math), 
       condition: preformat(condition), 
       answer: preformat(answer)
@@ -29,6 +30,7 @@ const createExample2 = () => {
     const condition = `${variable}=${b}`
 
     return {
+      id: 'math-1-2',
       math: preformat(math), 
       condition: preformat(condition), 
       answer: preformat(answer)
@@ -47,6 +49,7 @@ const createExample3 = () => {
     const condition = `${variable}=${b}`
 
     return {
+      id: 'math-1-3',
       math: preformat(math), 
       condition: preformat(condition), 
       answer: preformat(answer)
@@ -64,6 +67,7 @@ const createExample4 = () => {
     const condition = `${variable}=${a}; k=${b}`
 
     return {
+      id: 'math-1-4',
       math: preformat(math), 
       condition: preformat(condition), 
       answer: preformat(answer)

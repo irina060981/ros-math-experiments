@@ -20,7 +20,8 @@ const generateVariableName = () => {
 
 // преформатирует для MathJax
 const preformat = (math) => {
-  return `\\(${math}\\)`
+  // return `\\(${math}\\)`
+  return `${math}`
 }
 
 // перемешиваем 2 массива
