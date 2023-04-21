@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path'); //тестовый коммент
 
 const resolvePath = p => path.resolve(__dirname, p)
 
