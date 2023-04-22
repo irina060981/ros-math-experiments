@@ -28,8 +28,7 @@ const createExample2 = () => {
     
     const math = `${variable}^{${a}+${b}${c}}`
     const answer = `${variable}^{${a+b+c}}`
-    
-    const condition = `${variable}=${b}`
+    const condition = ``
 
     return {
       id: uuidv4(),
@@ -46,8 +45,7 @@ const createExample3 = () => {
 
     const math = `${variable}^{${a}}:${variable}^{${b}}`
     const answer = `${variable}^{${a-b}}`;
-
-    const condition = `${variable}=${b}`
+    const condition = ``
 
     return {
       id: uuidv4(),
@@ -64,8 +62,7 @@ const createExample4 = () => {
 
     const math = `${variable}^{${a}}:${variable}^{${b}}`
     const answer = `${variable}^{${a-b}}`
-
-    const condition = `${variable}=${a}`
+    const condition = ``
 
     return {
       id: uuidv4(),
@@ -83,8 +80,7 @@ const createExample5 = () => {
 
   const math = `${variable}^{${b}}:${variable}^{${a}}:${variable}^{${c}}`
   const answer = `${variable}^{${b-a-c}}`
-
-  const condition = `${variable}=${a}`
+  const condition = ``
 
   return {
     id: uuidv4(),
@@ -101,8 +97,7 @@ const createExample6 = () => {
 
   const math = `\\left(\\frac{${variable}}{k}\\right)^{${a}}:\\left(\\frac {${variable}}{k}\\right)^{${b}}`
   const answer = `\\left(\\frac{${variable}}{k}\\right)^{${a-b}}`
-
-  const condition = `${variable}=${a}`
+  const condition = ``
 
   return {
     id: uuidv4(),
@@ -119,8 +114,7 @@ const createExample7 = () => {
 
   const math = `(${variable}m)^{${a}}:(${variable}m)^{${b}}`
   const answer = `(${variable}m)^{${a-b}}`
-
-  const condition = `${variable}=${a}`
+  const condition = ``
 
   return {
     id: uuidv4(),
@@ -137,8 +131,7 @@ const createExample8 = () => {
 
   const math = `(-${variable})^{${a}}:(-${variable})^{${b}}`
   const answer = `(-${variable})^{${a-b}}`
-
-  const condition = `${variable}=${a}`
+  const condition = ``
 
   return {
     id: uuidv4(),
@@ -155,8 +148,7 @@ const createExample9 = () => {
 
   const math = `(${variable}-k)^{${a}}:(${variable}-k)^{${b}}`
   const answer = `(${variable}-k)^{${a-b}}`
-
-  const condition = `${variable}=${a}`
+  const condition = ``
 
   return {
     id: uuidv4(),
@@ -176,8 +168,7 @@ const createExample10 = () => {
 
   const math = `(${variable}${c})^{${a}}:(${variable}${c})^{${b}}`
   const answer = `(${variable}${c})^{${a-b}}`
-
-  const condition = `${variable}=${a}`
+  const condition = ``
 
   return {
     id: uuidv4(),
