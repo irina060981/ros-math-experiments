@@ -8,8 +8,7 @@ const createExample1 = () => {
 
     const math = `${variable}^{${a}+${b}}`
     const answer = `${variable}^{${a+b}}`
-    
-    
+        
     const condition = `${variable}=${b}`
   
     return {
