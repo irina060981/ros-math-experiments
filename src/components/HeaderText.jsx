@@ -18,7 +18,7 @@ const HeaderText = () => {
             color="#2a8b2c"
             gutterBottom
         >
-            РосМатематика
+            РосМатика
         </Typography>
         <Typography variant="h5" align="center" color="text.secondary" paragraph>
             Ну а тут какое-то приветственное слово, рассказывающее о проекте
