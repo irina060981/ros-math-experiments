@@ -27,7 +27,7 @@ const createExample2 = () => {
 
     const math = `${a}${variable}=${c}`
     const answer = `${b}`
-    const condition = ``
+    const condition = undefined
 
     return {
       id: uuidv4(),
@@ -45,7 +45,7 @@ const createExample3 = () => {
 
     const math = `${variable}${a}=${b}`
     const answer = `${b-a}`
-    const condition = ``
+    const condition = undefined
 
     return {
       id: uuidv4(),
@@ -63,7 +63,7 @@ const createExample4 = () => {
 
     const math = `${variable}${a}=${b}`
     const answer = `${b-a}`
-    const condition = ``
+    const condition = undefined
 
     return {
       id: uuidv4(),
@@ -81,7 +81,7 @@ const createExample5 = () => {
 
     const math = `${variable}${a}=${b}`
     const answer = `${b-a}`
-    const condition = ``
+    const condition = undefined
 
     return {
       id: uuidv4(),
@@ -99,7 +99,7 @@ let variable = generateVariableName()
 
 const math = `${a}=${variable}${b}`
 const answer = `${a-b}`
-const condition = ``
+const condition = undefined
 
 return {
   id: uuidv4(),
@@ -117,7 +117,7 @@ const createExample7 = () => {
     
     const math = `${a}=${variable}${b}`
     const answer = `${a-b}`
-    const condition = ``
+    const condition = undefined
     
     return {
       id: uuidv4(),
@@ -135,7 +135,7 @@ const createExample8 = () => {
     
     const math = `${a}${variable}${b}=0`
     const answer = `${-1*b/a}`
-    const condition = ``
+    const condition = undefined
     
     return {
       id: uuidv4(),
@@ -153,7 +153,7 @@ const createExample9 = () =>  {
     
     const math = `${a}${variable}${b}=0`
     const answer = `${-1*b/a}`
-    const condition = ``
+    const condition = undefined
     
     return {
       id: uuidv4(),
@@ -171,7 +171,7 @@ const createExample10 = () => {
     
     const math = `${a}${variable}-${b}=${c}`
     const answer = `${(c+b)/a}`
-    const condition = ``
+    const condition = undefined
     
     return {
       id: uuidv4(),

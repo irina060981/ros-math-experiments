@@ -12,12 +12,21 @@ const getRandomPeremen = (arr) => {
     return arr[rand];
 };
 
-// генерирует имя для случайной переменной
+// генерирует имя для случайной переменной. f,i,o,g исключена 
 const generateVariableName = () => {
-    const variables = ['q','e','t','y','u','p','a','s','d','h','l','x','c','v','n','m'];
+    const variables = ['a', 'b', 'c', 'd', 'e', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     return getRandomPeremen(variables)
 }
-
+// генерирует имя для случайной переменной f,i,o,g исключена 
+const generateVariableNameOne = () => {
+  const variables = ['a', 'b', 'c', 'd', 'e', 'h',  'j', 'k', 'l', 'm', 'n'];
+  return getRandomPeremen(variables)
+}
+// генерирует имя для случайной переменной
+const generateVariableNameTwo = () => {
+  const variables = ['p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  return getRandomPeremen(variables)
+}
 
 // перемешиваем 2 массива
 
@@ -36,4 +45,4 @@ const shuffleSingle = (array) => {
    return array
 }
 
-export { getRandomInt, getRandomPeremen, generateVariableName, shuffle, shuffleSingle }
+export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle }
