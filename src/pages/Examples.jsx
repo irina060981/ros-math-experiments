@@ -12,6 +12,12 @@ import { createExamples as createExamples9 } from '@mathExamples/stepen_proizved
 import { createExamples as createExamples10 } from '@mathExamples/kvdarat_summy_i_kvadrat_raznosti.js'
 import { createExamples as createExamples11 } from '@mathExamples/proizvedeniye_raznosti_na_summu.js'
 import { createExamples as createExamples12 } from '@mathExamples/raznost_kvadratov.js'
+import { createExamples as createExamples13 } from '@mathExamples/de_kvdarat_summy_i_kvadrat_raznosti.js'
+import { createExamples as createExamples14 } from '@mathExamples/summa_raznost_kubov.js'
+import { createExamples as createExamples15 } from '@mathExamples/de_summa_raznost_kubov.js'
+import { createExamples as createExamples16 } from '@mathExamples/privedeniye_podobnykh_slagayemykh.js'
+import { createExamples as createExamples17 } from '@mathExamples/vyrazheniya_desyatichnykh_drobi.js'
+import { createExamples as createExamples18 } from '@mathExamples/vyrazheniya_drobi.js'
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -29,8 +35,13 @@ export async function loader({ params }) {
     9: { fn: createExamples9, title: 'Степень произведения' },
     10: { fn: createExamples10, title: 'Квадрат суммы и разности двух выражений' },
     11: { fn: createExamples11, title: 'Произведение разности на сумму' },
-    12: { fn: createExamples12, title: 'Разность квадратов' }
-
+    12: { fn: createExamples12, title: 'Разность квадратов' },
+    13: { fn: createExamples13, title: 'Разложение на множители.Квадрат суммы и разности.' },
+    14: { fn: createExamples14, title: 'Сумма и разность кубов' },
+    15: { fn: createExamples15, title: 'Разложение на множители. Сумма и разность кубов' },
+    16: { fn: createExamples16, title: 'Приведение подобных слагаемых' },
+    17: { fn: createExamples17, title: 'Числовые выражения. Десятичные дроби' },
+    18: { fn: createExamples18, title: 'Числовые выражения. Дроби' }
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }

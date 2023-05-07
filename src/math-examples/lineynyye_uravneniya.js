@@ -9,7 +9,7 @@ const createExample1 = () => {
     
         const math = `${a}${variable}=${c}`
         const answer = `${b}` 
-        const condition = ``
+        const condition = undefined
     
         return {
           id: uuidv4(),

@@ -13,7 +13,12 @@ import { createExamples as createExamples9 } from '@mathExamples/stepen_proizved
 import { createExamples as createExamples10 } from '@mathExamples/kvdarat_summy_i_kvadrat_raznosti.js'
 import { createExamples as createExamples11 } from '@mathExamples/proizvedeniye_raznosti_na_summu.js'
 import { createExamples as createExamples12 } from '@mathExamples/raznost_kvadratov.js'
-
+import { createExamples as createExamples13 } from '@mathExamples/de_kvdarat_summy_i_kvadrat_raznosti.js'
+import { createExamples as createExamples14 } from '@mathExamples/summa_raznost_kubov.js'
+import { createExamples as createExamples15 } from '@mathExamples/de_summa_raznost_kubov.js'
+import { createExamples as createExamples16 } from '@mathExamples/privedeniye_podobnykh_slagayemykh.js'
+import { createExamples as createExamples17 } from '@mathExamples/vyrazheniya_desyatichnykh_drobi.js'
+import { createExamples as createExamples18 } from '@mathExamples/vyrazheniya_drobi.js'
 
 import ExampleBlock from "./components/ExampleBlock";
 
@@ -79,6 +84,36 @@ function App() {
         Примеры 12
       </Typography>
       <ExampleBlock createExamples={createExamples12}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 13
+      </Typography>
+      <ExampleBlock createExamples={createExamples13}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 14
+      </Typography>
+      <ExampleBlock createExamples={createExamples14}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 15
+      </Typography>
+      <ExampleBlock createExamples={createExamples15}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 16
+      </Typography>
+      <ExampleBlock createExamples={createExamples16}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 17
+      </Typography>
+      <ExampleBlock createExamples={createExamples17}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 18
+      </Typography>
+      <ExampleBlock createExamples={createExamples18}/>
     </Container>
   )
 }
