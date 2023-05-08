@@ -19,6 +19,10 @@ import { createExamples as createExamples15 } from '@mathExamples/de_summa_razno
 import { createExamples as createExamples16 } from '@mathExamples/privedeniye_podobnykh_slagayemykh.js'
 import { createExamples as createExamples17 } from '@mathExamples/vyrazheniya_desyatichnykh_drobi.js'
 import { createExamples as createExamples18 } from '@mathExamples/vyrazheniya_drobi.js'
+import { createExamples as createExamples19 } from '@mathExamples/vyrazheniya_ratsionalnyye_vychisleniya.js'
+import { createExamples as createExamples20 } from '@mathExamples/raspredelitelnoye_svoystvo.js'
+import { createExamples as createExamples21 } from '@mathExamples/odnochleny.js'
+import { createExamples as createExamples22 } from '@mathExamples/odnochlen_na_mnogochlen.js'
 
 import ExampleBlock from "./components/ExampleBlock";
 
@@ -114,6 +118,26 @@ function App() {
         Примеры 18
       </Typography>
       <ExampleBlock createExamples={createExamples18}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 19
+      </Typography>
+      <ExampleBlock createExamples={createExamples19}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 20
+      </Typography>
+      <ExampleBlock createExamples={createExamples20}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 21
+      </Typography>
+      <ExampleBlock createExamples={createExamples21}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 22
+      </Typography>
+      <ExampleBlock createExamples={createExamples22}/>
     </Container>
   )
 }

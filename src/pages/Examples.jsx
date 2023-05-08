@@ -18,6 +18,11 @@ import { createExamples as createExamples15 } from '@mathExamples/de_summa_razno
 import { createExamples as createExamples16 } from '@mathExamples/privedeniye_podobnykh_slagayemykh.js'
 import { createExamples as createExamples17 } from '@mathExamples/vyrazheniya_desyatichnykh_drobi.js'
 import { createExamples as createExamples18 } from '@mathExamples/vyrazheniya_drobi.js'
+import { createExamples as createExamples19 } from '@mathExamples/vyrazheniya_ratsionalnyye_vychisleniya.js'
+import { createExamples as createExamples20 } from '@mathExamples/raspredelitelnoye_svoystvo.js'
+import { createExamples as createExamples21 } from '@mathExamples/odnochleny.js'
+import { createExamples as createExamples22 } from '@mathExamples/odnochlen_na_mnogochlen.js'
+
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -41,7 +46,11 @@ export async function loader({ params }) {
     15: { fn: createExamples15, title: 'Разложение на множители. Сумма и разность кубов' },
     16: { fn: createExamples16, title: 'Приведение подобных слагаемых' },
     17: { fn: createExamples17, title: 'Числовые выражения. Десятичные дроби' },
-    18: { fn: createExamples18, title: 'Числовые выражения. Дроби' }
+    18: { fn: createExamples18, title: 'Числовые выражения. Дроби' },
+    19: { fn: createExamples19, title: 'Числовые выражения. Рациональные вычисления' },
+    20: { fn: createExamples20, title: 'Распределительное свойство умножения' },
+    21: { fn: createExamples21, title: 'Одночлены. Стандартный вид' },
+    22: { fn: createExamples22, title: 'Произведение одночлена на многочлен' }
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }
