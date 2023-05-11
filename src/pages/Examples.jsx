@@ -22,6 +22,11 @@ import { createExamples as createExamples19 } from '@mathExamples/vyrazheniya_ra
 import { createExamples as createExamples20 } from '@mathExamples/raspredelitelnoye_svoystvo.js'
 import { createExamples as createExamples21 } from '@mathExamples/odnochleny.js'
 import { createExamples as createExamples22 } from '@mathExamples/odnochlen_na_mnogochlen.js'
+import { createExamples as createExamples23 } from '@mathExamples/vyneseniye_za_skobki.js'
+import { createExamples as createExamples24 } from '@mathExamples/mnogochlen_na_mnogochlen.js'
+import { createExamples as createExamples25 } from '@mathExamples/metod_gruppirovki.js'
+import { createExamples as createExamples26 } from '@mathExamples/proizvedeniye_odnochlenov.js'
+import { createExamples as createExamples27 } from '@mathExamples/vozvedeniye_odnochlena_stepen.js'
 
 
 import ExampleBlock from "../components/ExampleBlock";
@@ -50,7 +55,12 @@ export async function loader({ params }) {
     19: { fn: createExamples19, title: 'Числовые выражения. Рациональные вычисления' },
     20: { fn: createExamples20, title: 'Распределительное свойство умножения' },
     21: { fn: createExamples21, title: 'Одночлены. Стандартный вид' },
-    22: { fn: createExamples22, title: 'Произведение одночлена на многочлен' }
+    22: { fn: createExamples22, title: 'Произведение одночлена на многочлен' },
+    23: { fn: createExamples23, title: 'Вынесение общего множителя за скобки' },
+    24: { fn: createExamples24, title: 'Произведение многочленов' },
+    25: { fn: createExamples25, title: 'Метод группировки' },
+    26: { fn: createExamples26, title: 'Произведение одночленов' },
+    27: { fn: createExamples27, title: 'Возведение одночлена в степень'}
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }

@@ -23,6 +23,11 @@ import { createExamples as createExamples19 } from '@mathExamples/vyrazheniya_ra
 import { createExamples as createExamples20 } from '@mathExamples/raspredelitelnoye_svoystvo.js'
 import { createExamples as createExamples21 } from '@mathExamples/odnochleny.js'
 import { createExamples as createExamples22 } from '@mathExamples/odnochlen_na_mnogochlen.js'
+import { createExamples as createExamples23 } from '@mathExamples/vyneseniye_za_skobki.js'
+import { createExamples as createExamples24 } from '@mathExamples/mnogochlen_na_mnogochlen.js'
+import { createExamples as createExamples25 } from '@mathExamples/metod_gruppirovki.js'
+import { createExamples as createExamples26 } from '@mathExamples/proizvedeniye_odnochlenov.js'
+import { createExamples as createExamples27 } from '@mathExamples/vozvedeniye_odnochlena_stepen.js'
 
 import ExampleBlock from "./components/ExampleBlock";
 
@@ -138,6 +143,31 @@ function App() {
         Примеры 22
       </Typography>
       <ExampleBlock createExamples={createExamples22}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 23
+      </Typography>
+      <ExampleBlock createExamples={createExamples23}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 24
+      </Typography>
+      <ExampleBlock createExamples={createExamples24}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 25
+      </Typography>
+      <ExampleBlock createExamples={createExamples25}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 26
+      </Typography>
+      <ExampleBlock createExamples={createExamples26}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 27
+      </Typography>
+      <ExampleBlock createExamples={createExamples27}/>
     </Container>
   )
 }
