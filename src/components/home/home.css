@@ -1,0 +1,14 @@
+.bigBlock {
+    width: 100%;
+    padding: 15px;
+}
+
+.bigBlockText {
+    width: 45%;
+    margin-top: 60px;
+}
+.imgBlock {
+    display: block;
+    width: auto;
+    height: 350px;
+}

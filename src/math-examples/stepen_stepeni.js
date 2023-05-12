@@ -74,7 +74,7 @@ const createExample5 = () => {
   let variable = generateVariableName()
 
   const math = `(${c}${variable}^{${b}})^{${a}}`
-  if ((a*b)%2==0) c = "";
+  if ((a*b)%2===0) c = "";
   const answer = `${c}${variable}^{${b*a}}`
   const condition = ``
 
@@ -93,7 +93,7 @@ const createExample6 = () => {
   let variable = generateVariableName()
 
   const math = `(${c}${variable}^{${b}})^{${a}}`
-  if ((a*b)%2==0) c = "";
+  if ((a*b)%2===0) c = "";
   const answer = `${c}${variable}^{${b*a}}`
   const condition = ``
 
@@ -165,7 +165,7 @@ const createExample10 = () => {
   let variable = generateVariableName()
 
   const math = `((${d}${variable}^{${b}})^{${a}})^{${c}}`
-  if ((a*c)%2==0) d = "";
+  if ((a*c)%2===0) d = "";
   const answer = `${d}${variable}^{${a*b*c}}`
   const condition = ``
 
