@@ -62,7 +62,7 @@ const createExample4 = () => {
     let b = getRandomInt(2, 5);
     let c = getRandomInt(2, 10);
     let d = "";
-    if (c%2!=0) {d="-"}
+    if (c%2!==0) {d="-"}
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
@@ -83,7 +83,7 @@ const createExample5 = () => {
     let b = getRandomInt(2, 5);
     let c = getRandomInt(2, 10);
     let d = "";
-    if (c%2!=0) {d="-"}
+    if (c%2!==0) {d="-"}
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 

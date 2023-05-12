@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Container, Card, CardActions, CardContent, CardMedia, Grid, Button  } from '@mui/material';
+import { Typography, Container, Card, CardActions, CardContent, Grid, Button  } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const ExamplesCardsGrid = () => {
@@ -145,11 +145,11 @@ const ExamplesCardsGrid = () => {
   ];
 
   return (
-    <Container sx={{ py: 8 }} maxWidth="md">
+    <Container sx={{ py: 8, paddingTop: '10px' }} maxWidth="lg">
 
         <Grid container spacing={4}>
         {cards.map((card) => (
-            <Grid item key={card.id} xs={12} sm={6} md={4}>
+            <Grid item key={card.id} xs={12} sm={6} md={3}>
             <Card
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
             >

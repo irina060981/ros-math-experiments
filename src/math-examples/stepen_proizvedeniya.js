@@ -96,7 +96,7 @@ const createExample6 = () => {
     let variable1 = generateVariableName()
 
     const math = `(${b}${variable1})^{${a}}`
-    if (a%2==0) b=`${-1*b}`
+    if (a%2===0) b=`${-1*b}`
     const answer = `${b}^{${a}}${variable1}^{${a}}`       
     const condition = undefined
   
@@ -133,7 +133,7 @@ const createExample8 = () => {
     let variable2 = generateVariableNameTwo()
 
     const math = `(${b}${variable1}${variable2})^{${a}}`
-    if (a%2==0) b=`${-1*b}`
+    if (a%2===0) b=`${-1*b}`
     const answer = `${b}^{${a}}${variable1}^{${a}}${variable2}^{${a}}`       
     const condition = undefined
   

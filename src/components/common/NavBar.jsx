@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import CameraIcon from '@mui/icons-material/Camera';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (

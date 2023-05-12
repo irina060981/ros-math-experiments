@@ -6,8 +6,8 @@ const createExample1 = () => {
     let b = getRandomInt(2, 20);
     let c = getRandomInt(2, 20);
     let d = getRandomInt(2, 20);
-    if (b%10==0){b+=1}
-    if (d%10==0){d+=1}
+    if (b%10===0){b+=1}
+    if (d%10===0){d+=1}
 
     const math = `${b/10}+${(10*c-d)/10}+${(a*10-b)/10}+${d/10}`
     const answer = `${a+c}`;
@@ -27,8 +27,8 @@ const createExample2 = () => {
     let b = getRandomInt(2, 20);
     let c = getRandomInt(2, 20);
     let d = getRandomInt(2, 20);
-    if (b%10==0){b+=1}
-    if (d%10==0){d+=1}
+    if (b%10===0){b+=1}
+    if (d%10===0){d+=1}
     const math = `${b/10}+${(10*c-d)/10}+${d/10}+${(10*a-b)/10}`
     const answer = `${a+c}`;
     const condition = undefined
@@ -47,8 +47,8 @@ const createExample3 = () => {
     let b = getRandomInt(2, 20);
     let c = getRandomInt(2, 20);
     let d = getRandomInt(2, 20);
-    if (b%10==0){b+=1}
-    if (d%10==0){d+=1}
+    if (b%10===0){b+=1}
+    if (d%10===0){d+=1}
     const math = `${(10*a+b)/10}+${(10*c+d)/10}-${b/10}-${d/10}`
     const answer = `${a+c}`;
     const condition = undefined
@@ -67,8 +67,8 @@ const createExample4 = () => {
     let b = getRandomInt(2, 20);
     let c = getRandomInt(2, 20);
     let d = getRandomInt(2, 20);
-    if (b%10==0){b+=1}
-    if (d%10==0){d+=1}
+    if (b%10===0){b+=1}
+    if (d%10===0){d+=1}
     const math = `-${b/10}+${(10*c+d)/10}+${(10*a+b)/10}-${d/10}`
     const answer = `${a+c}`;
     const condition = undefined
@@ -87,8 +87,8 @@ const createExample5 = () => {
     let b = getRandomInt(2, 20);
     let c = getRandomInt(2, 20);
     let d = getRandomInt(2, 20);
-    if (b%10==0){b+=1}
-    if (d%10==0){d+=1}
+    if (b%10===0){b+=1}
+    if (d%10===0){d+=1}
     const math = `-${b/10}-${d/10}+${(10*c+d)/10}+${(10*a+b)/10}`
     const answer = `${a+c}`;
     const condition = undefined
@@ -104,7 +104,7 @@ const createExample5 = () => {
 
 const createExample6 = () => {
     let a = getRandomInt(2, 40);  
-    if (a%10==0){a=(a+1)/10}
+    if (a%10===0){a=(a+1)/10}
     else{a/=10}
     const math = `0.2 \\cdot  ${a}\\cdot 5`
     const answer = `${a}`;
@@ -121,7 +121,7 @@ const createExample6 = () => {
 
 const createExample7 = () => {
     let a = getRandomInt(2, 40);  
-    if (a%10==0){a=(a+1)/10}
+    if (a%10===0){a=(a+1)/10}
     else{a/=10}
     const math = `0.25 \\cdot  ${a}\\cdot 4`
     const answer = `${a}`;
@@ -138,7 +138,7 @@ const createExample7 = () => {
 
 const createExample8 = () => {
     let a = getRandomInt(2, 40);  
-    if (a%10==0){a=(a+1)/10}
+    if (a%10===0){a=(a+1)/10}
     else{a/=10}
     const math = `2.5 \\cdot  ${a}\\cdot 4`
     const answer = `${a*10}`;
@@ -170,7 +170,7 @@ const createExample9 = () => {
 
 const createExample10 = () => {
     let a = getRandomInt(2, 40);  
-    if (a%10==0){a=(a+1)/10}
+    if (a%10===0){a=(a+1)/10}
     else{a/=10}
     const math = `2 \\cdot  ${a}\\cdot 5`
     const answer = `${Math.floor(a*10)}`;
