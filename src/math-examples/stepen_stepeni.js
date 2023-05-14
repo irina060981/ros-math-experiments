@@ -8,7 +8,7 @@ const createExample1 = () => {
 
     const math = `(${variable}^{${a}})^{${b}}`
     const answer = `${variable}^{${a*b}}` 
-    const condition = ``
+    const condition = undefined
   
     return {
       id: uuidv4(),
@@ -25,7 +25,7 @@ const createExample2 = () => {
     
     const math = `(${variable}^{${a}})^{${b}}`
     const answer = `${variable}^{${a*b}}`
-    const condition = ``
+    const condition = undefined
 
     return {
       id: uuidv4(),
@@ -41,7 +41,7 @@ const createExample3 = () => {
 
     const math = `(${variable}^{${a}})^{10}`
     const answer = `${variable}^{${a*10}}`;
-    const condition = ``
+    const condition = undefined
 
     return {
       id: uuidv4(),
@@ -57,7 +57,7 @@ const createExample4 = () => {
 
     const math = `(${variable}^{${a}})^{10}`
     const answer = `${variable}^{${a*10}}`
-    const condition = ``
+    const condition = undefined
 
     return {
       id: uuidv4(),
@@ -74,9 +74,9 @@ const createExample5 = () => {
   let variable = generateVariableName()
 
   const math = `(${c}${variable}^{${b}})^{${a}}`
-  if ((a*b)%2===0) c = "";
+  if ((a*b)%2===0) {c = ""};
   const answer = `${c}${variable}^{${b*a}}`
-  const condition = ``
+  const condition = undefined
 
   return {
     id: uuidv4(),
@@ -93,9 +93,9 @@ const createExample6 = () => {
   let variable = generateVariableName()
 
   const math = `(${c}${variable}^{${b}})^{${a}}`
-  if ((a*b)%2===0) c = "";
+  if ((a*b)%2===0) {c = ""};
   const answer = `${c}${variable}^{${b*a}}`
-  const condition = ``
+  const condition = undefined
 
   return {
     id: uuidv4(),
@@ -111,7 +111,7 @@ const createExample7 = () => {
 
   const math = `(${b}^{${a}})^{${b}}`
   const answer = `${b}^{${a*b}}`
-  const condition = ``
+  const condition = undefined
 
   return {
     id: uuidv4(),
@@ -129,7 +129,7 @@ const createExample8 = () => {
 
   const math = `((${variable}^{${b}})^{${a}})^{${c}}`
   const answer = `${variable}^{${b*a*c}}`
-  const condition = ``
+  const condition = undefined
 
   return {
     id: uuidv4(),
@@ -147,7 +147,7 @@ const createExample9 = () => {
 
   const math = `((${variable}^{${b}})^{${a}})^{${c}}`
   const answer = `${variable}^{${b*a*c}}`
-  const condition = ``
+  const condition = undefined
 
   return {
     id: uuidv4(),
@@ -165,9 +165,9 @@ const createExample10 = () => {
   let variable = generateVariableName()
 
   const math = `((${d}${variable}^{${b}})^{${a}})^{${c}}`
-  if ((a*c)%2===0) d = "";
+  if ((a*c)%2===0) {d = ""};
   const answer = `${d}${variable}^{${a*b*c}}`
-  const condition = ``
+  const condition = undefined
 
   return {
     id: uuidv4(),

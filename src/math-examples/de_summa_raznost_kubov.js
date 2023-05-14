@@ -35,11 +35,10 @@ const createExample2 = () =>  {
 
 const createExample3 = () =>  {
     let c =  getRandomInt(1, 5);
-    let a =  c**3;
     let variable = generateVariableName()
 
     const math = `(${variable}-${c})(${variable}^2+${c}${variable}+${c*c})` 
-    const answer = `${variable}^3-${a}`
+    const answer = `${variable}^3-${c*c*c}`
     const condition = undefined
 
     return {
@@ -52,11 +51,10 @@ const createExample3 = () =>  {
 
 const createExample4 = () => {
   let c =  getRandomInt(6, 10);
-  let a =  c**3;
   let variable = generateVariableName()
 
   const math = `(${variable}+${c})(${variable}^2-${c}${variable}+${c*c})`
-  const answer =  `${variable}^3+${a}`
+  const answer =  `${variable}^3+${c*c*c}`
   const condition = undefined
 
   return {
@@ -102,11 +100,10 @@ const createExample6 = () =>  {
 
 const createExample7 = () => {
   let c =  getRandomInt(1, 5);
-  let a =  c**3;
   let variable = generateVariableName()
 
   const math = `(${c}-${variable})(${c*c}+${c}${variable}+${variable}^2)` 
-  const answer = `${a}-${variable}^3`
+  const answer = `${c*c*c}-${variable}^3`
   const condition = undefined
 
   return {
@@ -119,11 +116,10 @@ const createExample7 = () => {
 
 const createExample8 = () => {
   let c =  getRandomInt(6, 10);
-  let a =  c**3;
   let variable = generateVariableName()
 
   const math = `(${c}+${variable})(${c*c}-${c}${variable}+${variable}^2)` 
-  const answer = `${a}+${variable}^3`
+  const answer = `${c*c*c}+${variable}^3`
   const condition = undefined
 
   return {
@@ -137,12 +133,10 @@ const createExample8 = () => {
 const createExample9 = () =>  {
   let c =  getRandomInt(1, 5);
   let d =  getRandomInt(2, 5);
-  let a =  c**3;
-  let b =  d**3;
   let variable = generateVariableName()
 
   const math = `(${d}${variable}-${c})(${d*d}${variable}^2+${c*d}${variable}+${c*c})`
-  const answer =  `${b}${variable}^3-${a}`
+  const answer =  `${d*d*d}${variable}^3-${c*c*c}`
   const condition = undefined
 
   return {
@@ -156,12 +150,10 @@ const createExample9 = () =>  {
 const createExample10 = () => {
   let c =  getRandomInt(6, 10);
   let d =  getRandomInt(6, 10);
-  let a =  c**3;
-  let b =  d**3;
   let variable = generateVariableName()
 
   const math = `(${d}${variable}+${c})(${d*d}${variable}^2-${c*d}${variable}+${c*c})` 
-  const answer = `${b}${variable}^3+${a}`
+  const answer = `${d*d*d}${variable}^3+${c*c*c}`
   const condition = undefined
 
   return {

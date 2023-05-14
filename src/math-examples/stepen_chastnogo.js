@@ -76,7 +76,7 @@ const createExample5 = () => {
     let b = getRandomInt(10, 30);  
     let variable = generateVariableName()
     let otv = '-'
-    if(a%2===0) otv = '';
+    if(a%2===0) {otv = ''};
     const math = `\\left(-\\frac{${b}}{${variable}}\\right)^{${a}}`
     const answer = `${otv}\\frac{${b}^{${a}}}{${variable}^{${a}}}`
     const condition = undefined
@@ -94,7 +94,7 @@ const createExample6 = () => {
     let b = (-1)*getRandomInt(-30, -2);  
     let variable = generateVariableName()
     let otv = '-'
-    if(a%2===0) otv = '';
+    if(a%2===0) {otv = ''};
     const math = `\\left(-\\frac{${b}}{${variable}}\\right)^{${a}}`
     const answer = `${otv}\\frac{${b}^{${a}}}{${variable}^{${a}}}`
     const condition = undefined
@@ -128,7 +128,7 @@ const createExample8 = () => {
     let b = getRandomInt(-10, -2);  
     let variable = generateVariableName()
     let otv = '-'
-    if(a%2===0) otv = '';
+    if(a%2===0) {otv = ''};
     const math = `(${b}:${variable})^{${a}}`
     const answer = `${otv}\\frac{${(-1)*b}^{${a}}}{${variable}^{${a}}}`
     const condition = undefined
@@ -146,8 +146,8 @@ const createExample9 = () => {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-    const math = `\\left(\\frac{${variable1}g}{${variable2}o}\\right)^{${a}}`
-    const answer = `\\frac{(${variable1}g)^{${a}}}{(${variable2}o)^{${a}}}`
+    const math = `\\left(\\frac{${variable1}g}{${variable2}t}\\right)^{${a}}`
+    const answer = `\\frac{(${variable1}g)^{${a}}}{(${variable2}t)^{${a}}}`
     const condition = undefined
   
     return {
@@ -163,8 +163,8 @@ const createExample10 = () => {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-    const math = `\\left(\\frac{${variable1}+g}{${variable2}+o}\\right)^{${a}}`
-    const answer = `\\frac{(${variable1}+g)^{${a}}}{(${variable2}+o)^{${a}}}`
+    const math = `\\left(\\frac{${variable1}+g}{${variable2}+t}\\right)^{${a}}`
+    const answer = `\\frac{(${variable1}+g)^{${a}}}{(${variable2}+t)^{${a}}}`
     const condition = undefined
   
     return {

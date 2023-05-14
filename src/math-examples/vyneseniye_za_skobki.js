@@ -2,7 +2,7 @@ import { getRandomInt, generateVariableName, generateVariableNameOne, generateVa
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
-        let a = getRandomInt(2, 10, 0);
+        let a = getRandomInt(2, 10);
         let variable1 = generateVariableNameOne()
         let variable2 = generateVariableNameTwo()
 
@@ -143,8 +143,8 @@ const createExample9 = () =>  {
     let variable2 = generateVariableNameTwo()
     let a = getRandomInt(-20, -2);
 
-    const math = `${a}${variable1}${variable2}${a}${variable2}g`
-    const answer = `${a}${variable2}(${variable1}+g)` 
+    const math = `${a}${variable1}${variable2}${a}${variable2}t`
+    const answer = `${a}${variable2}(${variable1}+t)` 
     const condition = undefined
 
     return {

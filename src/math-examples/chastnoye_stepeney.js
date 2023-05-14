@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, shuffleSingle } from '@utility/math-utitility.js'
+import { getRandomInt, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffleSingle } from '@utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -90,11 +90,12 @@ const createExample5 = () => {
 
 const createExample6 = () => {
   let b = getRandomInt(2, 20);
-  let a = b*getRandomInt(1, 5);
-  let variable = generateVariableName()
+  let a = b*getRandomInt(2, 5);
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameTwo()
 
-  const math = `\\left(\\frac{${variable}}{k}\\right)^{${a}}:\\left(\\frac {${variable}}{k}\\right)^{${b}}`
-  const answer = `\\left(\\frac{${variable}}{k}\\right)^{${a-b}}`
+  const math = `\\left(\\frac{${variable1}}{${variable2}}\\right)^{${a}}:\\left(\\frac {${variable1}}{${variable2}}\\right)^{${b}}`
+  const answer = `\\left(\\frac{${variable1}}{${variable2}}\\right)^{${a-b}}`
   const condition = undefined
 
   return {
@@ -108,10 +109,11 @@ const createExample6 = () => {
 const createExample7 = () => {
   let b = getRandomInt(2, 20);
   let a = b*getRandomInt(1, 5);
-  let variable = generateVariableName()
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameTwo()
 
-  const math = `(${variable}m)^{${a}}:(${variable}m)^{${b}}`
-  const answer = `(${variable}m)^{${a-b}}`
+  const math = `(${variable1}${variable2})^{${a}}:(${variable1}${variable2})^{${b}}`
+  const answer = `(${variable1}${variable2})^{${a-b}}`
   const condition = undefined
 
   return {
@@ -126,9 +128,10 @@ const createExample8 = () => {
   let b = getRandomInt(2, 20);
   let a = b*getRandomInt(2, 5);
   let variable = generateVariableName()
-
+  let o ="-"
+  if ((a-b)%2===0){o=""}
   const math = `(-${variable})^{${a}}:(-${variable})^{${b}}`
-  const answer = `(-${variable})^{${a-b}}`
+  const answer = `${o}${variable}^{${a-b}}`
   const condition = undefined
 
   return {
@@ -142,10 +145,11 @@ const createExample8 = () => {
 const createExample9 = () => {
   let b = getRandomInt(2, 20);
   let a = b*getRandomInt(2, 5);
-  let variable = generateVariableName()
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameTwo()
 
-  const math = `(${variable}-k)^{${a}}:(${variable}-k)^{${b}}`
-  const answer = `(${variable}-k)^{${a-b}}`
+  const math = `(${variable1}-${variable2})^{${a}}:(${variable1}-${variable2})^{${b}}`
+  const answer = `(${variable1}-${variable2})^{${a-b}}`
   const condition = undefined
 
   return {
@@ -160,7 +164,7 @@ const createExample10 = () => {
   let b = getRandomInt(2, 6);
   let a = getRandomInt(7, 20);
   let c = getRandomInt(-30, 30, 0);
-  if(c > 0) c = '+'+c;
+  if(c > 0) {c = '+'+c};
 
   let variable = generateVariableName()
 

@@ -102,10 +102,9 @@ const createExample6 = () =>  {
 
 const createExample7 = () => {
   let c =  getRandomInt(1, 5);
-  let a =  c**3;
   let variable = generateVariableName()
 
-  const math = `${a}-${variable}^3`
+  const math = `${c*c*c}-${variable}^3`
   const answer = `(${c}-${variable})(${c*c}+${c}${variable}+${variable}^2)` 
   const condition = undefined
 
@@ -119,10 +118,9 @@ const createExample7 = () => {
 
 const createExample8 = () => {
   let c =  getRandomInt(6, 10);
-  let a =  c**3;
   let variable = generateVariableName()
 
-  const math = `${a}+${variable}^3`
+  const math = `${c*c*c}+${variable}^3`
   const answer = `(${c}+${variable})(${c*c}-${c}${variable}+${variable}^2)` 
   const condition = undefined
 
@@ -137,11 +135,9 @@ const createExample8 = () => {
 const createExample9 = () =>  {
   let c =  getRandomInt(1, 5);
   let d =  getRandomInt(2, 5);
-  let a =  c**3;
-  let b =  d**3;
   let variable = generateVariableName()
 
-  const math = `${b}${variable}^3-${a}`
+  const math = `${d*d*d}${variable}^3-${c*c*c}`
   const answer = `(${d}${variable}-${c})(${d*d}${variable}^2+${c*d}${variable}+${c*c})` 
   const condition = undefined
 
@@ -156,11 +152,9 @@ const createExample9 = () =>  {
 const createExample10 = () => {
   let c =  getRandomInt(6, 10);
   let d =  getRandomInt(6, 10);
-  let a =  c**3;
-  let b =  d**3;
   let variable = generateVariableName()
 
-  const math = `${b}${variable}^3+${a}`
+  const math = `${d*d*d}${variable}^3+${c*c*c}`
   const answer = `(${d}${variable}+${c})(${d*d}${variable}^2-${c*d}${variable}+${c*c})` 
   const condition = undefined
 

@@ -57,8 +57,8 @@ const createExample4 = () => {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-    const math = `h(${variable1}-${variable2})+${a}${variable1}-${a}${variable2}`
-    const answer = `(${variable1}-${variable2})(h+${a})` 
+    const math = `t(${variable1}-${variable2})+${a}${variable1}-${a}${variable2}`
+    const answer = `(${variable1}-${variable2})(t+${a})` 
     const condition = undefined
 
     return {
@@ -74,8 +74,8 @@ const createExample5 = () =>{
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-    const math = `${a}${variable1}-${a}${variable2}+h(${variable1}-${variable2})`
-    const answer = `(${variable1}-${variable2})(h+${a})` 
+    const math = `${a}${variable1}-${a}${variable2}+t(${variable1}-${variable2})`
+    const answer = `(${variable1}-${variable2})(t+${a})` 
     const condition = undefined
 
     return {
@@ -90,8 +90,8 @@ const createExample6 = () => {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-    const math = `${variable1}(h-${variable2})+h-${variable2}`
-    const answer = `(h-${variable2})(${variable1}+1)` 
+    const math = `${variable1}(t-${variable2})+t-${variable2}`
+    const answer = `(t-${variable2})(${variable1}+1)` 
     const condition = undefined
 
     return {
@@ -141,8 +141,8 @@ const createExample9 = () =>  {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-    const math = `${a}${variable1}-${a}${variable2}+${variable1}h-${variable2}h`
-    const answer = `(${variable1}-${variable2})(${a}+h)` 
+    const math = `${a}${variable1}-${a}${variable2}+${variable1}t-${variable2}t`
+    const answer = `(${variable1}-${variable2})(${a}+t)` 
     const condition = undefined
 
     return {

@@ -22,7 +22,7 @@ const createExample2 = () => {
     let a = getRandomInt(6, 10);  
     let variable1 = generateVariableName()
 
-    const math = `${variable1}^2+${a*2}${variable1}+{${a*a}}`
+    const math = `${variable1}^2+${a*2}${variable1}+${a*a}`
     const answer = `(${variable1}+${a})^2`       
     const condition = undefined
   
@@ -38,7 +38,7 @@ const createExample3 = () => {
     let a = getRandomInt(1, 5);  
     let variable1 = generateVariableName()
 
-    const math = `${variable1}^2-${a*2}${variable1}+{${a*a}}`
+    const math = `${variable1}^2-${a*2}${variable1}+${a*a}`
     const answer = `(${variable1}-${a})^2`       
     const condition = undefined
   
@@ -54,7 +54,7 @@ const createExample4 = () => {
     let a = getRandomInt(6, 10);  
     let variable1 = generateVariableName()
 
-    const math = `${variable1}^2-${a*2}${variable1}+{${a*a}}`
+    const math = `${variable1}^2-${a*2}${variable1}+${a*a}`
     const answer = `(${variable1}-${a})^2`       
     const condition = undefined
   
@@ -151,21 +151,22 @@ const createExample9 = () => {
   }
 
 const createExample10 = () =>  {
-    let a = getRandomInt(2, 5);  
-    let b = getRandomInt(1, 5);  
-    let variable1 = generateVariableName()
-    
-    const math = `${a*a}${variable1}^2-${2*a*b}${variable1}+${b*b}`
-    const answer = `(${a}${variable1}-${b})^2`       
-    const condition = undefined
-  
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
+  let a = getRandomInt(2, 7);  
+  let b = getRandomInt(2, 7);  
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameTwo()
+
+  const math = `${a*a}${variable1}^2-${a*2*b}${variable1}${variable2}+${b*b}${variable2}^2`
+  const answer = `(${a}${variable1}-${b}${variable2})^2`       
+  const condition = undefined
+
+  return {
+    id: uuidv4(),
+    math: math, 
+    condition: condition, 
+    answer: answer
   }
+}
 
 
 const examplesFn = [

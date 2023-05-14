@@ -6,7 +6,7 @@ const createExample1 = () => {
     let variable1 = generateVariableName()
 
     const math = `(${variable1}+${a})^2`
-    const answer = `${variable1}^2+${a*2}${variable1}+{${a*a}}`       
+    const answer = `${variable1}^2+${a*2}${variable1}+${a*a}`       
     const condition = undefined
   
     return {
@@ -22,7 +22,7 @@ const createExample2 = () => {
     let variable1 = generateVariableName()
 
     const math = `(${variable1}+${a})^2`
-    const answer = `${variable1}^2+${a*2}${variable1}+{${a*a}}`       
+    const answer = `${variable1}^2+${a*2}${variable1}+${a*a}`       
     const condition = undefined
   
     return {
@@ -38,7 +38,7 @@ const createExample3 = () => {
     let variable1 = generateVariableName()
 
     const math = `(${variable1}-${a})^2`
-    const answer = `${variable1}^2-${a*2}${variable1}+{${a*a}}`       
+    const answer = `${variable1}^2-${a*2}${variable1}+${a*a}`       
     const condition = undefined
   
     return {
@@ -54,7 +54,7 @@ const createExample4 = () => {
     let variable1 = generateVariableName()
 
     const math = `(${variable1}-${a})^2`
-    const answer = `${variable1}^2-${a*2}${variable1}+{${a*a}}`       
+    const answer = `${variable1}^2-${a*2}${variable1}+${a*a}`       
     const condition = undefined
   
     return {

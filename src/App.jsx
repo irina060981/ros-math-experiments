@@ -28,6 +28,9 @@ import { createExamples as createExamples24 } from '@mathExamples/mnogochlen_na_
 import { createExamples as createExamples25 } from '@mathExamples/metod_gruppirovki.js'
 import { createExamples as createExamples26 } from '@mathExamples/proizvedeniye_odnochlenov.js'
 import { createExamples as createExamples27 } from '@mathExamples/vozvedeniye_odnochlena_stepen.js'
+import { createExamples as createExamples28 } from '@mathExamples/mnogochleny_standartnyy_vyid.js'
+import { createExamples as createExamples29 } from '@mathExamples/summa_raznost_mnogochlenov.js'
+import { createExamples as createExamples30 } from '@mathExamples/vyrazheniya_sravneniy.js'
 
 import ExampleBlock from "./components/ExampleBlock";
 
@@ -168,6 +171,21 @@ function App() {
         Примеры 27
       </Typography>
       <ExampleBlock createExamples={createExamples27}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 28
+      </Typography>
+      <ExampleBlock createExamples={createExamples28}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 29
+      </Typography>
+      <ExampleBlock createExamples={createExamples29}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 30
+      </Typography>
+      <ExampleBlock createExamples={createExamples30}/>
     </Container>
   )
 }

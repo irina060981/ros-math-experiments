@@ -12,14 +12,14 @@ const getRandomPeremen = (arr) => {
     return arr[rand];
 };
 
-// генерирует имя для случайной переменной. f,i,o,g, исключена 
+// генерирует имя для случайной переменной. f,i,o,g,j исключена 
 const generateVariableName = () => {
-    const variables = ['a', 'b', 'c', 'd', 'e', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    const variables = ['a', 'b', 'c', 'd', 'e', 'h', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     return getRandomPeremen(variables)
 }
-// генерирует имя для случайной переменной f,i,o,g,h исключена 
+// генерирует имя для случайной переменной f,i,o,g,h,j исключена 
 const generateVariableNameOne = () => {
-  const variables = ['a', 'b', 'c', 'd', 'e',  'j', 'k', 'l', 'm', 'n'];
+  const variables = ['a', 'b', 'c', 'd', 'e', 'k', 'l', 'm', 'n'];
   return getRandomPeremen(variables)
 }
 // генерирует имя для случайной переменной t исключена
