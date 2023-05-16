@@ -6,7 +6,6 @@ const createExample1 = () => {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-
     const math = `(${variable1}${variable2})^{${a}}`
     const answer = `${variable1}^{${a}}${variable2}^{${a}}`       
     const condition = undefined
@@ -23,7 +22,6 @@ const createExample2 = () => {
     let a = getRandomInt(11, 20);  
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
-
 
     const math = `(${variable1}${variable2})^{${a}}`
     const answer = `${variable1}^{${a}}${variable2}^{${a}}`       
@@ -43,7 +41,6 @@ const createExample3 = () => {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-
     const math = `(${variable1}${variable2})^{${a}${b}}`
     const answer = `${variable1}^{${a+b}}${variable2}^{${a+b}}`       
     const condition = undefined
@@ -61,8 +58,8 @@ const createExample4 = () => {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-    const math = `(${variable1}${variable2}g)^{${a}}`
-    const answer = `${variable1}^{${a}}${variable2}^{${a}}g^{${a}}`       
+    const math = `(${variable1}${variable2}t)^{${a}}`
+    const answer = `${variable1}^{${a}}${variable2}^{${a}}t^{${a}}`       
     const condition = undefined
   
     return {
@@ -96,7 +93,7 @@ const createExample6 = () => {
     let variable1 = generateVariableName()
 
     const math = `(${b}${variable1})^{${a}}`
-    if (a%2===0) b=`${-1*b}`
+    if (a%2===0) {b=`${-1*b}`}
     const answer = `${b}^{${a}}${variable1}^{${a}}`       
     const condition = undefined
   
@@ -133,7 +130,7 @@ const createExample8 = () => {
     let variable2 = generateVariableNameTwo()
 
     const math = `(${b}${variable1}${variable2})^{${a}}`
-    if (a%2===0) b=`${-1*b}`
+    if (a%2===0) {b=`${-1*b}`}
     const answer = `${b}^{${a}}${variable1}^{${a}}${variable2}^{${a}}`       
     const condition = undefined
   
@@ -150,9 +147,8 @@ const createExample9 = () => {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-
-    const math = `((${variable2}${variable1})(og))^{${a}}`
-    const answer = `(${variable2}${variable1})^{${a}}(og)^{${a}}`       
+    const math = `((${variable2}${variable1})(gt))^{${a}}`
+    const answer = `(${variable2}${variable1})^{${a}}(gt)^{${a}}`       
     const condition = undefined
   
     return {
@@ -168,9 +164,8 @@ const createExample10 = () =>  {
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
-
-    const math = `((${variable2}+${variable1})(o+g))^{${a}}`
-    const answer = `(${variable2}+${variable1})^{${a}}(o+g)^{${a}}`       
+    const math = `((${variable2}+${variable1})(t+g))^{${a}}`
+    const answer = `(${variable2}+${variable1})^{${a}}(t+g)^{${a}}`       
     const condition = undefined
   
     return {

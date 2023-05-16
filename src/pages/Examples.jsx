@@ -27,7 +27,9 @@ import { createExamples as createExamples24 } from '@mathExamples/mnogochlen_na_
 import { createExamples as createExamples25 } from '@mathExamples/metod_gruppirovki.js'
 import { createExamples as createExamples26 } from '@mathExamples/proizvedeniye_odnochlenov.js'
 import { createExamples as createExamples27 } from '@mathExamples/vozvedeniye_odnochlena_stepen.js'
-
+import { createExamples as createExamples28 } from '@mathExamples/mnogochleny_standartnyy_vyid.js'
+import { createExamples as createExamples29 } from '@mathExamples/summa_raznost_mnogochlenov.js'
+import { createExamples as createExamples30 } from '@mathExamples/vyrazheniya_sravneniy.js'
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -60,7 +62,10 @@ export async function loader({ params }) {
     24: { fn: createExamples24, title: 'Произведение многочленов' },
     25: { fn: createExamples25, title: 'Метод группировки' },
     26: { fn: createExamples26, title: 'Произведение одночленов' },
-    27: { fn: createExamples27, title: 'Возведение одночлена в степень'}
+    27: { fn: createExamples27, title: 'Возведение одночлена в степень'},
+    28: { fn: createExamples28, title: 'Многочлены. Стандартный вид'},
+    29: { fn: createExamples29, title: 'Сумма и разность многочленов'},
+    30: { fn: createExamples30, title: 'Сравнение выражений'}
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }

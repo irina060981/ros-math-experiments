@@ -96,7 +96,7 @@ const createExample6 = () => {
 
   const math = `\\left(\\frac{${variable}}{k}\\right)^{${a}}\\left(\\frac {${variable}}{k}\\right)^{${b}}`
   const answer = `\\left(\\frac{${variable}}{k}\\right)^{${a+b}}`
-  const condition = ``
+  const condition = undefined
 
   return {
     id: uuidv4(),

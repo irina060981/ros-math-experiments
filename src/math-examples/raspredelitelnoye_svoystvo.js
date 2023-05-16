@@ -2,8 +2,8 @@ import { getRandomInt, generateVariableName, generateVariableNameOne, generateVa
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
-        let a = getRandomInt(2,10, 0);
-        let b = getRandomInt(2, 10, 0);
+        let a = getRandomInt(2, 10);
+        let b = getRandomInt(2, 10);
         let variable = generateVariableName()
     
         const math = `${a}(${variable}+${b})`
@@ -19,8 +19,8 @@ const createExample1 = () => {
   }
 
 const createExample2 = () => {
-    let a = getRandomInt(2,10, 0);
-    let b = getRandomInt(-10, -1, 0);
+    let a = getRandomInt(2, 10);
+    let b = getRandomInt(-10, -1);
     let variable = generateVariableName()
 
     const math = `${a}(${variable}${b})`
@@ -36,8 +36,8 @@ const createExample2 = () => {
 }
 
 const createExample3 = () => {
-    let a = getRandomInt(-10,-2, 0);
-    let b = getRandomInt(-10, -1, 0);
+    let a = getRandomInt(-10, -2);
+    let b = getRandomInt(-10, -1);
     let variable = generateVariableName()
 
     const math = `${a}(${variable}${b})`
@@ -53,8 +53,8 @@ const createExample3 = () => {
 }
 
 const createExample4 = () =>{
-    let a = getRandomInt(-10,-2, 0);
-    let b = getRandomInt(-10,-2, 0);
+    let a = getRandomInt(-10,-2);
+    let b = getRandomInt(-10,-2);
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
@@ -88,7 +88,7 @@ const createExample5 = () => {
 }
 
 const createExample6 = () => {
-    let a = getRandomInt(-10,-2, 0);
+    let a = getRandomInt(-10,-2);
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
@@ -122,8 +122,8 @@ const createExample7 = () => {
 }
 
 const createExample8 = () => {
-    let a = getRandomInt(-10,-2, 0);
-    let b = getRandomInt(2,10, 0);
+    let a = getRandomInt(-10, -2);
+    let b = getRandomInt(2, 10);
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 
@@ -140,8 +140,8 @@ const createExample8 = () => {
 }
 
 const createExample9 = () =>  {
-    let a = getRandomInt(2,10, 0);
-    let b = getRandomInt(2,10, 0);
+    let a = getRandomInt(2, 10);
+    let b = getRandomInt(2, 10);
     let variable1 = generateVariableNameOne()
     let variable2 = generateVariableNameTwo()
 

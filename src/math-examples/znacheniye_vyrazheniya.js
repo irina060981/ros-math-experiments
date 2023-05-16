@@ -5,10 +5,9 @@ const createExample1 = () => {
     let a = getRandomInt(-10, 10, 0);  
     let b = getRandomInt(-30, 30, 0);
     let variable = generateVariableName()
-  
-    const answer = `${b + a}`;
-  
+
     const math = `${variable}${a > 0 ? '+' : ''}${a}`
+    const answer = `${b + a}`;
     const condition = `${variable}=${b}`
   
     return {
@@ -25,9 +24,8 @@ const createExample2 = () => {
     let c = getRandomInt(-5, 5, 0);
     let variable = generateVariableName()
 
-    const answer = `${c*b + a}`;
-
     const math = `${c}${variable}${a > 0 ? '+' : ''}${a}`
+    const answer = `${c*b + a}`;
     const condition = `${variable}=${b}`
 
     return {
@@ -44,9 +42,8 @@ const createExample3 = () => {
     let c = getRandomInt(-5, 5, 0);
     let variable = generateVariableName()
 
-    const answer = `${c*b + a}`;
-
     const math = `${a}${c > 0 ? '+' : ''}${c}${variable}`
+    const answer = `${c*b + a}`
     const condition = `${variable}=${b}`
 
     return {
@@ -62,9 +59,8 @@ const createExample4 = () => {
     let b = getRandomInt(-20, 20, 0);
     let variable = generateVariableName()
 
-    const answer = `${a+b}`
-
     const math = `${variable}+k`
+    const answer = `${a+b}`
     const condition = `${variable}=${a}; k=${b}`
 
     return {
@@ -80,9 +76,8 @@ const createExample5 = () => {
   let b = getRandomInt(-20, -2);
   let variable = generateVariableName()
 
-  const answer = `${a-b}`
-
   const math = `${variable}-w`
+  const answer = `${a-b}`
   const condition = `${variable}=${a}; w=${b}`
 
   return {
@@ -98,9 +93,8 @@ const createExample6 = () => {
   let b = getRandomInt(-20, 20, 0);
   let variable = generateVariableName()
 
-  const answer = `${-1*(a+b)}`
-
   const math = `-${variable}-k`
+  const answer = `${-1*(a+b)}`
   const condition = `${variable}=${a}; k=${b}`
 
   return {
@@ -115,10 +109,9 @@ const createExample7 = () => {
   let a = getRandomInt(-10, 10, 0);  
   let b = getRandomInt(-30, 30, 0);
   let variable = generateVariableName()
-
-  const answer = `${-1*(a+b)}`
-
+  
   const math = `-(${variable}${a > 0 ? '+' : ''}${a})`
+  const answer = `${-1*(a+b)}`
   const condition = `${variable}=${b};`
 
   return {
@@ -134,9 +127,8 @@ const createExample8 = () => {
   let b = getRandomInt(-20, 20, 0);
   let variable = generateVariableName()
 
-  const answer = `${-1*(a+b)}`
-
   const math = `-(${variable}+k)`
+  const answer = `${-1*(a+b)}`
   const condition = `${variable}=${a};k=${b}`
 
   return {
@@ -153,9 +145,8 @@ const createExample9 = () => {
   const c = getRandomInt(-5, 5, 0);
   let variable = generateVariableName()
 
-  const answer = `${c+a+b}`
-
   const math = `${c}+${variable}${a > 0 ? '+' : ''}${a}`
+  const answer = `${c+a+b}`
   const condition = `${variable}=${b};`
 
   return {
@@ -171,9 +162,8 @@ const createExample10 = () => {
   const b = getRandomInt(-30, 30, 0);
   let variable = generateVariableName()
 
-  const answer = `${b+a}`
-
   const math = `${variable}${a > 0 ? '+' : ''}${a}`
+  const answer = `${b+a}`
   const condition = `${variable}=${b};`
 
   return {
