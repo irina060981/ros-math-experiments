@@ -1,4 +1,4 @@
-// получает случайное целое
+// получает случайное целое - границы включены в выборку
 const getRandomInt = (min, max, exp) => {
   let n;
   while(true){
@@ -45,4 +45,18 @@ const shuffleSingle = (array) => {
    return array
 }
 
-export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle }
+// Наибольший общий делитель двух чисел для сокращения дробей
+function NOD (x, y) {
+	if (y > x) return NOD(y, x);
+	if (!y) return x;
+	return NOD(y, x % y);
+}
+
+// Наименьшее общее кратное двух чисел для приведения к общему знаменателю
+function NOK (x, y) {
+  let i;
+	for (i=2; 1>0; i++)
+  {if(i%x===0 && i%y===0){return i; break}}
+}
+
+export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle, NOD , NOK}

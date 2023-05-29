@@ -30,6 +30,16 @@ import { createExamples as createExamples27 } from '@mathExamples/7klass/vozvede
 import { createExamples as createExamples28 } from '@mathExamples/7klass/mnogochleny_standartnyy_vyid.js'
 import { createExamples as createExamples29 } from '@mathExamples/7klass/summa_raznost_mnogochlenov.js'
 import { createExamples as createExamples30 } from '@mathExamples/7klass/vyrazheniya_sravneniy.js'
+import { createExamples as createExamples31 } from '@mathExamples/8klass/znacheniye_drobi.js'
+import { createExamples as createExamples32 } from '@mathExamples/8klass/dopustimyye_znacheniya.js'
+import { createExamples as createExamples33 } from '@mathExamples/8klass/sokrashcheniye_drobey.js'
+import { createExamples as createExamples34 } from '@mathExamples/8klass/summa_raznost_droyey_odinin_znamenatel.js'
+import { createExamples as createExamples35 } from '@mathExamples/8klass/summa_raznost_droyey_raznie_znamenatel.js'
+import { createExamples as createExamples36 } from '@mathExamples/8klass/proizvedeniye_drobey.js'
+import { createExamples as createExamples37 } from '@mathExamples/8klass/chastnoye_drobey.js'
+import { createExamples as createExamples38 } from '@mathExamples/8klass/znacheniye_kornya.js'
+import { createExamples as createExamples39 } from '@mathExamples/8klass/koren_proizvedeniya_i_drobey.js'
+
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -65,7 +75,16 @@ export async function loader({ params }) {
     27: { fn: createExamples27, title: 'Возведение одночлена в степень'},
     28: { fn: createExamples28, title: 'Многочлены. Стандартный вид'},
     29: { fn: createExamples29, title: 'Сумма и разность многочленов'},
-    30: { fn: createExamples30, title: 'Сравнение выражений'}
+    30: { fn: createExamples30, title: 'Сравнение выражений'},
+    31: { fn: createExamples31, title: 'Рациональные дроби. Найти значение дроби'},
+    32: { fn: createExamples32, title: 'Рациональные дроби. Допустимые значения'},
+    33: { fn: createExamples33, title: 'Рациональные дроби. Сокращение дробей'},
+    34: { fn: createExamples34, title: 'Сложение и вычитание дробей с одинаковыми знаменателями'},
+    35: { fn: createExamples35, title: 'Сложение и вычитание дробей с разными знаменателями'},
+    36: { fn: createExamples36, title: 'Произведение рациональных дробей'},
+    37: { fn: createExamples37, title: 'Частное рациональных дробей'},
+    38: { fn: createExamples38, title: 'Вычисление значения квадратного корня'},
+    39: { fn: createExamples39, title: 'Корень произведедния и дроби'}
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }
