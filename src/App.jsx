@@ -40,6 +40,17 @@ import { createExamples as createExamples36 } from '@mathExamples/8klass/proizve
 import { createExamples as createExamples37 } from '@mathExamples/8klass/chastnoye_drobey.js'
 import { createExamples as createExamples38 } from '@mathExamples/8klass/znacheniye_kornya.js'
 import { createExamples as createExamples39 } from '@mathExamples/8klass/koren_proizvedeniya_i_drobey.js'
+import { createExamples as createExamples40 } from '@mathExamples/8klass/koren_stepeni.js'
+import { createExamples as createExamples41 } from '@mathExamples/8klass/vyneseniye_mnozhitelya_kornya.js'
+import { createExamples as createExamples42 } from '@mathExamples/8klass/nepolnyye_kvadratnyye_b_0.js'
+import { createExamples as createExamples43 } from '@mathExamples/8klass/nepolnyye_kvadratnyye_c_0.js'
+import { createExamples as createExamples44 } from '@mathExamples/8klass/diskriminant.js'
+import { createExamples as createExamples45 } from '@mathExamples/8klass/teorema_viyeta.js'
+import { createExamples as createExamples46 } from '@mathExamples/8klass/neravenstva_odna_perem.js'
+import { createExamples as createExamples47 } from '@mathExamples/8klass/sistema_neravenstv.js'
+import { createExamples as createExamples48 } from '@mathExamples/8klass/stepen_naturalny.js'
+import { createExamples as createExamples49 } from '@mathExamples/8klass/proizvedeniye_stepeney_natural.js'
+import { createExamples as createExamples50 } from '@mathExamples/8klass/stepen_chastnogo_natural.js'
 
 
 import ExampleBlock from "./components/ExampleBlock";
@@ -241,6 +252,61 @@ function App() {
         Примеры 39
       </Typography>
       <ExampleBlock createExamples={createExamples39}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 40
+      </Typography>
+      <ExampleBlock createExamples={createExamples40}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 41
+      </Typography>
+      <ExampleBlock createExamples={createExamples41}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 42
+      </Typography>
+      <ExampleBlock createExamples={createExamples42}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 43
+      </Typography>
+      <ExampleBlock createExamples={createExamples43}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 44
+      </Typography>
+      <ExampleBlock createExamples={createExamples44}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 45
+      </Typography>
+      <ExampleBlock createExamples={createExamples45}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 46
+      </Typography>
+      <ExampleBlock createExamples={createExamples46}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 47
+      </Typography>
+      <ExampleBlock createExamples={createExamples47}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 48
+      </Typography>
+      <ExampleBlock createExamples={createExamples48}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 49
+      </Typography>
+      <ExampleBlock createExamples={createExamples49}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 50
+      </Typography>
+      <ExampleBlock createExamples={createExamples50}/>
     </Container>
   )
 }
