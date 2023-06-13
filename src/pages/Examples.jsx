@@ -39,7 +39,17 @@ import { createExamples as createExamples36 } from '@mathExamples/8klass/proizve
 import { createExamples as createExamples37 } from '@mathExamples/8klass/chastnoye_drobey.js'
 import { createExamples as createExamples38 } from '@mathExamples/8klass/znacheniye_kornya.js'
 import { createExamples as createExamples39 } from '@mathExamples/8klass/koren_proizvedeniya_i_drobey.js'
-
+import { createExamples as createExamples40 } from '@mathExamples/8klass/koren_stepeni.js'
+import { createExamples as createExamples41 } from '@mathExamples/8klass/vyneseniye_mnozhitelya_kornya.js'
+import { createExamples as createExamples42 } from '@mathExamples/8klass/nepolnyye_kvadratnyye_b_0.js'
+import { createExamples as createExamples43 } from '@mathExamples/8klass/nepolnyye_kvadratnyye_c_0.js'
+import { createExamples as createExamples44 } from '@mathExamples/8klass/diskriminant.js'
+import { createExamples as createExamples45 } from '@mathExamples/8klass/teorema_viyeta.js'
+import { createExamples as createExamples46 } from '@mathExamples/8klass/neravenstva_odna_perem.js'
+import { createExamples as createExamples47 } from '@mathExamples/8klass/sistema_neravenstv.js'
+import { createExamples as createExamples48 } from '@mathExamples/8klass/stepen_naturalny.js'
+import { createExamples as createExamples49 } from '@mathExamples/8klass/proizvedeniye_stepeney_natural.js'
+import { createExamples as createExamples50 } from '@mathExamples/8klass/stepen_chastnogo_natural.js'
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -84,7 +94,18 @@ export async function loader({ params }) {
     36: { fn: createExamples36, title: 'Произведение рациональных дробей'},
     37: { fn: createExamples37, title: 'Частное рациональных дробей'},
     38: { fn: createExamples38, title: 'Вычисление значения квадратного корня'},
-    39: { fn: createExamples39, title: 'Корень произведедния и дроби'}
+    39: { fn: createExamples39, title: 'Корень произведедния и дроби'},
+    40: { fn: createExamples40, title: 'Корень степени'},
+    41: { fn: createExamples41, title: 'Вынесение множителя за знак корня'},
+    42: { fn: createExamples42, title: 'Неполные квадратные уравнения (b=0)'},
+    43: { fn: createExamples43, title: 'Неполные квадратные уравнения (c=0)'},
+    44: { fn: createExamples44, title: 'Дискриминант'},
+    45: { fn: createExamples45, title: 'Теорема Виета'},
+    46: { fn: createExamples46, title: 'Неравенства с одной переменной'},
+    47: { fn: createExamples47, title: 'Системы неравенства с одной переменной'},
+    48: { fn: createExamples48, title: 'Степень с целым показателем'},
+    49: { fn: createExamples49, title: 'Произведение степеней с целым показателем'},
+    50: { fn: createExamples50, title: 'Степень частного с целым показателем'}
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }

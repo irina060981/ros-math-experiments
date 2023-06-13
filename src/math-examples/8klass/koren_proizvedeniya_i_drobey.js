@@ -85,8 +85,8 @@ const createExample6 = () => {
   let b = getRandomInt(2, 5);  
   let a = getRandomInt(6, 11); 
 
-  const math = `\\sqrt{\\frac{${a*a}}{${b*b}}}`
-  const answer = `\\frac{${a}}{${b}}`;
+  const math = `\\sqrt{\\frac{${b*b}}{${a*a}}}`
+  const answer = `\\frac{${b}}{${a}}`;
   const condition = undefined
 
   return {
