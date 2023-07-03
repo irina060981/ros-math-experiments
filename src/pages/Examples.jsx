@@ -50,6 +50,13 @@ import { createExamples as createExamples47 } from '@mathExamples/8klass/sistema
 import { createExamples as createExamples48 } from '@mathExamples/8klass/stepen_naturalny.js'
 import { createExamples as createExamples49 } from '@mathExamples/8klass/proizvedeniye_stepeney_natural.js'
 import { createExamples as createExamples50 } from '@mathExamples/8klass/stepen_chastnogo_natural.js'
+import { createExamples as createExamples51 } from '@mathExamples/8klass/chastnoye_stepeney_natural.js'
+import { createExamples as createExamples52 } from '@mathExamples/8klass/stepen_racionlanoi_drobi.js'
+import { createExamples as createExamples53 } from '@mathExamples/8klass/formula_korney_kvadratnogo.js'
+import { createExamples as createExamples54 } from '@mathExamples/6klass/slozheniye_ratsionalnykh_chisel.js'
+import { createExamples as createExamples55 } from '@mathExamples/6klass/svoystva_slozheniya_ratsionalnykh_chisel.js'
+import { createExamples as createExamples56 } from '@mathExamples/6klass/vychitaniye_ratsionalnykh_chisel.js'
+import { createExamples as createExamples57 } from '@mathExamples/6klass/umnozheniye_ratsionalnykh_chisel.js'
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -105,7 +112,14 @@ export async function loader({ params }) {
     47: { fn: createExamples47, title: 'Системы неравенства с одной переменной'},
     48: { fn: createExamples48, title: 'Степень с целым показателем'},
     49: { fn: createExamples49, title: 'Произведение степеней с целым показателем'},
-    50: { fn: createExamples50, title: 'Степень частного с целым показателем'}
+    50: { fn: createExamples50, title: 'Степень частного с целым показателем'},
+    51: { fn: createExamples51, title: 'Частное степеней с целым показателем'},
+    52: { fn: createExamples52, title: 'Степень рациональной дроби'},
+    53: { fn: createExamples53, title: 'Формула корней квадратного уравнения'},
+    54: { fn: createExamples54, title: 'Сложение рациональных чисел'},
+    55: { fn: createExamples55, title: 'Свойства сложения рациональных чисел'},
+    56: { fn: createExamples56, title: 'Вычитание рациональных чисел'},
+    57: { fn: createExamples57, title: 'Умножение рациональных чисел'}
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }
