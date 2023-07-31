@@ -57,6 +57,14 @@ import { createExamples as createExamples54 } from '@mathExamples/6klass/slozhen
 import { createExamples as createExamples55 } from '@mathExamples/6klass/svoystva_slozheniya_ratsionalnykh_chisel.js'
 import { createExamples as createExamples56 } from '@mathExamples/6klass/vychitaniye_ratsionalnykh_chisel.js'
 import { createExamples as createExamples57 } from '@mathExamples/6klass/umnozheniye_ratsionalnykh_chisel.js'
+import { createExamples as createExamples58 } from '@mathExamples/6klass/osnovnoye_svoystvo_drobi.js'
+import { createExamples as createExamples59 } from '@mathExamples/6klass/sokrashcheniye_drobey.js'
+import { createExamples as createExamples60 } from '@mathExamples/6klass/privedeniye_obshchemu_znamenatelyu.js'
+import { createExamples as createExamples61 } from '@mathExamples/6klass/deystviya_s_drobyami.js'
+import { createExamples as createExamples62 } from '@mathExamples/6klass/sravneniye_drobey.js'
+import { createExamples as createExamples63 } from '@mathExamples/6klass/vychisleniya_povtoreniye_5klass_1.js'
+import { createExamples as createExamples64 } from '@mathExamples/6klass/vychisleniya_povtoreniye_5klass_2.js'
+
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -119,7 +127,14 @@ export async function loader({ params }) {
     54: { fn: createExamples54, title: 'Сложение рациональных чисел'},
     55: { fn: createExamples55, title: 'Свойства сложения рациональных чисел'},
     56: { fn: createExamples56, title: 'Вычитание рациональных чисел'},
-    57: { fn: createExamples57, title: 'Умножение рациональных чисел'}
+    57: { fn: createExamples57, title: 'Умножение рациональных чисел'},
+    58: { fn: createExamples58, title: 'Основное свойство дроби'},
+    59: { fn: createExamples59, title: 'Сокращение дробей'},
+    60: { fn: createExamples60, title: 'Приведение дробей к общему знаменателю'},
+    61: { fn: createExamples61, title: 'Сложение и вычитание дробей с разными знаменателями'},
+    62: { fn: createExamples62, title: 'Сравнение дробей'},
+    63: { fn: createExamples63, title: 'Повторение 5 класс. Вычисления 1.'},
+    64: { fn: createExamples64, title: 'Повторение 5 класс. Вычисления 2.'}
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }

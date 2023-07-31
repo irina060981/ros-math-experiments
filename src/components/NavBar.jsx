@@ -15,7 +15,7 @@ const NavBar = () => {
         <a href="/" className="logoLink">
           <CameraIcon sx={{ mr: 2 }} />
           <Typography variant="h6" color="inherit" noWrap >
-              РосМатематика
+              РосМатика
           </Typography>
         </a>
         </Toolbar>

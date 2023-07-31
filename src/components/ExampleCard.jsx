@@ -37,7 +37,7 @@ const ExampleCard = ({ example, visibleExamples, setVisibleExamples }) => {
             visibility: visibleExamples.includes(example.id) ? 'initial' : 'hidden'
           }}
         >
-          Ответ <MathComponent tex={example.answer} display={false} />
+          Ответ: <MathComponent tex={example.answer} display={false} />
           </Typography>
 
     </Box>
