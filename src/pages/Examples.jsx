@@ -64,6 +64,19 @@ import { createExamples as createExamples61 } from '@mathExamples/6klass/deystvi
 import { createExamples as createExamples62 } from '@mathExamples/6klass/sravneniye_drobey.js'
 import { createExamples as createExamples63 } from '@mathExamples/6klass/vychisleniya_povtoreniye_5klass_1.js'
 import { createExamples as createExamples64 } from '@mathExamples/6klass/vychisleniya_povtoreniye_5klass_2.js'
+import { createExamples as createExamples65 } from '@mathExamples/6klass/resheniye_uravneniy.js'
+import { createExamples as createExamples66 } from '@mathExamples/6klass/deleniye_ratsionalnykh_chisel.js'
+import { createExamples as createExamples67 } from '@mathExamples/6klass/privedeniye_podobnykh.js'
+import { createExamples as createExamples68 } from '@mathExamples/6klass/raskrytiye_skobok'
+import { createExamples as createExamples69 } from '@mathExamples/6klass/koeffitsiyent.js'
+import { createExamples as createExamples70 } from '@mathExamples/6klass/protivopolozhnyye_chisla.js'
+import { createExamples as createExamples71 } from '@mathExamples/6klass/modul_chisla.js'
+import { createExamples as createExamples72 } from '@mathExamples/6klass/sravneniye_ratsionalnykh.js'
+import { createExamples as createExamples73 } from '@mathExamples/6klass/raspredelitelnoye_svoystvo.js'
+import { createExamples as createExamples74 } from '@mathExamples/6klass/vyneseniye_za_skobki.js'
+import { createExamples as createExamples75 } from '@mathExamples/6klass/otnosheniy.js'
+import { createExamples as createExamples76 } from '@mathExamples/6klass/proportsii.js'
+import { createExamples as createExamples77 } from '@mathExamples/6klass/umnozheniye_drobei.js'
 
 
 import ExampleBlock from "../components/ExampleBlock";
@@ -134,7 +147,20 @@ export async function loader({ params }) {
     61: { fn: createExamples61, title: 'Сложение и вычитание дробей с разными знаменателями'},
     62: { fn: createExamples62, title: 'Сравнение дробей'},
     63: { fn: createExamples63, title: 'Повторение 5 класс. Вычисления 1.'},
-    64: { fn: createExamples64, title: 'Повторение 5 класс. Вычисления 2.'}
+    64: { fn: createExamples64, title: 'Повторение 5 класс. Вычисления 2.'},
+    65: { fn: createExamples65, title: 'Решение уравнений'},
+    66: { fn: createExamples66, title: 'Деление рациональных чисел'},
+    67: { fn: createExamples67, title: 'Приведение подобных слагаемых'},
+    68: { fn: createExamples68, title: 'Раскрытие скобок'},
+    69: { fn: createExamples69, title: 'Коэффициент'},
+    70: { fn: createExamples70, title: 'Противоположные числа'},
+    71: { fn: createExamples71, title: 'Модуль числа'},
+    72: { fn: createExamples72, title: 'Сравнение рациональных чисел'},
+    73: { fn: createExamples73, title: 'Распределительное свойство умножения'},
+    74: { fn: createExamples74, title: 'Вынесение общего множителя за скобки'},
+    75: { fn: createExamples75, title: 'Отношения'},
+    76: { fn: createExamples76, title: 'Пропорции'},
+    77: { fn: createExamples77, title: 'Умножение дробей'}
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }
