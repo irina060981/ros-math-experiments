@@ -77,7 +77,29 @@ import { createExamples as createExamples74 } from '@mathExamples/6klass/vynesen
 import { createExamples as createExamples75 } from '@mathExamples/6klass/otnosheniy.js'
 import { createExamples as createExamples76 } from '@mathExamples/6klass/proportsii.js'
 import { createExamples as createExamples77 } from '@mathExamples/6klass/umnozheniye_drobei.js'
-
+import { createExamples as createExamples78 } from '@mathExamples/6klass/drob_ot_chisla.js'
+import { createExamples as createExamples79 } from '@mathExamples/6klass/obratnyye_chisla.js'
+import { createExamples as createExamples80 } from '@mathExamples/6klass/deleniye_drobey.js'
+import { createExamples as createExamples81 } from '@mathExamples/6klass/preobrazovaniye_v_desyatichnuyu_drob.js'
+import { createExamples as createExamples82 } from '@mathExamples/6klass/deliteli_i_kratnyye.js'
+import { createExamples as createExamples83 } from '@mathExamples/5klass/povtoreniye_4_klass.js'
+import { createExamples as createExamples84 } from '@mathExamples/5klass/razryadnyye_slagayemyye.js'
+import { createExamples as createExamples85 } from '@mathExamples/5klass/sravneniye_naturalnykh.js'
+import { createExamples as createExamples86 } from '@mathExamples/5klass/svoystva_slozheniya_naturalnykh_chisel.js'
+import { createExamples as createExamples87 } from '@mathExamples/5klass/vychitaniye_naturalnykh.js'
+import { createExamples as createExamples88 } from '@mathExamples/5klass/bukvennyye_vyrazheniya.js'
+import { createExamples as createExamples89 } from '@mathExamples/5klass/uravneniya_summa_raznost.js'
+import { createExamples as createExamples90 } from '@mathExamples/5klass/uravneniya_proizvedeniye_chastnoye.js'
+import { createExamples as createExamples91 } from '@mathExamples/5klass/umnozheniye_naturalnykh_chisel.js'
+import { createExamples as createExamples92 } from '@mathExamples/5klass/svoystva_umnozheniya.js'
+import { createExamples as createExamples93 } from '@mathExamples/5klass/deleniye_naturalnykh.js'
+import { createExamples as createExamples94 } from '@mathExamples/5klass/proizvedeniye_v_vide_stepeni.js'
+import { createExamples as createExamples95 } from '@mathExamples/5klass/obyknovnnyye_drobi.js'
+import { createExamples as createExamples96 } from '@mathExamples/5klass/sravneniye_drobey.js'
+import { createExamples as createExamples97 } from '@mathExamples/5klass/summa_raznost_drrobey.js'
+import { createExamples as createExamples98 } from '@mathExamples/5klass/chastnoye_vide_drobi.js'
+import { createExamples as createExamples99 } from '@mathExamples/5klass/smeshanoye_v_drob.js'
+import { createExamples as createExamples100 } from '@mathExamples/5klass/drob_v_smeshanoye.js'
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -160,7 +182,30 @@ export async function loader({ params }) {
     74: { fn: createExamples74, title: 'Вынесение общего множителя за скобки'},
     75: { fn: createExamples75, title: 'Отношения'},
     76: { fn: createExamples76, title: 'Пропорции'},
-    77: { fn: createExamples77, title: 'Умножение дробей'}
+    77: { fn: createExamples77, title: 'Умножение дробей'},
+    78: { fn: createExamples78, title: 'Дробь от числа'},
+    79: { fn: createExamples79, title: 'Взаимно обратные числа'},
+    80: { fn: createExamples80, title: 'Деление дробей'},
+    81: { fn: createExamples81, title: 'Преобразование в десятичную дробь'},
+    82: { fn: createExamples82, title: 'Делители и кратные'},
+    83: { fn: createExamples83, title: 'Повторение 4 класс'},
+    84: { fn: createExamples84, title: 'Разрядные слагаемые'},
+    85: { fn: createExamples85, title: 'Сравнение натуральных чисел'},
+    86: { fn: createExamples86, title: 'Свойства сложения натуральных чисел'},
+    87: { fn: createExamples87, title: 'Вычитание натуральных чисел'},
+    88: { fn: createExamples88, title: 'Буквенные выражения'},
+    89: { fn: createExamples89, title: 'Уравнения. Сумма и разность'},
+    90: { fn: createExamples90, title: 'Уравнения. Произведение и частное'},
+    91: { fn: createExamples91, title: 'Умножение натуральных чисел'},
+    92: { fn: createExamples92, title: 'Свойства умножения'},
+    93: { fn: createExamples93, title: 'Деление натуральных чисел'},
+    94: { fn: createExamples94, title: 'Произведение в виде степени'},
+    95: { fn: createExamples95, title: 'Обыкновенные дроби'},
+    96: { fn: createExamples96, title: 'Сравнение дробей'},
+    97: { fn: createExamples97, title: 'Сложение и вычитание дробей с одинаковыми знаменателями'},
+    98: { fn: createExamples98, title: 'Частное в виде дроби'},
+    99: { fn: createExamples99, title: 'Смешаное число в дробь'},
+    100: { fn: createExamples100, title: 'Дробь в смешаное число'}
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }
