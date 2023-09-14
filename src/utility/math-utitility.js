@@ -59,4 +59,13 @@ function NOK (x, y) {
   {if(i%x===0 && i%y===0){return i; break}}
 }
 
-export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle, NOD , NOK}
+// Делители числа
+function DEL (x) {
+  let i;
+  let arr =[];
+	for (i=1; x>=i; i++)
+  {if(x%i===0){arr.push(i)}}
+  return arr; 
+}
+
+export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle, NOD , NOK, DEL}

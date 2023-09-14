@@ -78,6 +78,29 @@ import { createExamples as createExamples74 } from '@mathExamples/6klass/vynesen
 import { createExamples as createExamples75 } from '@mathExamples/6klass/otnosheniy.js'
 import { createExamples as createExamples76 } from '@mathExamples/6klass/proportsii.js'
 import { createExamples as createExamples77 } from '@mathExamples/6klass/umnozheniye_drobei.js'
+import { createExamples as createExamples78 } from '@mathExamples/6klass/drob_ot_chisla.js'
+import { createExamples as createExamples79 } from '@mathExamples/6klass/obratnyye_chisla.js'
+import { createExamples as createExamples80 } from '@mathExamples/6klass/deleniye_drobey.js'
+import { createExamples as createExamples81 } from '@mathExamples/6klass/preobrazovaniye_v_desyatichnuyu_drob.js'
+import { createExamples as createExamples82 } from '@mathExamples/6klass/deliteli_i_kratnyye.js'
+import { createExamples as createExamples83 } from '@mathExamples/5klass/povtoreniye_4_klass.js'
+import { createExamples as createExamples84 } from '@mathExamples/5klass/razryadnyye_slagayemyye.js'
+import { createExamples as createExamples85 } from '@mathExamples/5klass/sravneniye_naturalnykh.js'
+import { createExamples as createExamples86 } from '@mathExamples/5klass/svoystva_slozheniya_naturalnykh_chisel.js'
+import { createExamples as createExamples87 } from '@mathExamples/5klass/vychitaniye_naturalnykh.js'
+import { createExamples as createExamples88 } from '@mathExamples/5klass/bukvennyye_vyrazheniya.js'
+import { createExamples as createExamples89 } from '@mathExamples/5klass/uravneniya_summa_raznost.js'
+import { createExamples as createExamples90 } from '@mathExamples/5klass/uravneniya_proizvedeniye_chastnoye.js'
+import { createExamples as createExamples91 } from '@mathExamples/5klass/umnozheniye_naturalnykh_chisel.js'
+import { createExamples as createExamples92 } from '@mathExamples/5klass/svoystva_umnozheniya.js'
+import { createExamples as createExamples93 } from '@mathExamples/5klass/deleniye_naturalnykh.js'
+import { createExamples as createExamples94 } from '@mathExamples/5klass/proizvedeniye_v_vide_stepeni.js'
+import { createExamples as createExamples95 } from '@mathExamples/5klass/obyknovnnyye_drobi.js'
+import { createExamples as createExamples96 } from '@mathExamples/5klass/sravneniye_drobey.js'
+import { createExamples as createExamples97 } from '@mathExamples/5klass/summa_raznost_drrobey.js'
+import { createExamples as createExamples98 } from '@mathExamples/5klass/chastnoye_vide_drobi.js'
+import { createExamples as createExamples99 } from '@mathExamples/5klass/smeshanoye_v_drob.js'
+import { createExamples as createExamples100 } from '@mathExamples/5klass/drob_v_smeshanoye.js'
 
 import ExampleBlock from "./components/ExampleBlock";
 
@@ -468,6 +491,123 @@ function App() {
         Примеры 77
       </Typography>
       <ExampleBlock createExamples={createExamples77}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 78
+      </Typography>
+      <ExampleBlock createExamples={createExamples78}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 79
+      </Typography>
+      <ExampleBlock createExamples={createExamples79}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 80
+      </Typography>
+      <ExampleBlock createExamples={createExamples80}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 81
+      </Typography>
+      <ExampleBlock createExamples={createExamples81}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 82
+      </Typography>
+      <ExampleBlock createExamples={createExamples82}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 83
+      </Typography>
+      <ExampleBlock createExamples={createExamples83}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 84
+      </Typography>
+      <ExampleBlock createExamples={createExamples84}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 85
+      </Typography>
+      <ExampleBlock createExamples={createExamples85}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 86
+      </Typography>
+      <ExampleBlock createExamples={createExamples86}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 87
+      </Typography>
+      <ExampleBlock createExamples={createExamples87}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 88
+      </Typography>
+      <ExampleBlock createExamples={createExamples88}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 89
+      </Typography>
+      <ExampleBlock createExamples={createExamples89}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 90
+      </Typography>
+      <ExampleBlock createExamples={createExamples90}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 91
+      </Typography>
+      <ExampleBlock createExamples={createExamples91}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 92
+      </Typography>
+      <ExampleBlock createExamples={createExamples92}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 93
+      </Typography>
+      <ExampleBlock createExamples={createExamples93}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 94
+      </Typography>
+      <ExampleBlock createExamples={createExamples94}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 95
+      </Typography>
+      <ExampleBlock createExamples={createExamples95}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 96
+      </Typography>
+      <ExampleBlock createExamples={createExamples96}/>
+
+      
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 97
+      </Typography>
+      <ExampleBlock createExamples={createExamples97}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 98
+      </Typography>
+      <ExampleBlock createExamples={createExamples98}/>
+
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 99
+      </Typography>
+      <ExampleBlock createExamples={createExamples99}/>
+
+      
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Примеры 100
+      </Typography>
+      <ExampleBlock createExamples={createExamples100}/>
     </Container>
   )
 }
