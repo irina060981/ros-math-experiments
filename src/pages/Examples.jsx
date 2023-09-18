@@ -100,6 +100,13 @@ import { createExamples as createExamples97 } from '@mathExamples/5klass/summa_r
 import { createExamples as createExamples98 } from '@mathExamples/5klass/chastnoye_vide_drobi.js'
 import { createExamples as createExamples99 } from '@mathExamples/5klass/smeshanoye_v_drob.js'
 import { createExamples as createExamples100 } from '@mathExamples/5klass/drob_v_smeshanoye.js'
+import { createExamples as createExamples101 } from '@mathExamples/5klass/slozheniye_vychitaniye_smeshanykh.js'
+import { createExamples as createExamples102 } from '@mathExamples/5klass/desyatichnyye_drobi.js'
+import { createExamples as createExamples103 } from '@mathExamples/5klass/sravneniye_desyatichnykh_drobey.js'
+import { createExamples as createExamples104 } from '@mathExamples/5klass/slozheniye_vychitaniye_desyatichnykh.js'
+import { createExamples as createExamples105 } from '@mathExamples/5klass/umnozheniye_desyatichnykh.js'
+import { createExamples as createExamples106 } from '@mathExamples/5klass/delenie_desyatichnykh.js'
+import { createExamples as createExamples107 } from '@mathExamples/5klass/protsent_ot_chisla.js'
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -205,7 +212,14 @@ export async function loader({ params }) {
     97: { fn: createExamples97, title: 'Сложение и вычитание дробей с одинаковыми знаменателями'},
     98: { fn: createExamples98, title: 'Частное в виде дроби'},
     99: { fn: createExamples99, title: 'Смешаное число в дробь'},
-    100: { fn: createExamples100, title: 'Дробь в смешаное число'}
+    100: { fn: createExamples100, title: 'Дробь в смешаное число'},
+    101: { fn: createExamples101, title: 'Сложение и вычитание смешаных чисел'},
+    102: { fn: createExamples102, title: 'Десятичные дроби'},
+    103: { fn: createExamples103, title: 'Сравнение десятичных дробей'},
+    104: { fn: createExamples104, title: 'Сложение и вычитание десятичных дробей'},
+    105: { fn: createExamples105, title: 'Умножение десятичных дробей'},
+    106: { fn: createExamples106, title: 'Деление десятичных дробей'},
+    107: { fn: createExamples107, title: 'Процент от числа'}
   }
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }
