@@ -2,13 +2,11 @@ import { getRandomInt, generateVariableName, shuffleSingle } from '@utility/math
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
-        let a = getRandomInt(2, 15);
-        let b = getRandomInt(-10, 10, 0);
-        let c =a*b;
+        let a = getRandomInt(2, 99);
         let variable = generateVariableName()
-    
-        const math = `${a}${variable}>${c}`
-        const answer = `${variable}\\in (${b};+\\infty)` 
+
+        const math = `${variable}>${a}`
+        const answer = `${variable}\\in (${a};+\\infty)` 
         const condition = undefined
     
         return {
@@ -20,13 +18,11 @@ const createExample1 = () => {
   }
 
 const createExample2 = () => {
-    let a = getRandomInt(-20, -2);
-    let b = getRandomInt(-5, 5, 0);
-    let c =a*b;
+    let a = getRandomInt(2, 99);
     let variable = generateVariableName()
 
-    const math = `${a}${variable}>${c}`
-    const answer = `${variable}\\in (-\\infty; ${b})`
+    const math = `${variable}<${a}`
+    const answer = `${variable}\\in (-\\infty; ${a})` 
     const condition = undefined
 
     return {
@@ -37,14 +33,13 @@ const createExample2 = () => {
     }
 }
 
-const createExample3 = () => {
-    let a = getRandomInt(-20, 20, 0);
-    let b = getRandomInt(-20, 20, 0);
-    if(a > 0) {a = '+'+a};
+
+const createExample3 = () =>  {
+    let a = getRandomInt(-99, -2);
     let variable = generateVariableName()
 
-    const math = `${variable}${a}<${b}`
-    const answer = `${variable}\\in (-\\infty; ${b-a})`
+    const math = `${variable}>${a}`
+    const answer = `${variable}\\in (${a};+\\infty)` 
     const condition = undefined
 
     return {
@@ -56,13 +51,11 @@ const createExample3 = () => {
 }
 
 const createExample4 = () => {
-    let a = getRandomInt(-20, 20, 0);
-    let b = getRandomInt(-20, 20, 0);
-    if(a > 0) {a = '+'+a};
+    let a = getRandomInt(-99, -2);
     let variable = generateVariableName()
 
-    const math = `${variable}${a}\\geq${b}`
-    const answer = `${variable}\\in [${b-a};+\\infty)`
+    const math = `${variable}<${a}`
+    const answer = `${variable}\\in (-\\infty; ${a})` 
     const condition = undefined
 
     return {
@@ -73,14 +66,12 @@ const createExample4 = () => {
     }
 }
 
-const createExample5 = () => {
-    let a = getRandomInt(-20, 20, 0);
-    let b = getRandomInt(-20, 20, 0);
-    if(a > 0) {a = '+'+a};
+const createExample5 = () =>  {
+    let a = getRandomInt(-99, 99);
     let variable = generateVariableName()
 
-    const math = `${variable}${a}\\leq${b}`
-    const answer = `${variable}\\in (-\\infty;${b-a}]`
+    const math = `${variable}\\geq${a}`
+    const answer = `${variable}\\in [${a};+\\infty)` 
     const condition = undefined
 
     return {
@@ -92,94 +83,88 @@ const createExample5 = () => {
 }
 
 const createExample6 = () => {
-let a = getRandomInt(2, 30);
-let b = getRandomInt(-20, 20, 0);
-if(b > 0) {b = '+'+b};
-let variable = generateVariableName()
+    let a = getRandomInt(-99, 99);
+    let variable = generateVariableName()
 
-const math = `${a}>${variable}${b}`
-const answer = `${variable}\\in (-\\infty;${a-b})`
-const condition = undefined
+    const math = `${variable}\\leq${a}`
+    const answer = `${variable}\\in (-\\infty;${a}]` 
+    const condition = undefined
 
-return {
-  id: uuidv4(),
-  math: math, 
-  condition: condition, 
-  answer: answer
-}
+    return {
+      id: uuidv4(),
+      math: math, 
+      condition: condition, 
+      answer: answer
+    }
 }
 
 const createExample7 = () => {
-    let a = getRandomInt(-30, -2);
-    let b = getRandomInt(-30, 30, 0);
-    if(b > 0) {b = '+'+b};
+    let a = getRandomInt(2, 99);
+    let b = getRandomInt(-99, -2);
     let variable = generateVariableName()
-    
-    const math = `${a}<${variable}${b}`
-    const answer = `${variable}\\in (${a-b};+\\infty)`
-    const condition = undefined
-    
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
-    }
 
-const createExample8 = () => {
-    let a = getRandomInt(2, 10);
-    let b = a*getRandomInt(-10, -2);
-    if(b > 0) {b = '+'+b};
-    let variable = generateVariableName()
-    
-    const math = `${a}${variable}${b}\\geq 0`
-    const answer = `${variable}\\in [${-1*(b/a)}; +\\infty)`
+    const math = `${b}<${variable}<${a}`
+    const answer = `${variable}\\in (${b};${a})` 
     const condition = undefined
-    
+
     return {
       id: uuidv4(),
       math: math, 
       condition: condition, 
       answer: answer
     }
+}
+
+const createExample8 = () =>{
+    let a = getRandomInt(2, 99);
+    let b = getRandomInt(-99, -2);
+    let variable = generateVariableName()
+
+    const math = `${b}\\leq ${variable}<${a}`
+    const answer = `${variable}\\in [${b};${a})` 
+    const condition = undefined
+
+    return {
+      id: uuidv4(),
+      math: math, 
+      condition: condition, 
+      answer: answer
     }
+}
 
 const createExample9 = () =>  {
-    let a = getRandomInt(2, 10);
-    let b = a*getRandomInt(2, 11);
-    if(b > 0) {b = '+'+b};
+    let a = getRandomInt(2, 99);
+    let b = getRandomInt(-99, -2);
     let variable = generateVariableName()
-    
-    const math = `${a}${variable}${b}\\leq0`
-    const answer = `${variable}\\in (-\\infty;${-1*(b/a)}]`
-    const condition = undefined
-    
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
-    }
 
-const createExample10 = () => {
-    let a = getRandomInt(2, 10);
-    let b = a*getRandomInt(1, 5);
-    let c = a*getRandomInt(5, 10);
-    let variable = generateVariableName()
-    
-    const math = `${a}${variable}-${b}>${c}`
-    const answer = `${variable}\\in (${(c+b)/a};+\\infty)`
+    const math = `${a}>${variable}\\geq ${b}`
+    const answer = `${variable}\\in [${b};${a})` 
     const condition = undefined
-    
+
     return {
       id: uuidv4(),
       math: math, 
       condition: condition, 
       answer: answer
     }
+}
+
+const createExample10 = () =>{
+    let a = getRandomInt(2, 99);
+    let b = getRandomInt(-99, -2);
+    let variable = generateVariableName()
+
+    const math = `${a}\\geq ${variable}\\geq ${b}`
+    const answer = `${variable}\\in [${b};${a}]` 
+    const condition = undefined
+
+    return {
+      id: uuidv4(),
+      math: math, 
+      condition: condition, 
+      answer: answer
     }
+}
 
 const examplesFn = [
   createExample1,
