@@ -107,6 +107,17 @@ import { createExamples as createExamples104 } from '@mathExamples/5klass/slozhe
 import { createExamples as createExamples105 } from '@mathExamples/5klass/umnozheniye_desyatichnykh.js'
 import { createExamples as createExamples106 } from '@mathExamples/5klass/delenie_desyatichnykh.js'
 import { createExamples as createExamples107 } from '@mathExamples/5klass/protsent_ot_chisla.js'
+import { createExamples as createExamples108 } from '@mathExamples/9klass/lineynyye_neravenstva.js'
+import { createExamples as createExamples109 } from '@mathExamples/9klass/chislovyye_promezhutki.js'
+import { createExamples as createExamples110 } from '@mathExamples/9klass/neravenstva_odnoy_peremennoy.js'
+import { createExamples as createExamples111 } from '@mathExamples/9klass/sistema_neravenstv.js'
+import { createExamples as createExamples112 } from '@mathExamples/9klass/znacheniye_funktsii.js'
+import { createExamples as createExamples113 } from '@mathExamples/9klass/oblast_opredeleniya.js'
+import { createExamples as createExamples114 } from '@mathExamples/9klass/koren_n_stepeni.js'
+import { createExamples as createExamples115 } from '@mathExamples/9klass/stepen_ratsionalnym.js'
+import { createExamples as createExamples116 } from '@mathExamples/9klass/chislovyye_posledovatelnosti.js'
+import { createExamples as createExamples117 } from '@mathExamples/9klass/zakonomernost_ryada_chisel.js'
+import { createExamples as createExamples118 } from '@mathExamples/9klass/arifmeticheskaya_progressiya.js'
 
 import ExampleBlock from "../components/ExampleBlock";
 import { useLoaderData } from "react-router-dom";
@@ -219,8 +230,20 @@ export async function loader({ params }) {
     104: { fn: createExamples104, title: 'Сложение и вычитание десятичных дробей'},
     105: { fn: createExamples105, title: 'Умножение десятичных дробей'},
     106: { fn: createExamples106, title: 'Деление десятичных дробей'},
-    107: { fn: createExamples107, title: 'Процент от числа'}
+    107: { fn: createExamples107, title: 'Процент от числа'},
+    108: { fn: createExamples108, title: 'Линейные неравенства'},
+    109: { fn: createExamples109, title: 'Числовые промежутки'},
+    110: { fn: createExamples110, title: 'Неравенства с одной переменной'},
+    111: { fn: createExamples111, title: 'Системы линейных неравенств'},
+    112: { fn: createExamples112, title: 'Значение функции'},
+    113: { fn: createExamples113, title: 'Область определения функции'},
+    114: { fn: createExamples114, title: 'Корень n-ой степени'},
+    115: { fn: createExamples115, title: 'Степень с рациональным показателем'},
+    116: { fn: createExamples116, title: 'Числовые последовательности'},
+    117: { fn: createExamples117, title: 'Закономерность ряда чисел'},
+    118: { fn: createExamples118, title: 'Арифметическая прогрессия'}
   }
+
   return { examplesFn: (dict[params.examplesGroupId] ?? dict[1]) };
 }
 
