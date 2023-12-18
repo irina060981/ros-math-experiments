@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, shuffleSingle, NOD } from '@utility/math-utitility.js'
+import { getRandomInt, generateVariableName, shuffleSingle, NOD } from '@/utility/math-utitility.js'
 import { v4 as uuidv4, validate } from 'uuid'
 
 const createExample1 = () => {
