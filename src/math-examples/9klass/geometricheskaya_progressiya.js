@@ -2,11 +2,11 @@ import { getRandomInt, generateVariableName, shuffleSingle } from '@/utility/mat
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
-    let a = getRandomInt(2, 20);
-    let b = getRandomInt(2, 20);
+    let a = getRandomInt(2, 10);
+    let b = getRandomInt(2, 5);
     
-    const math = `a_1=${a},\\;d=${b},\\;a_{2}-?`
-    const answer = `a_{2}=${a+b}` 
+    const math = `b_1=${a},\\;q=${b},\\;b_{2}-?`
+    const answer = `b_{2}=${a*b}` 
     const condition = undefined
 
     return {
@@ -19,10 +19,10 @@ const createExample1 = () => {
 
 const createExample2 = () =>{
     let a = getRandomInt(2, 10);
-    let b = getRandomInt(2, 10);
+    let b = getRandomInt(6, 10);
     
-    const math = `a_1=${a},\\;d=${b}, \\;a_{3}-?`
-    const answer = `a_{2}=${a+2*b}` 
+    const math = `b_1=${a},\\;q=${b},\\;b_{2}-?`
+    const answer = `b_{2}=${a*b}` 
     const condition = undefined
 
     return {
@@ -34,11 +34,12 @@ const createExample2 = () =>{
 }
 
 const createExample3 = () =>  {
-    let a = getRandomInt(11, 20);
-    let b = getRandomInt(1, 10);
+    let b = getRandomInt(2, 5);
+    let a = b*getRandomInt(2, 10);
     
-    const math = `a_2=${a},\\; d=${b}, \\;a_{1}-?`
-    const answer = `a_{1}=${a-b}` 
+    
+    const math = `b_2=${a},\\;q=${b},\\;b_{1}-?`
+    const answer = `b_{1}=${a/b}` 
     const condition = undefined
 
     return {
@@ -49,12 +50,13 @@ const createExample3 = () =>  {
     }
 }
 
-const createExample4 = () =>{
-    let a = getRandomInt(30, 50);
-    let b = getRandomInt(2, 10);
+const createExample4 = () => {
+    let b = getRandomInt(6, 10);
+    let a = b*getRandomInt(2, 10);
     
-    const math = `a_3=${a},\\;d=${b}, \\;a_{1}-?`
-    const answer = `a_{1}=${a-2*b}` 
+    
+    const math = `b_2=${a},\\;q=${b},\\;b_{1}-?`
+    const answer = `b_{1}=${a/b}` 
     const condition = undefined
 
     return {
@@ -65,45 +67,45 @@ const createExample4 = () =>{
     }
 }
 
-const createExample5 = () =>  {
+const createExample5 = () => {
+    let a = getRandomInt(2, 5);
+    let q = getRandomInt(2, 5);
+    let b = a*q
+    
+    const math = `b_1=${a},\\;b_2=${b},\\;q-?`
+    const answer = `q=${q}` 
+    const condition = undefined
+
+    return {
+      id: uuidv4(),
+      math: math, 
+      condition: condition, 
+      answer: answer
+    }
+}
+
+const createExample6 = () =>  {
+    let a = getRandomInt(6, 10);
+    let q = getRandomInt(6, 10);
+    let b = a*q
+    
+    const math = `b_1=${a},\\;b_2=${b},\\;q-?`
+    const answer = `q=${q}` 
+    const condition = undefined
+
+    return {
+      id: uuidv4(),
+      math: math, 
+      condition: condition, 
+      answer: answer
+    }
+}
+
+const createExample7 = () =>  {
     let a = getRandomInt(2, 10);
-    let b = getRandomInt(2, 10);
     
-    const math = `a_1=${a},\\; a_2=${b}, \\;d-?`
-    const answer = `d=${b-a}` 
-    const condition = undefined
-
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
-}
-
-const createExample6 = () => {
-    let a = getRandomInt(11, 20);
-    let b = getRandomInt(11, 20);
-    
-    const math = `a_1=${a},\\; a_2=${b}, \\;d-?`
-    const answer = `d=${b-a}` 
-    const condition = undefined
-
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
-}
-
-const createExample7 = () => {
-    let a = getRandomInt(6, 15);
-    let b = getRandomInt(2, 10);
-    let d = getRandomInt(1, 5);
-    
-    const math = `a_{1}=${b},\\; d=${d}, \\; a_{${a}}-?`
-    const answer = `a_{${a}}=${b+d*(a-1)}` 
+    const math = `b_4=${a*8},\\;q=2,\\;b_1-?`
+    const answer = `b_1=${a}` 
     const condition = undefined
 
     return {
@@ -115,12 +117,10 @@ const createExample7 = () => {
 }
 
 const createExample8 = () =>{
-    let a = getRandomInt(16, 20);
-    let b = getRandomInt(2, 10);
-    let d = getRandomInt(1, 5);
+    let a = getRandomInt(2, 10);
     
-    const math = `a_{1}=${b},\\; d=${d}, \\; a_{${a}}-?`
-    const answer = `a_{${a}}=${b+d*(a-1)}` 
+    const math = `b_3=${a*9},\\;q=3,\\;b_1-?`
+    const answer = `b_1=${a}` 
     const condition = undefined
 
     return {
@@ -132,12 +132,12 @@ const createExample8 = () =>{
 }
 
 const createExample9 = () =>  {
-    let a = getRandomInt(6, 15);
-    let b = getRandomInt(2, 10);
-    let d = getRandomInt(2, 5);
+    let a = getRandomInt(6, 11);
+    let b = getRandomInt(2, 5);
+    let d = getRandomInt(2, 3);
     
-    const math = `a_{${a-1}}=${b},\\; a_{${a+1}}=${b+2*d}, \\; a_{${a}}-?`
-    const answer = `a_{${a}}=${b+d}` 
+    const math = `b_{${a-1}}=${b},\\; b_{${a+1}}=${b*d*d}, \\; b_{${a}}-?`
+    const answer = `a_{${a}}=${b*d}` 
     const condition = undefined
 
     return {
@@ -149,12 +149,12 @@ const createExample9 = () =>  {
 }
 
 const createExample10 = () =>{
-    let a = getRandomInt(16, 20);
-    let b = getRandomInt(2, 10);
-    let d = getRandomInt(2, 5);
+    let a = getRandomInt(12, 20);
+    let b = getRandomInt(2, 5);
+    let d = getRandomInt(4, 5);
     
-    const math = `a_{${a-1}}=${b},\\; a_{${a+1}}=${b+2*d}, \\; a_{${a}}-?`
-    const answer = `a_{${a}}=${b+d}` 
+    const math = `b_{${a-1}}=${b},\\; b_{${a+1}}=${b*d*d}, \\; b_{${a}}-?`
+    const answer = `a_{${a}}=${b*d}` 
     const condition = undefined
 
     return {

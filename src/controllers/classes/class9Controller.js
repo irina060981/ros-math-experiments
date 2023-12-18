@@ -9,6 +9,13 @@ import { createExamples as createExamples115 } from '@/math-examples/9klass/step
 import { createExamples as createExamples116 } from '@/math-examples/9klass/chislovyye_posledovatelnosti.js'
 import { createExamples as createExamples117 } from '@/math-examples/9klass/zakonomernost_ryada_chisel.js'
 import { createExamples as createExamples118 } from '@/math-examples/9klass/arifmeticheskaya_progressiya.js'
+import { createExamples as createExamples119 } from '@/math-examples/9klass/absolyutnaya_pogreshnost.js'
+import { createExamples as createExamples120 } from '@/math-examples/9klass/geometricheskaya_progressiya.js'
+import { createExamples as createExamples121 } from '@/math-examples/9klass/metod_intervalov.js'
+import { createExamples as createExamples122 } from '@/math-examples/9klass/napravleniye_vetvey_kvadratichnoy.js'
+import { createExamples as createExamples123 } from '@/math-examples/9klass/nuli_funktsii.js'
+import { createExamples as createExamples124 } from '@/math-examples/9klass/prenadlezhnost_tochki.js'
+import { createExamples as createExamples125 } from '@/math-examples/9klass/vozrastaniye_ubyvaniye_lineynoy.js'
 
 
 export default class Class9Controller {
@@ -24,7 +31,14 @@ export default class Class9Controller {
             { fn: createExamples115, title: 'Степень с рациональным показателем'},
             { fn: createExamples116, title: 'Числовые последовательности'},
             { fn: createExamples117, title: 'Закономерность ряда чисел'},
-            { fn: createExamples118, title: 'Арифметическая прогрессия'}
+            { fn: createExamples118, title: 'Арифметическая прогрессия'},
+            { fn: createExamples119, title: 'Абсолютая погрешность'},
+            { fn: createExamples120, title: 'Геометричсекая прогрессия'},
+            { fn: createExamples121, title: 'Метод интервалов'},
+            { fn: createExamples122, title: 'Направление ветвей параболы'},
+            { fn: createExamples123, title: 'Нули функции'},
+            { fn: createExamples124, title: 'Принадлежность точки графику'},
+            { fn: createExamples125, title: 'Возрастание и убывание линейной функции'}
         ]
     }
 }
