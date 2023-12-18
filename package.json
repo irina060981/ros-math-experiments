@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mui/x-charts": "^6.18.3",
     "match-sorter": "^6.3.1",
     "mathjax-full": "^3.2.2",
     "mathjax-react": "^2.0.1",

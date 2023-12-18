@@ -4,8 +4,6 @@ import { MathComponent } from "mathjax-react";
 import styles from './ExampleCard.module.scss'
 
 export default function ExampleCard ({ example, visibleExamples, setVisibleExamples }) {
-
-  console.log('example - ', example)
   const clickExample = () => {
     if (!visibleExamples.includes(example.id)) {
       const localExamples = [...visibleExamples]

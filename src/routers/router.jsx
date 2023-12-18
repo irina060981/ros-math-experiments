@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from '@/pages/Home.jsx';
 import Theme from '@/pages/Theme.jsx';
 import ClassGroup from '@/pages/ClassGroup.jsx';
+import Charts from '@/pages/Charts.jsx'
 
 export const router = createBrowserRouter([
   {
@@ -24,5 +25,9 @@ export const router = createBrowserRouter([
   {
     path: "/class/:classId/theme/:themeId",
     element: <Theme />
+  },
+  {
+    path: "/charts",
+    element: <Charts />
   }
 ]);

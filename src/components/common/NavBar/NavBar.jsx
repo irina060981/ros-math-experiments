@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import CameraIcon from '@mui/icons-material/Camera';
 
 import styles from './NavBar.module.scss'
@@ -14,6 +14,8 @@ export default function NavBar () {
                   РосМатика
               </Typography>
             </a>
+
+            <a href='/charts' className={styles.logoLink} >Графики</a>
           </Toolbar>
       </AppBar>
     )
