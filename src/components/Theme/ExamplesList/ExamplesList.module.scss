@@ -1,0 +1,25 @@
+.cardsBox {
+    margin-bottom: 30px;
+}
+
+.cardsBoxButtonsContainer {
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 32px;
+    margin-bottom: 40px;
+}
+
+button.buttonRecreate {
+    background-color: #2a8b2c;
+}
+
+a.buttonReturn {
+    color: #2a8b2c;
+    border-color: #2a8b2c;
+}
+
+.examplesBox {
+    flex-flow: wrap;
+    gap: 20px;
+}

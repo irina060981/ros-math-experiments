@@ -1,0 +1,24 @@
+:global(html) {
+    height: 100%;
+}
+
+:global(body) {
+    margin: 0;
+    height: 100%;
+}
+
+:global(#root) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/*
+.container {
+  width: 800px;
+  margin: 20px auto;
+}
+*/
+.content {
+    flex: 1 0 auto;
+    padding: 10px;
+  }

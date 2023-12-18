@@ -1,17 +1,18 @@
 import React from 'react'
 
-import NavBar from '../components/NavBar';
-import HeaderText from '../components/HeaderText';
-import ExamplesCardsGrid from '../components/ExamplesCardsGrid';
-import Footer from '../components/Footer';
+import { ClassCProvider } from '@/contexts/classContext'
 
-const Home = () => {
-  return (
-    <>
-        <HeaderText />
-        <ExamplesCardsGrid />
-    </>
-  )
-}
+import Heading from '@/components/Home/Heading/Heading'
+import ClassesList from '@/components/Home/ClassesList/ClassesList'
 
-export default Home
+export default function Home() {
+    return (
+      <>
+        <ClassCProvider>
+          <Heading />
+          <ClassesList />
+        </ClassCProvider>
+      </>
+    )
+  }
+  
