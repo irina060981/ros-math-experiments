@@ -5,12 +5,14 @@ import Class6Themes from '@/data/6classThemes.json'
 import Class7Themes from '@/data/7classThemes.json'
 import Class8Themes from '@/data/8classThemes.json'
 import Class9Themes from '@/data/9classThemes.json'
+import Class10Themes from '@/data/10classThemes.json'
 
 import Class5Controller from '@/controllers/classes/class5Controller'
 import Class6Controller from '@/controllers/classes/class6Controller'
 import Class7Controller from '@/controllers/classes/class7Controller'
 import Class8Controller from '@/controllers/classes/class8Controller'
 import Class9Controller from '@/controllers/classes/class9Controller'
+import Class10Controller from '@/controllers/classes/class10Controller'
 
 export default class ClassController {
   constructor () {
@@ -24,7 +26,8 @@ export default class ClassController {
       '6klass': { themes: Class6Themes, examples: Class6Controller.dict },
       '7klass': { themes: Class7Themes, examples: Class7Controller.dict },
       '8klass': { themes: Class8Themes, examples: Class8Controller.dict },
-      '9klass': { themes: Class9Themes, examples: Class9Controller.dict }
+      '9klass': { themes: Class9Themes, examples: Class9Controller.dict },
+      '10klass': { themes: Class10Themes, examples: Class10Controller.dict }
     }
   }
 

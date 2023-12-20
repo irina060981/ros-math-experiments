@@ -1,60 +1,50 @@
-import React from 'react'
+import * as React from 'react';
 import { LineChart } from '@mui/x-charts/LineChart';
+import { getRandomInt, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffleSingle } from '@/utility/math-utitility.js'
 
-export default function Charts() {
-    const chartFn = (a, b, c) => {
-      const xC = -b/2*a
-      const xCord = []
-      const yCord = []
 
-      for(let x = xC-15; x<=xC+15; x++) {
-        xCord.push(x)
-        yCord.push(a*x*x + b*x + c)
-      }
+export default function BasicLineChart() {
 
-      return { xCord, yCord }
+//массив для шкалы осей
+  const shkala  = [];
+  for (let i = -10; i<= 10; i++){
+    shkala.push(i);
     }
 
-    /*
-    const xCord = [1, 2, 3, 5, 8, 10]
-    const yCord = [2, 5.5, 2, 8.5, 1.5, 5]
-    */
+let a = getRandomInt(-4, 4);
+let b = getRandomInt(-6, 2);
 
-    const a = 1
-    const b = 2
-    const c = -50
+    //построение графика 
+    //Ответ: y=\\left(x+${a}\\right)^2+${b}
+  return (
+    <LineChart
+      xAxis={[{ data: [a-4, a-3, a-2,  a-1, a, a+1, a+2,  a+3,  a+4],  max: 7, min: -7, tickInterval: shkala}
+    ]}
 
-    const { xCord, yCord } = chartFn(a, b, c)
+      yAxis={[
+        { id: 'linearAxis', scaleType: 'linear', max: 7, min: -7, tickInterval: shkala}
+    ]}
 
-    return (
-      <>
 
-      <LineChart
-        xAxis={[{ data: xCord }]}
-        yAxis={[
-            { id: 'linearAxis', scaleType: 'linear' },
-          ]}
-        series={[
-            {
-            data: yCord, showMark: false, color: '#fdb462',
-            label: `y = a*x*x + b*x + c, где a=${a}, b=${b}, c=${c}`
-            },
-        ]}
-        width={500}
-        height={300}
-        axisHighlight={'none'}
-
-        sx={{
-            'g.MuiChartsAxis-directionY': {
-                transform: 'translate(50%,0)'
-            },
-            
-            'g.MuiChartsAxis-directionX': {
-                transform: 'translate(0, 50%)'
-            }
-        }}
-
-        disableAxisListener
+      series={[
+        {
+          data: [b+16, b+9, b+4,  b+1, b, b+1, b+4, b+9, b+16],
+          showMark: false, color: '#fdb462'
+        },
+      ]}
+      width={1000}
+      height={850}
+      axisHighlight={'none'}
+      sx={{
+        'g.MuiChartsAxis-directionY': {
+            transform: 'translate(50%,0)'
+        },
+        
+        'g.MuiChartsAxis-directionX': {
+            transform: 'translate(0, 50%)'
+        }
+    }}
+disableAxisListener
 
         slotProps={{
             legend: {
@@ -65,8 +55,8 @@ export default function Charts() {
         }}
 
         tooltip={{ trigger: 'none' }}
-       />
-      </>
-    )
-  }
-  
+
+
+    />
+  );
+}
