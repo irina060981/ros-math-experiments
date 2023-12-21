@@ -12,8 +12,6 @@ export default function ExamplesList({classId, themeId}) {
     const { classC } = useClassC();
     const examplesFn = classC.getExamplesItem(classId, themeId);
 
-    console.log('examplesFn - ', examplesFn)
-
     const [ examples, setExamples ] = useState([])
     const [ visibleExamples, setVisibleExamples ] = useState([])
 

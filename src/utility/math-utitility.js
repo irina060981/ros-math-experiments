@@ -68,4 +68,8 @@ function DEL (x) {
   return arr; 
 }
 
-export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle, NOD , NOK, DEL}
+// создать массив чисел от start до stop с шагом step
+const range = (start, stop, step) => 
+                     Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step))
+
+export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle, NOD , NOK, DEL, range}
