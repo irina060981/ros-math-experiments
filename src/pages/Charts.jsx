@@ -1,62 +1,70 @@
 import * as React from 'react';
-import { LineChart } from '@mui/x-charts/LineChart';
-import { getRandomInt, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffleSingle } from '@/utility/math-utitility.js'
+import BasicLineChart from '@/components/Charts/BasicLineChart/BasicLineChart';
+import { getRandomInt, range } from '@/utility/math-utitility.js'
+import { useState } from 'react'
+import { Box, Button, Container } from '@mui/material';
 
+export default function LineChart() {
+  const [xAxisMin, xAxisMax] = [-7, 7]
+  const [yAxisMin, yAxisMax] = [-7, 7]
 
-export default function BasicLineChart() {
+  const shkala = range(-10, 10, 1)
 
-//массив для шкалы осей
-  const shkala  = [];
-  for (let i = -10; i<= 10; i++){
-    shkala.push(i);
-    }
+  let a = getRandomInt(-4, 4)
+  let b = getRandomInt(-6, 2)
 
-let a = getRandomInt(-4, 4);
-let b = getRandomInt(-6, 2);
+  const [ xMinAdd, xMaxAdd ] = [-4, 4]
+  const [ yMinAdd, yMaxAdd ] = [0, 4]
+  const yFn = (b, arrY) => arrY.map(y => b+y*y)
+
+  const chartColor = '#fdb462'
+  const textLegend = 'что-то на русском'
+  let mathLegend = `y=\\left(x+${a}\\right)^2+${b}`
 
     //построение графика 
     //Ответ: y=\\left(x+${a}\\right)^2+${b}
+
+  const [rebuildFlag, setRebuildFlag] = useState(1)
+
+  const generateCharts = () => {
+    setRebuildFlag((a) => a+1)
+
+    a = getRandomInt(-4, 4)
+    b = getRandomInt(-6, 2)
+    mathLegend = `y=\\left(x+${a}\\right)^2+${b}`
+  }
+  
   return (
-    <LineChart
-      xAxis={[{ data: [a-4, a-3, a-2,  a-1, a, a+1, a+2,  a+3,  a+4],  max: 7, min: -7, tickInterval: shkala}
-    ]}
+    <Box >
+        <Container maxWidth="lg">
+        <Box >              
+                <Button variant="contained"
+                        onClick={(e) => generateCharts()}
+                >
+                    Пересоздать
+                </Button>
+        </Box>
+        </Container>
+      
+      <BasicLineChart 
+        xAxisMin = {xAxisMin} xAxisMax = {xAxisMax}
+        yAxisMin = {yAxisMin} yAxisMax = {yAxisMax}
+        shkala = {shkala}
 
-      yAxis={[
-        { id: 'linearAxis', scaleType: 'linear', max: 7, min: -7, tickInterval: shkala}
-    ]}
+        a = {a} b={b}
 
+        xMinAdd = {xMinAdd} xMaxAdd = {xMaxAdd}
+        yMinAdd = {yMinAdd} yMaxAdd = {yMaxAdd}
 
-      series={[
-        {
-          data: [b+16, b+9, b+4,  b+1, b, b+1, b+4, b+9, b+16],
-          showMark: false, color: '#fdb462'
-        },
-      ]}
-      width={1000}
-      height={850}
-      axisHighlight={'none'}
-      sx={{
-        'g.MuiChartsAxis-directionY': {
-            transform: 'translate(50%,0)'
-        },
-        
-        'g.MuiChartsAxis-directionX': {
-            transform: 'translate(0, 50%)'
-        }
-    }}
-disableAxisListener
+        yFn = {yFn}
 
-        slotProps={{
-            legend: {
-              direction: 'row',
-              position: { vertical: 'top', horizontal: 'middle' },
-              padding: 0,
-            }
-        }}
-
-        tooltip={{ trigger: 'none' }}
+        chartColor = {chartColor}
+        rebuildFlag = {rebuildFlag}
+        textLegend = {textLegend}
+        mathLegend = {mathLegend}
+      />
+    </Box>
 
 
-    />
   );
 }
