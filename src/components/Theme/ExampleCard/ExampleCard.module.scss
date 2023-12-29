@@ -2,7 +2,11 @@ div.cardBox {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 20px;
-    cursor: pointer
+    cursor: pointer;
+
+    :global(svg text) {
+        font-family: 'Times New Roman', Times, serif;
+    }
 }
 
 p.exampleText {
@@ -22,3 +26,4 @@ p.exampleAnswer {
     color: #2a8b2c;
     margin-top: 10px;
 }
+

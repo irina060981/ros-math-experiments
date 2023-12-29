@@ -53,7 +53,7 @@ const createExample4 = () =>{
     let a = getRandomInt(2, 10);
     let b = getRandomInt(2, 10);
 
-    const math = `${a}\\cdot ${b}`
+    const math = `11${a}\\cdot ${b}`
     const answer = `${a*b}` 
     const condition = undefined
 
@@ -69,7 +69,7 @@ const createExample5 = () => {
     let a = getRandomInt(11, 20);
     let b = getRandomInt(2, 5);
 
-    const math = `${a}\\cdot ${b}`
+    const math = `12${a}\\cdot ${b}`
     const answer = `${a*b}` 
     const condition = undefined
 
@@ -85,7 +85,7 @@ const createExample6 = () =>  {
     let a = getRandomInt(21, 30);
     let b = getRandomInt(2, 5);
 
-    const math = `${a}\\cdot ${b}`
+    const math = `13${a}\\cdot ${b}`
     const answer = `${a*b}` 
     const condition = undefined
 
@@ -150,7 +150,7 @@ const createExample10 = () => {
     let a = getRandomInt(2, 99);
 
 
-    const math = `${a}\\cdot 10`
+    const math = `14${a}\\cdot 10`
     const answer = `${a*10}` 
     const condition = undefined
 
