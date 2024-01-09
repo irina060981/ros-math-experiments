@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Typography, Stack } from '@mui/material';
-import { MathComponent } from "mathjax-react";
+import { MathJax, MathJaxContext } from "better-react-mathjax"
 import styles from './ExampleCard.module.scss'
 
 export default function ExampleCard ({ example, visibleExamples, setVisibleExamples }) {
@@ -12,21 +12,24 @@ export default function ExampleCard ({ example, visibleExamples, setVisibleExamp
     }
   }
 
+
   return (
     <Box className={styles.cardBox}
       onClick={(e) => clickExample()}
     >
+      <MathJax hideUntilTypeset={"first"}
+            inline
+            dynamic
+          >
       <Stack direction="row">
+        
         <Typography className={styles.exampleText}>
-            <MathComponent tex={example.math} display={false} /> 
+          {`\\(${example.math}\\)`}
         </Typography>
 
         { example.condition && example.condition.length > 0 &&
         <Typography className={styles.exampleCondition}>
-            при <MathComponent
-            tex={example.condition}
-            display={false}
-            />
+            при {`\\(${example.condition}\\)`}
         </Typography>
         }
       </Stack>
@@ -35,9 +38,9 @@ export default function ExampleCard ({ example, visibleExamples, setVisibleExamp
             visibility: visibleExamples.includes(example.id) ? 'initial' : 'hidden'
           }}
         >
-          Ответ: <MathComponent tex={example.answer} display={false} />
+          Ответ: {`\\(${example.answer}\\)`}
           </Typography>
-
+      </MathJax> 
     </Box>
   )
 }

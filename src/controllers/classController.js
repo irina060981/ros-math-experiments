@@ -73,7 +73,6 @@ export default class ClassController {
   }
 
   getExamplesItem (classId, themeId) {
-    console.log('this.getExamples(classId) - ', this.getExamples(classId))
     return this.getExamples(classId)[themeId]
   }
 }

@@ -33,7 +33,6 @@ const createExample2 = () =>{
     }
 }
 
-
 const createExample3 = () =>  {
     let a = getRandomInt(11, 20);
     let b = getRandomInt(1, 10);
@@ -103,7 +102,7 @@ const createExample7 = () => {
     let b = getRandomInt(2, 10);
     let d = getRandomInt(1, 5);
     
-    const math = `a_{1}=${b},\\; d=${d}, \\; a_{${a}}=?`
+    const math = `a_{1}=${b},\\; d=${d}, \\; a_{${a}}-?`
     const answer = `a_{${a}}=${b+d*(a-1)}` 
     const condition = undefined
 
@@ -120,7 +119,7 @@ const createExample8 = () =>{
     let b = getRandomInt(2, 10);
     let d = getRandomInt(1, 5);
     
-    const math = `a_{1}=${b},\\; d=${d}, \\; a_{${a}}=?`
+    const math = `a_{1}=${b},\\; d=${d}, \\; a_{${a}}-?`
     const answer = `a_{${a}}=${b+d*(a-1)}` 
     const condition = undefined
 
@@ -132,13 +131,12 @@ const createExample8 = () =>{
     }
 }
 
-
 const createExample9 = () =>  {
     let a = getRandomInt(6, 15);
     let b = getRandomInt(2, 10);
     let d = getRandomInt(2, 5);
     
-    const math = `a_{${a-1}}=${b},\\; a_{${a+1}}=${b+2*d}, \\; a_{${a}}=?`
+    const math = `a_{${a-1}}=${b},\\; a_{${a+1}}=${b+2*d}, \\; a_{${a}}-?`
     const answer = `a_{${a}}=${b+d}` 
     const condition = undefined
 
@@ -155,7 +153,7 @@ const createExample10 = () =>{
     let b = getRandomInt(2, 10);
     let d = getRandomInt(2, 5);
     
-    const math = `a_{${a-1}}=${b},\\; a_{${a+1}}=${b+2*d}, \\; a_{${a}}=?`
+    const math = `a_{${a-1}}=${b},\\; a_{${a+1}}=${b+2*d}, \\; a_{${a}}-?`
     const answer = `a_{${a}}=${b+d}` 
     const condition = undefined
 
