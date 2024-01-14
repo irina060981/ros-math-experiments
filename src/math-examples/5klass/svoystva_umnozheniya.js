@@ -95,7 +95,7 @@ const createExample6 = () => {
 
 const createExample7 = () =>{
     let a = getRandomInt(2, 10);
-    let b = getRandomInt(-10, -1);
+    let b = getRandomInt(-10, -2);
     let variable = generateVariableName()
 
     const math = `${a}(${variable}${b})`

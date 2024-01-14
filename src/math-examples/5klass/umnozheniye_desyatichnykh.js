@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOD } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -114,9 +114,10 @@ const createExample7 = () =>  {
 
 const createExample8 = () =>{
     let a = getRandomInt(11, 99);
+    let c = 2*a
 
     const math = `${a/10}\\cdot 2`
-    const answer = `${(2*a)/10}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -144,9 +145,10 @@ const createExample9 = () =>   {
 
 const createExample10 = () => {
     let a = getRandomInt(1, 19, 10);
+    let c = 3*a
 
     const math = `${a/10}\\cdot 3`
-    const answer = `${(3*a)/10}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -156,8 +158,6 @@ const createExample10 = () => {
       answer: answer
     }
   }
-
-
 
 const examplesFn = [
   createExample1,

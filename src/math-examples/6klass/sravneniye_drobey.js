@@ -1,11 +1,11 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOK } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle, NOK } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
     let b = getRandomInt(2, 5);
     let c = getRandomInt(2, 5); 
 
-    const math = `\\frac{1}{${b}}...\\frac{1}{${b*c}}`
+    const math = `\\frac{1}{${b}} \\text{ и } \\frac{1}{${b*c}}`
     const answer = `\\frac{${c}}{${b*c}}>\\frac{1}{${b*c}}`
     const condition = undefined
   
@@ -21,7 +21,7 @@ const createExample2 = () => {
     let b = getRandomInt(6, 10);
     let c = getRandomInt(2, 5); 
 
-    const math = `\\frac{1}{${b*c}}...\\frac{1}{${b}}`
+    const math = `\\frac{1}{${b*c}} \\text{ и } \\frac{1}{${b}}`
     const answer = `\\frac{1}{${b*c}}<\\frac{${c}}{${b*c}}`
     const condition = undefined
   
@@ -38,7 +38,7 @@ const createExample3 = () => {
     let c = getRandomInt(6, 10); 
     let a = getRandomInt(2, 10); 
 
-    const math = `\\frac{${b}}{${c}}...${a}`
+    const math = `\\frac{${b}}{${c}} \\text{ и } ${a}`
     const answer = `\\frac{${b}}{${c}}<${a}`
     const condition = undefined
   
@@ -54,7 +54,7 @@ const createExample4 = () => {
     let c = getRandomInt(6, 10); 
     let a = getRandomInt(2, 10); 
 
-    const math = `${a}...\\frac{${b}}{${c}}`
+    const math = `${a} \\text{ и } \\frac{${b}}{${c}}`
     const answer = `${a}>\\frac{${b}}{${c}}`
     const condition = undefined
   
@@ -74,7 +74,7 @@ const createExample5 = () =>  {
     let o
     if(2*n/(b*d)>3*n/(b*c)){o=`>`} else {o=`<`}
 
-    const math = `\\frac{2}{${b*d}}...\\frac{3}{${b*c}}`
+    const math = `\\frac{2}{${b*d}} \\text{ и } \\frac{3}{${b*c}}`
     const answer = `\\frac{${2*n/(b*d)}}{${n}}${o}\\frac{${3*n/(b*c)}}{${n}}`
     const condition = undefined
   
@@ -94,7 +94,7 @@ const createExample6 = () => {
     let o
     if(a*c>d){o=`>`} else {o=`<`}
 
-    const math = `\\frac{${a}}{${b}}...\\frac{${d}}{${b*c}}`
+    const math = `\\frac{${a}}{${b}} \\text{ и } \\frac{${d}}{${b*c}}`
     const answer = `\\frac{${a*c}}{${b*c}}${o}\\frac{${d}}{${b*c}}`
     const condition = undefined
   
@@ -114,7 +114,7 @@ const createExample7 = () => {
     let o
     if(a>d*c){o=`>`} else {o=`<`}
 
-    const math = `\\frac{${a}}{${b*c}}...\\frac{${d}}{${b}}`
+    const math = `\\frac{${a}}{${b*c}} \\text{ и } \\frac{${d}}{${b}}`
     const answer = `\\frac{${a}}{${b*c}}${o}\\frac{${d*c}}{${b*c}}`
     const condition = undefined
   
@@ -134,7 +134,7 @@ const createExample8 = () => {
     let o
     if(a*c>d){o=`>`} else {o=`<`}
 
-    const math = `\\frac{${a}}{${b}}...\\frac{${d}}{${b*c}}`
+    const math = `\\frac{${a}}{${b}} \\text{ и } \\frac{${d}}{${b*c}}`
     const answer = `\\frac{${a*c}}{${b*c}}${o}\\frac{${d}}{${b*c}}`
     const condition = undefined
   
@@ -154,7 +154,7 @@ const createExample9 = () =>  {
     let o
     if(a>d*c){o=`>`} else {o=`<`}
 
-    const math = `\\frac{${a}}{${b*c}}...\\frac{${d}}{${b}}`
+    const math = `\\frac{${a}}{${b*c}} \\text{ и } \\frac{${d}}{${b}}`
     const answer = `\\frac{${a}}{${b*c}}${o}\\frac{${d*c}}{${b*c}}`
     const condition = undefined
   
@@ -176,7 +176,7 @@ const createExample10 = () => {
     let o
     if((a*n)/(b*d)>(f*n)/(b*c)){o=`>`} else {o=`<`}
 
-    const math = `\\frac{${a}}{${b*d}}...\\frac{${f}}{${b*c}}`
+    const math = `\\frac{${a}}{${b*d}} \\text{ и } \\frac{${f}}{${b*c}}`
     const answer = `\\frac{${(a*n)/(b*d)}}{${n}}${o}\\frac{${(f*n)/(b*c)}}{${n}}`
     const condition = undefined
   

@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, shuffleSingle } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle} from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -14,7 +14,7 @@ const createExample1 = () => {
         else {b=b/10};
         if (a%10===0) {a=(a+1)/10}
         else {a=a/10};
-        const math = `${a}\\cdot ${c} \\ ... \\  ${b} \\cdot ${c}`;
+        const math = `${a}\\cdot ${c} \\text{ и } ${b} \\cdot ${c}`;
         const answer = `${a}\\cdot ${c} ${o} ${b} \\cdot ${c}` 
         const condition = undefined
     
@@ -39,7 +39,7 @@ const createExample2 = () =>{
     else {b=b/10};
     if (a%10===0) {a=(a+1)/10}
     else {a=a/10};
-    const math = `${a}\\cdot ${c} \\ ... \\  ${b} \\cdot ${c}`;
+    const math = `${a}\\cdot ${c} \\text{ и }  ${b} \\cdot ${c}`;
     const answer = `${a}\\cdot ${c} ${o} ${b} \\cdot ${c}` 
     const condition = undefined
 
@@ -64,7 +64,7 @@ const createExample3 = () => {
     else {b=b/10};
     if (a%10===0) {a=(a+1)/10}
     else {a=a/10};
-    const math = `${a}+${c} \\ ... \\  ${b}+${c}`;
+    const math = `${a}+${c} \\text{ и }  ${b}+${c}`;
     const answer = `${a}+ ${c} ${o} ${b} + ${c}` 
     const condition = undefined
 
@@ -91,7 +91,7 @@ const createExample4 = () => {
     else {a=a/10};
     if (c%10===0) {c=(c+1)/10}
     else {c=c/10};
-    const math = `${a}+${c} \\ ... \\  ${b}+${c}`;
+    const math = `${a}+${c} \\text{ и }  ${b}+${c}`;
     const answer = `${a}+ ${c} ${o} ${b} + ${c}` 
     const condition = undefined
 
@@ -118,7 +118,7 @@ const createExample5 = () => {
     else {a=a/10};
     if (c%10===0) {c=(c+1)/10}
     else {c=c/10};
-    const math = `${a}+${c} \\ ... \\  ${b}+${c}`;
+    const math = `${a}+${c} \\text{ и }  ${b}+${c}`;
     const answer = `${a}+ ${c} ${o} ${b} + ${c}` 
     const condition = undefined
 
@@ -143,7 +143,7 @@ const createExample6 = () => {
     else {b=b/100};
     if (a%10===0) {a=(a+1)/100}
     else {a=a/100};
-    const math = `${c}-${a} \\ ... \\  ${c}-${b}`;
+    const math = `${c}-${a} \\text{ и }  ${c}-${b}`;
     const answer = `${c}-${a} ${o} ${c}-${b}` 
     const condition = undefined
 
@@ -168,7 +168,7 @@ const createExample7 = () => {
     else {b=b/100};
     if (a%10===0) {a=(a+1)/100}
     else {a=a/100};
-    const math = `${c}-${a} \\ ... \\  ${c}-${b}`;
+    const math = `${c}-${a} \\text{ и }  ${c}-${b}`;
     const answer = `${c}-${a} ${o} ${c}-${b}` 
     const condition = undefined
 
@@ -185,8 +185,8 @@ const createExample8 = () => {
     let b = getRandomInt(16, 35);
     let c = getRandomInt(20, 50);
 
-    const math = `${c}:\\frac{${b}}{${a}}\\ ... \\  ${c}\\cdot \\frac{${a}}{${b}}`;
-    const answer = `${c}:\\frac{${a}}{${b}}\\ = \\  ${c}\\cdot \\frac{${a}}{${b}}` 
+    const math = `${c}:\\frac{${b}}{${a}} \\text{ и }  ${c}\\cdot \\frac{${a}}{${b}}`;
+    const answer = `${c}:\\frac{${a}}{${b}}\\ = \\ ${c}\\cdot \\frac{${a}}{${b}}` 
     const condition = undefined
 
     return {
@@ -202,7 +202,7 @@ const createExample9 = () =>  {
     let b = getRandomInt(16, 35);
     let c = getRandomInt(20, 50);
 
-    const math = `${c}:\\frac{${a}}{${b}}\\ ... \\  ${c}\\cdot \\frac{${b}}{${a}}`;
+    const math = `${c}:\\frac{${a}}{${b}} \\text{ и } ${c}\\cdot \\frac{${b}}{${a}}`;
     const answer = `${c}:\\frac{${a}}{${b}}\\ = \\  ${c}\\cdot \\frac{${b}}{${a}}` 
     const condition = undefined
 
@@ -220,7 +220,7 @@ const createExample10 = () => {
     let c = getRandomInt(20, 50);
     let d = getRandomInt(70, 99);
 
-    const math = `(${d}+${c}) \\cdot \\frac{${a}}{${b}}\\ ... \\  (${d}+${c}):\\frac{${b}}{${a}}`;
+    const math = `(${d}+${c}) \\cdot \\frac{${a}}{${b}} \\text{ и } (${d}+${c}):\\frac{${b}}{${a}}`;
     const answer = `(${d}+${c}) \\cdot \\frac{${a}}{${b}}\\ = \\  (${d}+${c}):\\frac{${b}}{${a}}` 
     const condition = undefined
 

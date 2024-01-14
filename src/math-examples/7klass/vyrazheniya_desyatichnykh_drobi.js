@@ -1,13 +1,14 @@
-import { getRandomInt, generateVariableName, shuffleSingle } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
         let a = getRandomInt(2, 20);
         let b = getRandomInt(2, 50);
-        if (b%10===0) {b=(b+1)/10}
-        else {b=b/10};
-        const math = `${a}+${b}`;
-        let o = a*10+b*10;
+
+        if (b%10===0) {b=b+1};
+        let o = a+b;
+
+        const math = `${a/10}+${b/10}`;
         const answer = `${o/10}` 
         const condition = undefined
     
@@ -22,10 +23,11 @@ const createExample1 = () => {
 const createExample2 = () => {
     let a = getRandomInt(2, 20);
     let b = getRandomInt(2, 50);
-    if (b%10===0) {b=(b+1)/10}
-    else {b=b/10};
-    const math = `${a}-${b}`;
-    let o = a*10-b*10;
+
+    if (b%10===0) {b=b+1};
+    let o = a-b;
+
+    const math = `${a/10}-${b/10}`;
     const answer = `${o/10}` 
     const condition = undefined
 
@@ -40,12 +42,12 @@ const createExample2 = () => {
 const createExample3 = () => {
     let a = getRandomInt(2, 50);
     let b = getRandomInt(2, 50);
-    if (a%10===0) {a=(a+1)/10}
-    else {a=a/10};
-    if (b%10===0) {b=(b+1)/10}
-    else {b=b/10};
-    const math = `${a}+${b}`;
-    let o = a*10+b*10
+
+    if (a%10===0) {a=a+1};
+    if (b%10===0) {b=b+1};
+    let o = a+b
+
+    const math = `${a/10}+${b/10}`;
     const answer = `${o/10}` 
     const condition = undefined
 
@@ -60,12 +62,12 @@ const createExample3 = () => {
 const createExample4 = () => {
     let a = getRandomInt(2, 50);
     let b = getRandomInt(2, 50);
-    if (a%10===0) {a=(a+1)/10}
-    else {a=a/10};
-    if (b%10===0) {b=(b+1)/10}
-    else {b=b/10};
-    const math = `${a}-${b}`;
-    let o = a*10-b*10
+
+    if (a%10===0) {a=a+1};
+    if (b%10===0) {b=b+1};
+    let o = a-b
+
+    const math = `${a/10}-${b/10}`;
     const answer = `${o/10}` 
     const condition = undefined
 
@@ -81,12 +83,12 @@ const createExample5 = () => {
     let a = getRandomInt(2, 50);
     let b = getRandomInt(2, 50);
     let c = getRandomInt(1, 10);
-    if (a%10===0) {a=(a+1)/10}
-    else {a=a/10};
-    if (b%10===0) {b=(b+1)/10}
-    else {b=b/10};
-    const math = `${a}+${b}+${c}`;
-    let o = a*10+b*10+c*10;
+    
+    if (a%10===0) {a=a+1};
+    if (b%10===0) {b=b+1};
+    let o = a+b+c
+
+    const math = `${a/10}+${b/10}+${c/10}`;
     const answer = `${o/10}` 
     const condition = undefined
 
@@ -102,12 +104,12 @@ const createExample6 = () => {
     let a = getRandomInt(2, 50);
     let b = getRandomInt(2, 50);
     let c = getRandomInt(1, 10);
-    if (a%10===0) {a=(a+1)/10}
-    else {a=a/10};
-    if (b%10===0) {b=(b+1)/10}
-    else {b=b/10};
-    const math = `${a}+${b}-${c}`;
-    let o = a*10+b*10-c*10;
+
+    if (a%10===0) {a=a+1};
+    if (b%10===0) {b=b+1};
+    let o = a+b-c
+
+    const math = `${a/10}+${b/10}-${c/10}`;
     const answer = `${o/10}` 
     const condition = undefined
 
@@ -122,12 +124,12 @@ const createExample6 = () => {
 const createExample7 = () => {
     let a = getRandomInt(2, 50);
     let b = getRandomInt(2, 50);
-    if (a%10===0) {a=(a+1)/10}
-    else {a=a/10};
-    if (b%10===0) {b=(b+1)/10}
-    else {b=b/10};
-    const math = `${a}\\cdot 10+${b}`;
-    let o = Math.floor(a*100+b*10);
+
+    if (a%10===0) {a=a+1};
+    if (b%10===0) {b=b+1};
+    let o = Math.floor(a*10+b);
+
+    const math = `${a/10}\\cdot 10+${b/10}`;
     const answer = `${o/10}` 
     const condition = undefined
 
@@ -142,12 +144,12 @@ const createExample7 = () => {
 const createExample8 = () => {
     let a = getRandomInt(2, 50);
     let b = getRandomInt(2, 50);
-    if (a%10===0) {a=(a+1)/10}
-    else {a=a/10};
-    if (b%10===0) {b=(b+1)/10}
-    else {b=b/10};
-    const math = `${a}\\cdot 10-${b}`;
-    let o = Math.floor(a*100-b*10);
+    
+    if (a%10===0) {a=a+1};
+    if (b%10===0) {b=b+1};
+    let o = a*10-b;
+
+    const math = `${a/10}\\cdot 10-${b/10}`;
     const answer = `${o/10}` 
     const condition = undefined
 
@@ -162,12 +164,12 @@ const createExample8 = () => {
 const createExample9 = () =>  {
     let a = getRandomInt(1, 9);
     let b = getRandomInt(1, 9);
-    if (a%10===0) {a=(a+1)/10}
-    else {a=a/10};
-    if (b%10===0) {b=(b+1)/10}
-    else {b=b/10};
-    const math = `(-${a})\\cdot (-${b})`;
-    let o = Math.floor((a*10)*(b*10));
+
+    if (a%10===0) {a=a+1};
+    if (b%10===0) {b=b+1};
+    let o = a*b;
+
+    const math = `(-${a/10})\\cdot (-${b/10})`;
     const answer = `${o/100}` 
     const condition = undefined
 
@@ -182,12 +184,12 @@ const createExample9 = () =>  {
 const createExample10 = () => {
     let a = getRandomInt(1, 9);
     let b = getRandomInt(1, 9);
-    if (a%10===0) {a=(a+1)/10}
-    else {a=a/10};
-    if (b%10===0) {b=(b+1)/10}
-    else {b=b/10};
-    const math = `(-${a})\\cdot(${b})`;
-    let o = Math.floor((a*10)*(b*10));
+
+    if (a%10===0) {a=a+1};
+    if (b%10===0) {b=b+1};
+    let o = a*b;
+
+    const math = `(-${a/10})\\cdot ${b/10}`;
     const answer = `${-o/100}` 
     const condition = undefined
 

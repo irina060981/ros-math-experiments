@@ -49,7 +49,7 @@ const createExample3 = () => {
 const createExample4 = () => {
     let a = getRandomInt(2, 50);  
 
-    const math = `\\log_{${a}}${a}\\`
+    const math = `\\log_{${a}}${a}`
     const answer = `1`
     const condition = undefined
   
@@ -64,7 +64,7 @@ const createExample4 = () => {
 const createExample5 = () => {
     let a = getRandomInt(2, 50);  
 
-    const math = `\\log_{${a}}1\\`
+    const math = `\\log_{${a}}1`
     const answer = `0`
     const condition = undefined
   
@@ -90,8 +90,6 @@ const createExample6 = () => {
       answer: answer
     }
   }
-
-
 
 const createExample7 = () => {
     let a = getRandomInt(2, 4); 
@@ -130,7 +128,7 @@ const createExample9 = () =>  {
  
     let variable = generateVariableName()
 
-    const math = `${b}\\cdot\\log_{${a}}1\\`
+    const math = `${b}\\cdot\\log_{${a}}1`
     const answer = `0`
     const condition = undefined
 
@@ -145,7 +143,7 @@ const createExample9 = () =>  {
 const createExample10 = () => {
     let a = getRandomInt(11, 29, 20);
 
-    const math = `\\log_{${a/100}}\\frac{${a}}{100}\\`
+    const math = `\\log_{${a/100}}\\frac{${a}}{100}`
     const answer = `1`
     const condition = undefined
 
@@ -156,7 +154,6 @@ const createExample10 = () => {
       answer: answer
     }
   }
-
 
 const examplesFn = [
   createExample1,

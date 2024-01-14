@@ -158,11 +158,11 @@ const createExample9 = () =>  {
     let a = getRandomInt(11, 29, 20)/10;
     let b = getRandomInt(11, 29, 20)/10;
     let c = getRandomInt(11, 29, 20)/10;
-    let o = (a*10+b*10+c*10)/10;
+    let o = (a*10+b*10+c*10);
     let variable = generateVariableName()
 
     const math = `${a}${variable}+${b}${variable}+${c}${variable}`
-    const answer = `${o}${variable}` 
+    const answer = `${o/10}${variable}` 
     const condition = undefined
 
     return {
@@ -177,11 +177,11 @@ const createExample10 = () => {
     let a = getRandomInt(11, 29, 20)/10;
     let b = getRandomInt(11, 29, 20)/10;
     let c = getRandomInt(11, 29, 20)/10;
-    let o = (a*10+b*10+c*10)/10;
+    let o = (a*10+b*10+c*10);
     let variable = generateVariableName()
 
     const math = `${a}${variable}+${b}${variable}+${c}${variable}`
-    const answer = `${o}${variable}` 
+    const answer = `${o/10}${variable}` 
     const condition = undefined
 
     return {

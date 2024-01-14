@@ -1,12 +1,13 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOD } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
     let a = getRandomInt(1, 5);
     let b = getRandomInt(1, 20);
+    let c = a*b
 
-    const math = `${a}\\%ot${b}`
-    const answer = `${(a*b)/100}`
+    const math = `${a} \\text{% от } ${b}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {
@@ -20,9 +21,10 @@ const createExample1 = () => {
 const createExample2 = () => {
     let a = getRandomInt(1, 5);
     let b = getRandomInt(21, 41);
+    let c = a*b
 
-    const math = `${a}\\%ot${b}`
-    const answer = `${(a*b)/100}`
+    const math = `${a} \\text{% от } ${b}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {
@@ -36,9 +38,10 @@ const createExample2 = () => {
 const createExample3 = () =>  {
     let a = getRandomInt(1, 5);
     let b = getRandomInt(42, 62);
+    let c = a*b
 
-    const math = `${a}\\%ot${b}`
-    const answer = `${(a*b)/100}`
+    const math = `${a} \\text{% от } ${b}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {
@@ -48,15 +51,14 @@ const createExample3 = () =>  {
       answer: answer
     }
   }
-
-
 
 const createExample4 = () =>   {
     let a = getRandomInt(1, 5);
     let b = getRandomInt(63, 99);
+    let c = a*b
 
-    const math = `${a}\\%ot${b}`
-    const answer = `${(a*b)/100}`
+    const math = `${a} \\text{% от } ${b}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {
@@ -67,12 +69,10 @@ const createExample4 = () =>   {
     }
   }
 
-
-
 const createExample5 = () =>  {
     let b = getRandomInt(1, 99);
 
-    const math = `50\\%ot${b}`
+    const math = `50 \\text{% от } ${b}`
     const answer = `${(b)/2}`
     const condition = undefined
   
@@ -85,9 +85,9 @@ const createExample5 = () =>  {
   }
 
 const createExample6 = () =>  {
-    let b = getRandomInt(101, 999);
+    let b = getRandomInt(101, 400);
 
-    const math = `50\\%ot${b}`
+    const math = `50 \\text{% от } ${b}`
     const answer = `${b/2}`
     const condition = undefined
   
@@ -99,12 +99,12 @@ const createExample6 = () =>  {
     }
   }
 
-
 const createExample7 = () =>  {
-    let b = 3*getRandomInt(10, 33);
+    let b = 30*getRandomInt(2, 10);
+    let c = b*3
 
-    const math = `30\\%ot${b}`
-    const answer = `${(b*3)/10}`
+    const math = `30 \\text{% от } ${b}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -115,13 +115,12 @@ const createExample7 = () =>  {
     }
   }
 
-
-
 const createExample8 = () =>{
     let b = 5*getRandomInt(2, 20);
+    let c = b*2
 
-    const math = `20\\%ot${b}`
-    const answer = `${(b*2)/10}`
+    const math = `20 \\text{% от } ${b}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -135,7 +134,7 @@ const createExample8 = () =>{
 const createExample9 = () =>  {
     let b = 4*getRandomInt(3, 30);
 
-    const math = `25\\%ot${b}`
+    const math = `25 \\text{% от } ${b}`
     const answer = `${b/4}`
     const condition = undefined
   
@@ -149,9 +148,10 @@ const createExample9 = () =>  {
 
 const createExample10 = () => {
     let b = getRandomInt(2, 100);
+    let c = b*15
 
-    const math = `150\\%ot${b}`
-    const answer = `${b*1.5}`
+    const math = `150 \\text{% от } ${b}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -161,8 +161,6 @@ const createExample10 = () => {
       answer: answer
     }
   }
-
-
 
 const examplesFn = [
   createExample1,

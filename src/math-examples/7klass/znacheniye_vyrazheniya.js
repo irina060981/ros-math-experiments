@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, shuffleSingle } from '@/utility/math-utitility.js'
+import { getRandomInt, generateVariableName, shuffleSingle, generateVariableNameOne, generateVariableNameTwo  } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -57,11 +57,12 @@ const createExample3 = () => {
 const createExample4 = () => {
     let a = getRandomInt(-20, 20, 0);
     let b = getRandomInt(-20, 20, 0);
-    let variable = generateVariableName()
+    let variable1 = generateVariableNameOne()
+    let variable2 = generateVariableNameTwo()
 
-    const math = `${variable}+k`
+    const math = `${variable1}+${variable2}`
     const answer = `${a+b}`
-    const condition = `${variable}=${a}; k=${b}`
+    const condition = `${variable1}=${a}, ${variable2}=${b}`
 
     return {
       id: uuidv4(),
@@ -74,11 +75,12 @@ const createExample4 = () => {
 const createExample5 = () => {
   let a = getRandomInt(-20, 20, 0);  
   let b = getRandomInt(-20, -2);
-  let variable = generateVariableName()
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameTwo()
 
-  const math = `${variable}-w`
+  const math = `${variable1}-${variable2}`
   const answer = `${a-b}`
-  const condition = `${variable}=${a}; w=${b}`
+  const condition = `${variable1}=${a},${variable2}=${b}`
 
   return {
     id: uuidv4(),
@@ -91,11 +93,12 @@ const createExample5 = () => {
 const createExample6 = () => {
   let a = getRandomInt(-20, 20, 0);  
   let b = getRandomInt(-20, 20, 0);
-  let variable = generateVariableName()
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameTwo()
 
-  const math = `-${variable}-k`
+  const math = `-${variable1}-${variable2}`
   const answer = `${-1*(a+b)}`
-  const condition = `${variable}=${a}; k=${b}`
+  const condition = `${variable1}=${a},${variable2}=${b}`
 
   return {
     id: uuidv4(),
@@ -125,11 +128,12 @@ const createExample7 = () => {
 const createExample8 = () => {
   let a = getRandomInt(-20, 20, 0);  
   let b = getRandomInt(-20, 20, 0);
-  let variable = generateVariableName()
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameTwo()
 
-  const math = `-(${variable}+k)`
+  const math = `-(${variable1}+${variable2})`
   const answer = `${-1*(a+b)}`
-  const condition = `${variable}=${a};k=${b}`
+  const condition = `${variable1}=${a},${variable2}=${b}`
 
   return {
     id: uuidv4(),
@@ -147,7 +151,7 @@ const createExample9 = () => {
 
   const math = `${c}+${variable}${a > 0 ? '+' : ''}${a}`
   const answer = `${c+a+b}`
-  const condition = `${variable}=${b};`
+  const condition = `${variable}=${b}`
 
   return {
     id: uuidv4(),
@@ -164,7 +168,7 @@ const createExample10 = () => {
 
   const math = `${variable}${a > 0 ? '+' : ''}${a}`
   const answer = `${b+a}`
-  const condition = `${variable}=${b};`
+  const condition = `${variable}=${b}`
 
   return {
     id: uuidv4(),

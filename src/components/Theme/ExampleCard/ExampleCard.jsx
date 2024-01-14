@@ -29,7 +29,7 @@ export default function ExampleCard ({ example, visibleExamples, setVisibleExamp
 
         { example.condition && example.condition.length > 0 &&
         <Typography className={styles.exampleCondition}>
-            при {`\\(${example.condition}\\)`}
+             {`\\(\\text{при }${example.condition}\\)`}
         </Typography>
         }
       </Stack>
@@ -38,7 +38,7 @@ export default function ExampleCard ({ example, visibleExamples, setVisibleExamp
             visibility: visibleExamples.includes(example.id) ? 'initial' : 'hidden'
           }}
         >
-          Ответ: {`\\(${example.answer}\\)`}
+             {`\\(\\text{Ответ: }${example.answer}\\)`}
           </Typography>
       </MathJax> 
     </Box>

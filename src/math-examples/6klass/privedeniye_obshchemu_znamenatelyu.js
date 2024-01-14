@@ -1,12 +1,12 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOK } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle, NOK } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
     let b = getRandomInt(2, 5);
     let c = getRandomInt(2, 5); 
 
-    const math = `\\frac{1}{${b}} n \\frac{1}{${b*c}}`
-    const answer = `\\frac{${c}}{${b*c}} n \\frac{1}{${b*c}}`
+    const math = `\\frac{1}{${b}} \\text{ и } \\frac{1}{${b*c}}`
+    const answer = `\\frac{${c}}{${b*c}} \\text{ и }  \\frac{1}{${b*c}}`
     const condition = undefined
   
     return {
@@ -21,8 +21,8 @@ const createExample2 = () => {
     let b = getRandomInt(6, 10);
     let c = getRandomInt(2, 5); 
 
-    const math = `\\frac{1}{${b*c}} n \\frac{1}{${b}}`
-    const answer = `\\frac{1}{${b*c}} n \\frac{${c}}{${b*c}}`
+    const math = `\\frac{1}{${b*c}} \\text{ и }  \\frac{1}{${b}}`
+    const answer = `\\frac{1}{${b*c}} \\text{ и }  \\frac{${c}}{${b*c}}`
     const condition = undefined
   
     return {
@@ -37,8 +37,8 @@ const createExample3 = () => {
     let b = getRandomInt(2, 5);
     let c = getRandomInt(6, 10); 
 
-    const math = `\\frac{1}{${b}} n \\frac{1}{${b*c}}`
-    const answer = `\\frac{${c}}{${b*c}} n \\frac{1}{${b*c}}`
+    const math = `\\frac{1}{${b}} \\text{ и }  \\frac{1}{${b*c}}`
+    const answer = `\\frac{${c}}{${b*c}} \\text{ и }  \\frac{1}{${b*c}}`
     const condition = undefined
   
     return {
@@ -52,8 +52,8 @@ const createExample4 = () => {
     let b = getRandomInt(6, 10);
     let c = getRandomInt(6, 10); 
 
-    const math = `\\frac{1}{${b*c}} n \\frac{1}{${b}}`
-    const answer = `\\frac{1}{${b*c}} n \\frac{${c}}{${b*c}}`
+    const math = `\\frac{1}{${b*c}} \\text{ и }  \\frac{1}{${b}}`
+    const answer = `\\frac{1}{${b*c}} \\text{ и }  \\frac{${c}}{${b*c}}`
     const condition = undefined
   
     return {
@@ -70,8 +70,8 @@ const createExample5 = () =>  {
     let d = getRandomInt(2, 5); 
     let n = NOK(b*d, b*c)
 
-    const math = `\\frac{1}{${b*d}} n \\frac{1}{${b*c}}`
-    const answer = `\\frac{${n/(b*d)}}{${n}} n \\frac{${n/(b*c)}}{${n}}`
+    const math = `\\frac{1}{${b*d}} \\text{ и }  \\frac{1}{${b*c}}`
+    const answer = `\\frac{${n/(b*d)}}{${n}} \\text{ и }  \\frac{${n/(b*c)}}{${n}}`
     const condition = undefined
   
     return {
@@ -88,8 +88,8 @@ const createExample6 = () => {
     let c = getRandomInt(2, 5); 
     let d = getRandomInt(2, 5);
 
-    const math = `\\frac{${a}}{${b}} n \\frac{${d}}{${b*c}}`
-    const answer = `\\frac{${a*c}}{${b*c}} n \\frac{${d}}{${b*c}}`
+    const math = `\\frac{${a}}{${b}} \\text{ и }  \\frac{${d}}{${b*c}}`
+    const answer = `\\frac{${a*c}}{${b*c}} \\text{ и }  \\frac{${d}}{${b*c}}`
     const condition = undefined
   
     return {
@@ -106,8 +106,8 @@ const createExample7 = () => {
     let c = getRandomInt(2, 5); 
     let d = getRandomInt(2, 5);
 
-    const math = `\\frac{${a}}{${b*c}} n \\frac{${d}}{${b}}`
-    const answer = `\\frac{${a}}{${b*c}} n \\frac{${d*c}}{${b*c}}`
+    const math = `\\frac{${a}}{${b*c}} \\text{ и }  \\frac{${d}}{${b}}`
+    const answer = `\\frac{${a}}{${b*c}} \\text{ и }  \\frac{${d*c}}{${b*c}}`
     const condition = undefined
   
     return {
@@ -124,8 +124,8 @@ const createExample8 = () => {
     let c = getRandomInt(6, 10); 
     let d = getRandomInt(2, 5);
 
-    const math = `\\frac{${a}}{${b}} n \\frac{${d}}{${b*c}}`
-    const answer = `\\frac{${a*c}}{${b*c}} n \\frac{${d}}{${b*c}}`
+    const math = `\\frac{${a}}{${b}} \\text{ и }  \\frac{${d}}{${b*c}}`
+    const answer = `\\frac{${a*c}}{${b*c}} \\text{ и }  \\frac{${d}}{${b*c}}`
     const condition = undefined
   
     return {
@@ -142,8 +142,8 @@ const createExample9 = () =>  {
     let c = getRandomInt(6, 10); 
     let d = getRandomInt(2, 5);
 
-    const math = `\\frac{${a}}{${b*c}} n \\frac{${d}}{${b}}`
-    const answer = `\\frac{${a}}{${b*c}} n \\frac{${d*c}}{${b*c}}`
+    const math = `\\frac{${a}}{${b*c}} \\text{ и }  \\frac{${d}}{${b}}`
+    const answer = `\\frac{${a}}{${b*c}} \\text{ и }  \\frac{${d*c}}{${b*c}}`
     const condition = undefined
   
     return {
@@ -162,8 +162,8 @@ const createExample10 = () => {
     let d = getRandomInt(2, 5); 
     let n = NOK(b*d, b*c)
 
-    const math = `\\frac{${a}}{${b*d}} n \\frac{${f}}{${b*c}}`
-    const answer = `\\frac{${(a*n)/(b*d)}}{${n}} n \\frac{${(f*n)/(b*c)}}{${n}}`
+    const math = `\\frac{${a}}{${b*d}} \\text{ и }  \\frac{${f}}{${b*c}}`
+    const answer = `\\frac{${(a*n)/(b*d)}}{${n}} \\text{ и }  \\frac{${(f*n)/(b*c)}}{${n}}`
     const condition = undefined
   
     return {

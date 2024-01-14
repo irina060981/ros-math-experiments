@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOK } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle} from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -9,7 +9,7 @@ const createExample1 = () => {
     if (b>c){d='>'}else{d='<'}
     if (b==c) {d='='}
 
-    const math = `\\frac{${b}}{${a}}...\\frac{${c}}{${a}}`
+    const math = `\\frac{${b}}{${a}} \\text{ и } \\frac{${c}}{${a}}`
     const answer = `\\frac{${b}}{${a}}${d}\\frac{${c}}{${a}}`
     const condition = undefined
   
@@ -29,7 +29,7 @@ const createExample2 = () =>{
   if (b>c){d='>'}else{d='<'}
   if (b==c) {d='='}
 
-  const math = `\\frac{${b}}{${a}}...\\frac{${c}}{${a}}`
+  const math = `\\frac{${b}}{${a}} \\text{ и } \\frac{${c}}{${a}}`
   const answer = `\\frac{${b}}{${a}}${d}\\frac{${c}}{${a}}`
   const condition = undefined
 
@@ -49,7 +49,7 @@ const createExample3 = () => {
   if (b>c){d='>'}else{d='<'}
   if (b==c) {d='='}
 
-  const math = `\\frac{${b}}{${a}}...\\frac{${c}}{${a}}`
+  const math = `\\frac{${b}}{${a}} \\text{ и } \\frac{${c}}{${a}}`
   const answer = `\\frac{${b}}{${a}}${d}\\frac{${c}}{${a}}`
   const condition = undefined
 
@@ -69,7 +69,7 @@ const createExample4 = () =>{
   if (b>c){d='<'}else{d='>'}
   if (b==c) {d='='}
 
-  const math = `\\frac{${a}}{${b}}...\\frac{${a}}{${c}}`
+  const math = `\\frac{${a}}{${b}} \\text{ и } \\frac{${a}}{${c}}`
   const answer = `\\frac{${a}}{${b}}${d}\\frac{${a}}{${c}}`
   const condition = undefined
 
@@ -89,7 +89,7 @@ const createExample5 = () =>  {
   if (b>c){d='<'}else{d='>'}
   if (b==c) {d='='}
 
-  const math = `\\frac{${a}}{${b}}...\\frac{${a}}{${c}}`
+  const math = `\\frac{${a}}{${b}} \\text{ и } \\frac{${a}}{${c}}`
   const answer = `\\frac{${a}}{${b}}${d}\\frac{${a}}{${c}}`
   const condition = undefined
 
@@ -109,7 +109,7 @@ const createExample6 = () => {
   if (b>c){d='<'}else{d='>'}
   if (b==c) {d='='}
 
-  const math = `\\frac{${a}}{${b}}...\\frac{${a}}{${c}}`
+  const math = `\\frac{${a}}{${b}} \\text{ и } \\frac{${a}}{${c}}`
   const answer = `\\frac{${a}}{${b}}${d}\\frac{${a}}{${c}}`
   const condition = undefined
 
@@ -125,7 +125,7 @@ const createExample7 = () => {
   let a = getRandomInt(2, 22); 
   let b = getRandomInt(23, 99);
 
-  const math = `\\frac{${a}}{${b}}...1`
+  const math = `\\frac{${a}}{${b}} \\text{ и } 1`
   const answer = `\\frac{${a}}{${b}}<1`
   const condition = undefined
 
@@ -141,7 +141,7 @@ const createExample8 = () => {
   let a = getRandomInt(2, 22); 
   let b = getRandomInt(23, 99);
 
-  const math = `\\frac{${b}}{${a}}...1`
+  const math = `\\frac{${b}}{${a}} \\text{ и } 1`
   const answer = `\\frac{${b}}{${a}}>1`
   const condition = undefined
 
@@ -156,7 +156,7 @@ const createExample8 = () => {
 const createExample9 = () =>   {
   let a = getRandomInt(22, 99); 
 
-  const math = `\\frac{${a}}{${a}}...1`
+  const math = `\\frac{${a}}{${a}} \\text{ и } 1`
   const answer = `\\frac{${a}}{${a}}=1`
   const condition = undefined
 
@@ -176,7 +176,7 @@ const createExample10 = () => {
   if (b>c){d='<'}else{d='>'}
   if (b==c) {d='='}
 
-  const math = `\\frac{${a}}{${b}}...\\frac{${a}}{${c}}`
+  const math = `\\frac{${a}}{${b}} \\text{ и } \\frac{${a}}{${c}}`
   const answer = `\\frac{${a}}{${b}}${d}\\frac{${a}}{${c}}`
   const condition = undefined
 

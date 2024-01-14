@@ -68,8 +68,15 @@ function DEL (x) {
   return arr; 
 }
 
+// Функция повторения чисел. На вход строка для повторения и количество повторений
+function repeatStr(str, n) {
+  var new_str = '';
+  while (n-- > 0) new_str += str;
+  return new_str;
+};
+
 // создать массив чисел от start до stop с шагом step
 const range = (start, stop, step) => 
                      Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step))
 
-export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle, NOD , NOK, DEL, range}
+export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle, NOD , NOK, DEL, range, repeatStr}

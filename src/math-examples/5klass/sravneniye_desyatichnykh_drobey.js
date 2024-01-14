@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOK } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -6,9 +6,9 @@ const createExample1 = () => {
     let b = getRandomInt(2, 9)/10; 
     let c
     if (a>b){c='>'}else{c='<'}
-    if(a==b){c='='}
+    if (a==b){c='='}
 
-    const math = `${a}...${b}`
+    const math = `${a} \\text{ и } ${b}`
     const answer = `${a}${c}${b}`
     const condition = undefined
   
@@ -25,9 +25,9 @@ const createExample2 = () => {
     let b = getRandomInt(11, 21, 20)/10; 
     let c
     if (a>b){c='>'}else{c='<'}
-    if(a==b){c='='}
+    if (a==b){c='='}
 
-    const math = `${a}...${b}`
+    const math = `${a} \\text{ и } ${b}`
     const answer = `${a}${c}${b}`
     const condition = undefined
   
@@ -44,9 +44,9 @@ const createExample3 = () =>  {
     let b = getRandomInt(22, 99)/10; 
     let c
     if (a>b){c='>'}else{c='<'}
-    if(a==b){c='='}
+    if (a==b){c='='}
 
-    const math = `${a}...${b}`
+    const math = `${a} \\text{ и } ${b}`
     const answer = `${a}${c}${b}`
     const condition = undefined
   
@@ -61,7 +61,7 @@ const createExample3 = () =>  {
 const createExample4 = () => {
     let a = getRandomInt(11, 99)/100;
 
-    const math = `${a}...0`
+    const math = `${a} \\text{ и } 0`
     const answer = `${a}>0`
     const condition = undefined
   
@@ -76,7 +76,7 @@ const createExample4 = () => {
 const createExample5 = () => {
     let a = getRandomInt(11, 99)/10;
 
-    const math = `0...${a}`
+    const math = `0 \\text{ и } ${a}`
     const answer = `0<${a}`
     const condition = undefined
   
@@ -93,9 +93,9 @@ const createExample6 = () => {
     let b = getRandomInt(100, 350)/1000; 
     let c
     if (a>b){c='>'}else{c='<'}
-    if(a==b){c='='}
+    if (a==b){c='='}
 
-    const math = `${a}...${b}`
+    const math = `${a} \\text{ и } ${b}`
     const answer = `${a}${c}${b}`
     const condition = undefined
   
@@ -109,9 +109,10 @@ const createExample6 = () => {
 
 const createExample7 = () =>{
     let a = getRandomInt(350, 650);
+    let c = a-1
 
-    const math = `${(a-1)/10}...${a/10}`
-    const answer = `${(a-1)/10}<${a/10}`
+    const math = `${c/10} \\text{ и } ${a/10}`
+    const answer = `${c/10}<${a/10}`
     const condition = undefined
   
     return {
@@ -124,9 +125,10 @@ const createExample7 = () =>{
 
 const createExample8 = () => {
     let a = getRandomInt(350, 650);
+    let c = a-1
 
-    const math = `${(a-1)/100}...${a/100}`
-    const answer = `${(a-1)/100}<${a/100}`
+    const math = `${c/100} \\text{ и } ${a/100}`
+    const answer = `${c/100}<${a/100}`
     const condition = undefined
   
     return {
@@ -139,9 +141,10 @@ const createExample8 = () => {
 
 const createExample9 = () =>  {
     let a = getRandomInt(350, 650);
+    let c = a-1
 
-    const math = `${(a-1)/100}...${a/1000}`
-    const answer = `${(a-1)/100}>${a/1000}`
+    const math = `${c/100} \\text{ и } ${a/1000}`
+    const answer = `${c/100}>${a/1000}`
     const condition = undefined
   
     return {
@@ -151,13 +154,13 @@ const createExample9 = () =>  {
       answer: answer
     }
   }
-
 
 const createExample10 = () => {
     let a = getRandomInt(1001, 9999);
+    let c = a-1
 
-    const math = `${(a-1)/100}...${a/100}`
-    const answer = `${(a-1)/100}<${a/100}`
+    const math = `${c/100} \\text{ и } ${a/100}`
+    const answer = `${c/100}<${a/100}`
     const condition = undefined
   
     return {
@@ -167,8 +170,6 @@ const createExample10 = () => {
       answer: answer
     }
   }
-
-
 
 const examplesFn = [
   createExample1,

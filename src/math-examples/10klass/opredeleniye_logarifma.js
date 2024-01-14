@@ -7,7 +7,7 @@ const createExample1 = () => {
 
     let variable = generateVariableName()
 
-    const math = `\\log_{${a}}${variable}=${b}\\`
+    const math = `\\log_{${a}}${variable}=${b}`
     const answer = `${variable}=${a**b}`
     const condition = undefined
   
@@ -25,7 +25,7 @@ const createExample2 = () => {
  
     let variable = generateVariableName()
 
-    const math = `\\log_{${a}}${a**b}=${variable}\\`
+    const math = `\\log_{${a}}${a**b}=${variable}`
     const answer = `${variable}=${b}`
     const condition = undefined
   
@@ -43,7 +43,7 @@ const createExample3 = () => {
  
     let variable = generateVariableName()
 
-    const math = `\\log_{${variable}}${a**b}=${b}\\`
+    const math = `\\log_{${variable}}${a**b}=${b}`
     const answer = `${variable}=${a}`
     const condition = undefined
   
@@ -61,8 +61,8 @@ const createExample4 = () => {
 
     let variable = generateVariableName()
 
-    const math = `\\log_{${a}}${variable}=${-1*b}\\`
-    const answer = `${variable}=\\frac{1}{${a**b}}\\`
+    const math = `\\log_{${a}}${variable}=${-1*b}`
+    const answer = `${variable}=\\frac{1}{${a**b}}`
     const condition = undefined
   
     return {
@@ -78,7 +78,7 @@ const createExample5 = () => {
  
     let variable = generateVariableName()
 
-    const math = `\\log_{${a}}1=${variable}\\`
+    const math = `\\log_{${a}}1=${variable}`
     const answer = `${variable}=0`
     const condition = undefined
   
@@ -95,7 +95,7 @@ const createExample6 = () => {
  
     let variable = generateVariableName()
 
-    const math = `\\log_{${a}}${a}=${variable}\\`
+    const math = `\\log_{${a}}${a}=${variable}`
     const answer = `${variable}=1`
     const condition = undefined
   
@@ -133,7 +133,7 @@ const createExample8 = () =>  {
  
     let variable = generateVariableName()
 
-    const math = `\\log_{${variable}}${a**b}=${-1*b}\\`
+    const math = `\\log_{${variable}}${a**b}=${-1*b}`
     const answer = `${variable}=\\frac{1}{${a}}`
     const condition = undefined
   
@@ -151,7 +151,7 @@ const createExample9 = () =>  {
  
     let variable = generateVariableName()
 
-    const math = `${b}\\cdot\\log_{${a}}1=${variable}\\`
+    const math = `${b}\\cdot\\log_{${a}}1=${variable}`
     const answer = `${variable}=0`
     const condition = undefined
   
@@ -169,7 +169,7 @@ const createExample10 = () => {
  
     let variable = generateVariableName()
 
-    const math = `${variable}=${b}\\cdot\\log_{${a}}${a}\\`
+    const math = `${variable}=${b}\\cdot\\log_{${a}}${a}`
     const answer = `${variable}=${b}`
     const condition = undefined
   
@@ -180,7 +180,6 @@ const createExample10 = () => {
       answer: answer
     }
   }
-
 
 const examplesFn = [
   createExample1,

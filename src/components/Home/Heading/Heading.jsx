@@ -15,7 +15,8 @@ export default function Heading() {
             Росматика
         </Typography>
         <Typography variant="h5" className={styles.description} paragraph>
-            Ну а тут какое-то описание
+        Задания предназначены для устного закрепления пройденного материала. 
+        Систематические тренировки помогут отработать навыки счёта и применения правил.
         </Typography>
         </Container>
     </Box>

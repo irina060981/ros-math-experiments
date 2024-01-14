@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOD } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle, NOD } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -7,7 +7,7 @@ const createExample1 = () => {
     let c = getRandomInt(2, 5); 
     let n = NOD (a*c, b);
 
-    const math = `\\frac{${a}}{${b}} ot ${c}`
+    const math = `\\frac{${a}}{${b}} \\text{ от } ${c}`
     const answer = `\\frac{${a*c/n}}{${b/n}}`
     const condition = undefined
   
@@ -25,7 +25,7 @@ const createExample2 = () =>  {
     let c = getRandomInt(6, 10); 
     let n = NOD (a*c, b);
 
-    const math = `\\frac{${a}}{${b}} ot ${c}`
+    const math = `\\frac{${a}}{${b}} \\text{ от } ${c}`
     const answer = `\\frac{${a*c/n}}{${b/n}}`
     const condition = undefined
   
@@ -43,7 +43,7 @@ const createExample3 = () =>  {
     let c = getRandomInt(2, 5); 
     let n = NOD (a*c, b);
 
-    const math = `\\frac{${a}}{${b}} ot ${c}`
+    const math = `\\frac{${a}}{${b}} \\text{ от } ${c}`
     const answer = `\\frac{${a*c/n}}{${b/n}}`
     const condition = undefined
   
@@ -62,7 +62,7 @@ const createExample4 = () =>  {
     let c = getRandomInt(6, 10); 
     let n = NOD (a*c, b);
 
-    const math = `\\frac{${a}}{${b}} ot  ${c}`
+    const math = `\\frac{${a}}{${b}} \\text{ от } ${c}`
     const answer = `\\frac{${a*c/n}}{${b/n}}`
     const condition = undefined
   
@@ -74,15 +74,13 @@ const createExample4 = () =>  {
     }
   }
 
-
-
 const createExample5 = () =>  {
     let a = getRandomInt(21, 29);
     let b = getRandomInt(3, 11); 
     let c = getRandomInt(2, 5); 
     let n = NOD (a, b*c);
 
-    const math = `\\frac{1}{${c}} ot \\frac{${a}}{${b}}`
+    const math = `\\frac{1}{${c}} \\text{ от } \\frac{${a}}{${b}}`
     const answer = `\\frac{${a/n}}{${b*c/n}}`
     const condition = undefined
   
@@ -101,7 +99,7 @@ const createExample6 = () => {
     let d = getRandomInt(6, 11);
     let n = NOD (a*c, b*d); 
 
-    const math = `\\frac{${a}}{${b}} ot \\frac{${c}}{${d}}`
+    const math = `\\frac{${a}}{${b}} \\text{ от } \\frac{${c}}{${d}}`
     const answer = `\\frac{${a*c/n}}{${b*d/n}}`
     const condition = undefined
   
@@ -120,7 +118,7 @@ const createExample7 = () =>   {
     let d = getRandomInt(6, 11); 
     let n = NOD (a*c, b*d); 
 
-    const math = `\\frac{${a}}{${b}} ot \\frac{${c}}{${d}}`
+    const math = `\\frac{${a}}{${b}} \\text{ от } \\frac{${c}}{${d}}`
     const answer = `\\frac{${a*c/n}}{${b*d/n}}`
     const condition = undefined
   
@@ -139,7 +137,7 @@ const createExample8 = () => {
     let d = getRandomInt(6, 11); 
     let n = NOD ((a/11)*d, b*(c/11)); 
 
-    const math = `\\frac{${a}}{${b}} ot \\frac{${d}}{${c}}`
+    const math = `\\frac{${a}}{${b}} \\text{ от } \\frac{${d}}{${c}}`
     const answer = `\\frac{${(a/11)*d}}{${b*(c/11)}}`
     const condition = undefined
   
@@ -158,7 +156,7 @@ const createExample9 = () =>   {
     let d = getRandomInt(6, 11); 
     let n = NOD ((a/10)*d, b*(c/10)); 
 
-    const math = `\\frac{${a}}{${b}} ot \\frac{${d}}{${c}}`
+    const math = `\\frac{${a}}{${b}} \\text{ от } \\frac{${d}}{${c}}`
     const answer = `\\frac{${(a/10)*d/n}}{${b*(c/10)/n}}`
     const condition = undefined
   
@@ -177,7 +175,7 @@ const createExample10 = () =>  {
     let d = getRandomInt(6, 11); 
     let n = NOD ((a/100)*d, b*(c/100)); 
 
-    const math = `\\frac{${a}}{${b}} ot \\frac{${d}}{${c}}`
+    const math = `\\frac{${a}}{${b}} \\text{ от } \\frac{${d}}{${c}}`
     const answer = `\\frac{${(a/100)*d/n}}{${b*(c/100)/n}}`
     const condition = undefined
   

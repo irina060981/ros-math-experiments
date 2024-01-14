@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { LineChart } from '@mui/x-charts/LineChart';
-import { getRandomInt, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffleSingle } from '@/utility/math-utitility.js'
+import { getRandomInt} from '@/utility/math-utitility.js'
 import { Battery20Rounded } from '@mui/icons-material';
-
+import { Box, Button, Container } from '@mui/material';
 
 export default function BasicLineChart() {
 
@@ -28,6 +28,17 @@ let b6 = getRandomInt(-2, 2);
     //Ответ: зависит от задания. обычно это промежуток вида [-12; (-12+a1)/2]
   
   return (
+    <Box >
+        <Container maxWidth="lg">
+        <Box >              
+                <Button variant="contained"
+                        onClick={(e) => generateCharts()}
+                >
+                    Пересоздать
+                </Button>
+        </Box>
+        </Container>
+
     <LineChart
       xAxis={[{ data: [-12, (-12+a1)/2, a1, (a1+a2)/2, a2, (a2+a3)/2, a3, (12+a3)/2, 12] ,  max: 12, min: -12, tickInterval: shkala}
     ]}
@@ -36,7 +47,7 @@ let b6 = getRandomInt(-2, 2);
         { id: 'linearAxis', scaleType: 'linear', max: 10, min: -10, tickInterval: shkala}
     ]}
 
-
+  
       series={[
         {
           data: [b6, b1, 0, b2, 0, b3, 0, b4 ,b5],
@@ -66,8 +77,9 @@ disableAxisListener
         }}
 
         tooltip={{ trigger: 'none' }}
-
-
+        
+        
     />
+    </Box >
   );
 }
