@@ -15,7 +15,7 @@ export default function NavBar () {
               </Typography>
             </a>
 
-            <a href='/charts' className={styles.logoLink} >Графики</a>
+            {(1==0) && (<a href='/charts' className={styles.logoLink} >Графики</a>)}
           </Toolbar>
       </AppBar>
     )

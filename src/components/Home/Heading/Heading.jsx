@@ -5,7 +5,7 @@ import styles from './Heading.module.scss'
 export default function Heading() {
     return (
     <Box className={styles.container}>
-        <Container maxWidth="sm">
+        <Container maxWidth="lg">
         <Typography
             className={styles.heading}
             component="h1"
@@ -15,8 +15,8 @@ export default function Heading() {
             Росматика
         </Typography>
         <Typography variant="h5" className={styles.description} paragraph>
-        Задания предназначены для устного закрепления пройденного материала. 
-        Систематические тренировки помогут отработать навыки счёта и применения правил.
+            Задания предназначены для устного закрепления пройденного материала. <br />
+            Систематические тренировки помогут отработать навыки счёта и применения правил.
         </Typography>
         </Container>
     </Box>
