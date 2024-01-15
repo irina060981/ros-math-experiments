@@ -69,8 +69,6 @@ const createExample4 = () =>  {
     }
 }
 
-
-
 const createExample5 = () =>   {
     let a = getRandomInt(2, 5);
     let b = a*getRandomInt(2, 5);
@@ -87,7 +85,6 @@ const createExample5 = () =>   {
       answer: answer
     }
 }
-
 
 const createExample6 = () =>   {
     let a = getRandomInt(2, 5);
@@ -107,7 +104,6 @@ const createExample6 = () =>   {
       answer: answer
     }
 }
-
 
 const createExample7 = () =>  {
     let a = getRandomInt(2, 5);

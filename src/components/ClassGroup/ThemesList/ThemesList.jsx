@@ -7,7 +7,6 @@ import styles from './ThemesList.module.scss'
 import { useClassC } from '@/contexts/classContext';
 
 export default function ThemesList({ classId}) {
-    console.log('classId - ', classId)
     const { classC } = useClassC();
     const themes = Object.values(classC.getThemes(classId))
 

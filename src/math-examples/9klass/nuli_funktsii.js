@@ -57,7 +57,7 @@ const createExample4 = () =>{
     let a = getRandomInt(2, 5);
 
     const math = `y=x^{2}-${a*a}`
-    const answer = `(${a};0), (-${a};0)` 
+    const answer = `(${a};0) \\text{ и } (-${a};0)` 
     const condition = undefined
 
     return {
@@ -87,7 +87,7 @@ const createExample6 = () =>  {
     let a = getRandomInt(2, 30);
 
     const math = `y=x(x-${a})`
-    const answer = `(0;0), (${a};0)` 
+    const answer = `(0;0) \\text{ и } (${a};0)` 
     const condition = undefined
 
     return {
@@ -102,7 +102,7 @@ const createExample7 = () => {
     let a = getRandomInt(2, 30);
 
     const math = `y=x^2-${a}x`
-    const answer =  `(0;0), (${a};0)` 
+    const answer =  `(0;0) \\text{ и } (${a};0)` 
     const condition = undefined
 
     return {

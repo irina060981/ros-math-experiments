@@ -1,11 +1,5 @@
-import { getRandomInt, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffleSingle } from '@/utility/math-utitility.js'
+import { getRandomInt, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffleSingle, repeatStr } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
-
-function repeatStr(str, n) {
-    var new_str = '';
-    while (n-- > 0) new_str += str;
-    return new_str;
-};
 
 const createExample1 = () => {
     let a = getRandomInt(2, 20);  
@@ -44,7 +38,7 @@ const createExample3 = () =>  {
     let b = getRandomInt(3, 7);
     let c = getRandomInt(11, 30);
 
-    const math = repeatStr(`\\frac{${a}}{${c}}\\cdot\\ `, `${b}`)+`\\frac{${a}}{${c}}\\`
+    const math = repeatStr(`\\frac{${a}}{${c}}\\cdot`, `${b}`)+`\\frac{${a}}{${c}}`
     const answer = `\\left(\\frac{${a}}{${c}}\\right)^{${b+1}}`       
     const condition = undefined
   
@@ -143,7 +137,7 @@ const createExample8 = () => {
   }
 
 const createExample9 = () => {
-    let a = getRandomInt(5, 50);
+    let a = getRandomInt(6, 50);
     let variable = generateVariableName()
 
     const math = `\\underbrace{${variable}\\cdot ${variable} \\cdot ${variable} \\cdot...\\cdot ${variable}}_{${a}}`

@@ -1,11 +1,11 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOK } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle} from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
     let a = getRandomInt(2, 10);
     let b = getRandomInt(20, 55); 
 
-    const math = `${a}...${b}`
+    const math = `${a} \\text{ и } ${b}`
     const answer = `${a}<${b}`
     const condition = undefined
   
@@ -21,7 +21,7 @@ const createExample2 = () => {
     let a = getRandomInt(2, 10);
     let b = getRandomInt(2, 10); 
 
-    const math = `${a}...-${b}`
+    const math = `${a} \\text{ и } -${b}`
     const answer = `${a}>-${b}`
     const condition = undefined
   
@@ -37,7 +37,7 @@ const createExample3 = () => {
     let a = getRandomInt(30, 99);
     let b = getRandomInt(2, 5); 
 
-    const math = `-${a}...${b}`
+    const math = `-${a} \\text{ и } ${b}`
     const answer = `-${a}<${b}`
     const condition = undefined
   
@@ -52,8 +52,7 @@ const createExample3 = () => {
 const createExample4 = () =>{
     let a = getRandomInt(30, 99);
 
-
-    const math = `-${a}...0`
+    const math = `-${a} \\text{ и } 0`
     const answer = `-${a}<0`
     const condition = undefined
   
@@ -68,8 +67,7 @@ const createExample4 = () =>{
 const createExample5 = () =>  {
     let a = getRandomInt(30, 99);
 
-
-    const math = `${a}...0`
+    const math = `${a} \\text{ и } 0`
     const answer = `${a}>0`
     const condition = undefined
   
@@ -88,9 +86,7 @@ const createExample6 = () => {
     if(a>b){c='<'} else{c='>'}
     if(a==b){c='='}
     
-
-
-    const math = `-${a}...-${b}`
+    const math = `-${a} \\text{ и } -${b}`
     const answer = `-${a}${c}-${b}`
     const condition = undefined
   
@@ -109,9 +105,7 @@ const createExample7 = () => {
     if(a>b){c='<'} else{c='>'}
     if(a==b){c='='}
     
-
-
-    const math = `-${a}...-${b}`
+    const math = `-${a} \\text{ и } -${b}`
     const answer = `-${a}${c}-${b}`
     const condition = undefined
   
@@ -130,9 +124,7 @@ const createExample8 = () => {
     if(a>b){c='<'} else{c='>'}
     if(a==b){c='='}
     
-
-
-    const math = `-${a}...-${b}`
+    const math = `-${a} \\text{ и } -${b}`
     const answer = `-${a}${c}-${b}`
     const condition = undefined
   
@@ -148,7 +140,7 @@ const createExample9 = () =>  {
     let a = getRandomInt(26, 50);
     let b = getRandomInt(26, 50); 
 
-    const math = `\\left|-${a}\\right|...-${b}`
+    const math = `\\left|-${a}\\right| \\text{ и } -${b}`
     const answer = `${a}>-${b}`
     const condition = undefined
   
@@ -164,7 +156,7 @@ const createExample10 = () => {
     let a = getRandomInt(26, 50);
     let b = getRandomInt(2, 10); 
 
-    const math = `\\left|-${a}\\right|...\\left|-${b}\\right|`
+    const math = `\\left|-${a}\\right| \\text{ и } \\left|-${b}\\right|`
     const answer = `${a}>${b}`
     const condition = undefined
   
@@ -175,7 +167,6 @@ const createExample10 = () => {
       answer: answer
     }
   }
-
 
 const examplesFn = [
   createExample1,

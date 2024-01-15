@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, shuffleSingle } from '@/utility/math-utitility.js'
+import { getRandomInt, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffleSingle } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -92,10 +92,11 @@ const createExample5 = () => {
 const createExample6 = () => {
   let a = getRandomInt(2, 10);
   let b = getRandomInt(-20, -12);
-  let variable = generateVariableName()
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameOne()
 
-  const math = `\\left(\\frac{${variable}}{k}\\right)^{${a}}\\left(\\frac {${variable}}{k}\\right)^{${b}}`
-  const answer = `\\frac{k^{${-1*(a+b)}}}{${variable}^{${-1*(a+b)}}}`
+  const math = `\\left(\\frac{${variable1}}{${variable2}}\\right)^{${a}}\\left(\\frac {${variable1}}{${variable2}}\\right)^{${b}}`
+  const answer = `\\frac{${variable2}^{${-1*(a+b)}}}{${variable1}^{${-1*(a+b)}}}`
   const condition = undefined
 
   return {
@@ -109,10 +110,11 @@ const createExample6 = () => {
 const createExample7 = () => {
   let b = getRandomInt(2, 10);
   let a = getRandomInt(-20, -12);
-  let variable = generateVariableName()
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameOne()
 
-  const math = `(${variable}m)^{${a}}(${variable}m)^{${b}}`
-  const answer = `\\frac{1}{(${variable}m)^{${-1*(a+b)}}}`
+  const math = `(${variable1}${variable2})^{${a}}(${variable1}${variable2})^{${b}}`
+  const answer = `\\frac{1}{(${variable1}${variable2})^{${-1*(a+b)}}}`
   const condition = undefined
 
   return {
@@ -144,9 +146,11 @@ const createExample9 = () => {
   let b = getRandomInt(-20, -12);
   let a = getRandomInt(2, 10);
   let variable = generateVariableName()
+  let variable1 = generateVariableNameOne()
+  let variable2 = generateVariableNameOne()
 
-  const math = `(${variable}-k)^{${a}}(${variable}-k)^{${b}}`
-  const answer = `\\frac{1}{(${variable}-k)^{${-1*(a+b)}}}`
+  const math = `(${variable1}-${variable2})^{${a}}(${variable1}-${variable2})^{${b}}`
+  const answer = `\\frac{1}{(${variable1}-${variable2})^{${-1*(a+b)}}}`
   const condition = undefined
 
   return {

@@ -124,7 +124,7 @@ const createExample9 = () => {
     let variable= generateVariableName()
     const math = `\\left(\\frac{1}{${variable}}\\right)^{-1}`
     const answer = `${a}`    
-    const condition = `a=${a}`
+    const condition = `${variable}=${a}`
   
     return {
       id: uuidv4(),
@@ -140,7 +140,7 @@ const createExample10 = () =>  {
     let variable= generateVariableName()
     const math = `\\left(\\frac{1}{${variable}}\\right)^{-2}`
     const answer = `${a*a}`    
-    const condition = `a=${a}`
+    const condition = `${variable}=${a}`
   
     return {
       id: uuidv4(),

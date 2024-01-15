@@ -12,14 +12,14 @@ const getRandomPeremen = (arr) => {
     return arr[rand];
 };
 
-// генерирует имя для случайной переменной. f,i,o,g,j исключена 
+// генерирует имя для случайной переменной. f,i,o,g,j исключена (e исключена как особенное число)
 const generateVariableName = () => {
-    const variables = ['a', 'b', 'c', 'd', 'e', 'h', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    const variables = ['a', 'b', 'c', 'd', 'h', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     return getRandomPeremen(variables)
 }
-// генерирует имя для случайной переменной f,i,o,g,h,j исключена 
+// генерирует имя для случайной переменной f,i,o,g,h,j исключена (e исключена как особенное число)
 const generateVariableNameOne = () => {
-  const variables = ['a', 'b', 'c', 'd', 'e', 'k', 'l', 'm', 'n'];
+  const variables = ['a', 'b', 'c', 'd', 'k', 'l', 'm', 'n'];
   return getRandomPeremen(variables)
 }
 // генерирует имя для случайной переменной t исключена
@@ -68,4 +68,15 @@ function DEL (x) {
   return arr; 
 }
 
-export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle, NOD , NOK, DEL}
+// Функция повторения чисел. На вход строка для повторения и количество повторений
+function repeatStr(str, n) {
+  var new_str = '';
+  while (n-- > 0) new_str += str;
+  return new_str;
+};
+
+// создать массив чисел от start до stop с шагом step
+const range = (start, stop, step) => 
+                     Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step))
+
+export { getRandomInt, getRandomPeremen, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffle, shuffleSingle, NOD , NOK, DEL, range, repeatStr}

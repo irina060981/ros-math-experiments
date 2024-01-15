@@ -1,12 +1,13 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOK } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
     let a = getRandomInt(2, 9);
-    let b = getRandomInt(2, 9); 
+    let b = getRandomInt(2, 9);
+    let c = a+b
 
     const math = `${a/10}+${b/10}`
-    const answer = `${(a+b)/10}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -20,9 +21,10 @@ const createExample1 = () => {
 const createExample2 = () => {
     let a = getRandomInt(11, 19);
     let b = getRandomInt(11, 19);
+    let c = a+b
 
     const math = `${a/10}+${b/10}`
-    const answer = `${(a+b)/10}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -36,9 +38,10 @@ const createExample2 = () => {
 const createExample3 = () => {
     let a = getRandomInt(21, 39, 30);
     let b = getRandomInt(21, 39, 30);
+    let c = a+b
 
     const math = `${a/10}+${b/10}`
-    const answer = `${(a+b)/10}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -52,9 +55,10 @@ const createExample3 = () => {
 const createExample4 = () => {
     let a = getRandomInt(21, 39, 30);
     let b = getRandomInt(2, 9);
+    let c = a-b
 
     const math = `${a/10}-${b/10}`
-    const answer = `${(a-b)/10}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -68,9 +72,10 @@ const createExample4 = () => {
 const createExample5 = () =>  {
     let a = getRandomInt(41, 59, 50);
     let b = getRandomInt(11, 19);
+    let c = a-b
 
     const math = `${a/10}-${b/10}`
-    const answer = `${(a-b)/10}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -83,10 +88,11 @@ const createExample5 = () =>  {
 
 const createExample6 = () => {
     let a = getRandomInt(2, 9);
-    let b = getRandomInt(2, 9); 
+    let b = getRandomInt(2, 9);
+    let c = 10*a+b
 
     const math = `${a/10}+${b/100}`
-    const answer = `${(10*a+b)/100}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {
@@ -100,9 +106,10 @@ const createExample6 = () => {
 const createExample7 = () =>{
     let a = getRandomInt(2, 9);
     let b = getRandomInt(2, 9); 
+    let c = 10*a-b
 
     const math = `${a/10}-${b/100}`
-    const answer = `${(10*a-b)/100}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {
@@ -116,9 +123,10 @@ const createExample7 = () =>{
 const createExample8 = () => {
     let a = getRandomInt(101, 999);
     let b = getRandomInt(11, 21); 
+    let c = a+10*b
 
     const math = `${a/1000}+${b/100}`
-    const answer = `${(a+10*b)/1000}`
+    const answer = `${c/1000}`
     const condition = undefined
   
     return {
@@ -132,9 +140,10 @@ const createExample8 = () => {
 const createExample9 = () =>   {
     let a = getRandomInt(1001, 9999);
     let b = getRandomInt(11, 21); 
+    let c = a-b
 
     const math = `${a/10}-${b/10}`
-    const answer = `${(a-b)/10}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -149,9 +158,10 @@ const createExample9 = () =>   {
 const createExample10 = () => {
     let a = getRandomInt(51, 99);
     let b = getRandomInt(51, 149); 
+    let c = 10*a-b
 
     const math = `${a/10}-${b/100}`
-    const answer = `${(10*a-b)/100}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {

@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOD } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -81,9 +81,10 @@ const createExample5 = () =>   {
 
 const createExample6 = () => {
     let a = getRandomInt(1,9);
+    let c = a*5
 
     const math = `\\frac{${a}}{20}`
-    const answer = `${(a*5)/100}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {
@@ -96,9 +97,10 @@ const createExample6 = () => {
 
 const createExample7 = () =>  {
     let a = getRandomInt(10,19);
+    let c = a*5
 
     const math = `\\frac{${a}}{20}`
-    const answer = `${(a*5)/100}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {
@@ -111,9 +113,10 @@ const createExample7 = () =>  {
 
 const createExample8 = () => {
     let a = getRandomInt(1,9);
+    let c = a*4
 
     const math = `\\frac{${a}}{25}`
-    const answer = `${(a*4)/100}`
+    const answer = `${c/100}`
     const condition = undefined
   
     return {
@@ -126,9 +129,10 @@ const createExample8 = () => {
 
 const createExample9 = () =>    {
     let a = getRandomInt(1, 9, 5);
+    let c = a*2
 
     const math = `\\frac{${a}}{5}`
-    const answer = `${(a*2)/10}`
+    const answer = `${c/10}`
     const condition = undefined
   
     return {
@@ -141,9 +145,10 @@ const createExample9 = () =>    {
 
 const createExample10 = () =>    {
     let a = getRandomInt(2, 99);
+    let c = a*5
 
     const math = `\\frac{${a}}{200}`
-    const answer = `${(a*5)/1000}`
+    const answer = `${c/1000}`
     const condition = undefined
   
     return {

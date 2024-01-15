@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
         let a = getRandomInt(1, 10);
-        let b = 10*getRandomInt(1, 5);
+        let b = getRandomInt(1, 5)*10;
         let c = getRandomInt(1, 5);
     
         const math = `${b-c}+${a}+${c}`
@@ -20,7 +20,7 @@ const createExample1 = () => {
 
 const createExample2 = () =>  {
   let a = getRandomInt(11, 21);
-  let b = 10*getRandomInt(1, 5);
+  let b = getRandomInt(1, 5)*10;
   let c = getRandomInt(1, 5);
 
   const math = `${b-c}+${a}+${c}`
@@ -36,8 +36,8 @@ const createExample2 = () =>  {
 }
 
 const createExample3 = () => {
-  let a = 10*getRandomInt(1, 5);
-  let b = 10*getRandomInt(1, 5);
+  let a = getRandomInt(1, 5)*10;
+  let b = getRandomInt(1, 5)*10;
   let c = getRandomInt(1, 5);
   let d = getRandomInt(1, 5);
 
@@ -54,8 +54,8 @@ const createExample3 = () => {
 }
 
 const createExample4 = () =>  {
-  let a = 10*getRandomInt(1, 5);
-  let b = 10*getRandomInt(1, 5);
+  let a = getRandomInt(1, 5)*10;
+  let b = getRandomInt(1, 5)*10;
   let c = getRandomInt(6, 9);
   let d = getRandomInt(6, 9);
 
@@ -72,8 +72,8 @@ const createExample4 = () =>  {
 }
 
 const createExample5 = () => {
-  let a = 10*getRandomInt(1, 5);
-  let b = 10*getRandomInt(1, 5);
+  let a = getRandomInt(1, 5)*10;
+  let b = getRandomInt(1, 5)*10;
   let c = getRandomInt(1, 5);
   let d = getRandomInt(1, 5);
 
@@ -91,7 +91,7 @@ const createExample5 = () => {
 
 const createExample6 = () =>   {
     let a = getRandomInt(2, 10);
-    let b = 10*getRandomInt(2, 10);
+    let b = getRandomInt(2, 10)*10;
     let c = getRandomInt(2, 5);
 
     const math = `(${b-c}+${a})+${c}`
@@ -109,7 +109,7 @@ const createExample6 = () =>   {
 
 const createExample7 = () =>  {
   let a = getRandomInt(11, 21);
-  let b = 10*getRandomInt(2, 10);
+  let b = getRandomInt(2, 10)*10;
   let c = getRandomInt(6, 10);
 
   const math = `(${b-c}+${a})+${c}`
@@ -126,7 +126,7 @@ const createExample7 = () =>  {
 
 const createExample8 = () => {
   let a = getRandomInt(11, 21);
-  let b = 100*getRandomInt(2, 10);
+  let b = getRandomInt(2, 10)*100;
   let c = getRandomInt(50, 99);
 
   const math = `${c}+(${b-c}+${a})`
@@ -143,7 +143,7 @@ const createExample8 = () => {
 
 const createExample9 = () =>  {
   let a = getRandomInt(11, 21);
-  let b = 100*getRandomInt(2, 10);
+  let b = getRandomInt(2, 10)*100;
   let c = getRandomInt(50, 99);
 
   const math = `${c}+(${a}+${b-c})`
@@ -159,7 +159,7 @@ const createExample9 = () =>  {
 }
 
 const createExample10 = () => {
-  let b = 100*getRandomInt(2, 10);
+  let b = getRandomInt(2, 10)*100;
   let c = getRandomInt(50, 99);
   let variable = generateVariableName()
 

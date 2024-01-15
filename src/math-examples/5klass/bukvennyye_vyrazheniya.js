@@ -7,7 +7,7 @@ const createExample1 = () => {
     let variable = generateVariableName()
 
     const math = `${variable}+${a}`
-    const answer = `${b + a}`;
+    const answer = `${b+a}`;
     const condition = `${variable}=${b}`
   
     return {
@@ -24,7 +24,7 @@ const createExample2 = () => {
     let variable = generateVariableName()
 
     const math = `${variable}+${a}`
-    const answer = `${b + a}`;
+    const answer = `${b+a}`;
     const condition = `${variable}=${b}`
   
     return {
@@ -41,7 +41,7 @@ const createExample3 = () =>{
     let variable = generateVariableName()
 
     const math = `${a}+${variable}`
-    const answer = `${b + a}`;
+    const answer = `${b+a}`;
     const condition = `${variable}=${b}`
   
     return {
@@ -59,7 +59,7 @@ const createExample4 = () =>{
     let variable = generateVariableName()
 
     const math = `${a-c}+${variable}+${c}`
-    const answer = `${b + a}`;
+    const answer = `${b+a}`;
     const condition = `${variable}=${b}`
   
     return {
@@ -113,7 +113,7 @@ const createExample7 = () => {
   
   const math = `${variable1}+${variable2}`
   const answer = `${a+b}`
-  const condition = `${variable1}=${a}; ${variable2}=${b}`
+  const condition = `${variable1}=${a}, ${variable2}=${b}`
 
   return {
     id: uuidv4(),
@@ -131,7 +131,7 @@ const createExample8 = () =>  {
     
     const math = `${variable1}+${variable2}`
     const answer = `${a+b}`
-    const condition = `${variable1}=${a}; ${variable2}=${b}`
+    const condition = `${variable1}=${a}, ${variable2}=${b}`
   
     return {
       id: uuidv4(),
@@ -150,7 +150,7 @@ const createExample9 = () => {
     
     const math = `${variable1}+${variable2}+${c}`
     const answer = `${a+b+c}`
-    const condition = `${variable1}=${a}; ${variable2}=${b}`
+    const condition = `${variable1}=${a}, ${variable2}=${b}`
   
     return {
       id: uuidv4(),
@@ -169,7 +169,7 @@ const createExample10 = () =>  {
     
     const math = `${variable1}-${c}+${variable2}`
     const answer = `${a-c+b}`
-    const condition = `${variable1}=${a}; ${variable2}=${b}`
+    const condition = `${variable1}=${a}, ${variable2}=${b}`
   
     return {
       id: uuidv4(),

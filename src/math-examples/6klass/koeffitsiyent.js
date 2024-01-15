@@ -4,10 +4,10 @@ import { v4 as uuidv4 } from 'uuid'
 const createExample1 = () => {
     let a = getRandomInt(2, 10);
     let b = getRandomInt(2, 10);
-    let variable1 = generateVariableName()
+    let variable = generateVariableName()
 
-    const math = `${a}\\cdot ${b}${variable1}`
-    const answer = `${a*b}${variable1}`       
+    const math = `${a}\\cdot ${b}${variable}`
+    const answer = `${a*b}${variable}`       
     const condition = undefined
   
     return {
@@ -21,10 +21,10 @@ const createExample1 = () => {
 const createExample2 = () => {
     let a = getRandomInt(2, 10);
     let b = getRandomInt(2, 10);
-    let variable1 = generateVariableName()
+    let variable = generateVariableName()
 
-    const math = `-${a}\\cdot${b}\\cdot ${variable1}`
-    const answer = `-${a*b}${variable1}`       
+    const math = `-${a}\\cdot${b}\\cdot ${variable}`
+    const answer = `-${a*b}${variable}`       
     const condition = undefined
   
     return {
@@ -38,10 +38,10 @@ const createExample2 = () => {
 const createExample3 = () => {
     let a = getRandomInt(2, 10);
     let b = getRandomInt(2, 10);
-    let variable1 = generateVariableName()
+    let variable = generateVariableName()
 
-    const math = `-${a}\\cdot (${b}${variable1})`
-    const answer = `-${a*b}${variable1}`       
+    const math = `-${a}\\cdot (${b}${variable})`
+    const answer = `-${a*b}${variable}`       
     const condition = undefined
   
     return {
@@ -55,10 +55,10 @@ const createExample3 = () => {
 const createExample4 = () =>  {
     let a = getRandomInt(9, 99);
     let c = a/100;
-    let variable1 = generateVariableName()
+    let variable = generateVariableName()
 
-    const math = `${c}\\cdot(-10${variable1})`
-    const answer = `-${(a/10)}${variable1}`       
+    const math = `${c}\\cdot(-10${variable})`
+    const answer = `-${(a/10)}${variable}`       
     const condition = undefined
   
     return {
@@ -72,10 +72,10 @@ const createExample4 = () =>  {
 const createExample5 = () => {
     let a = getRandomInt(2, 10);
     let b = getRandomInt(2, 10);
-    let variable1 = generateVariableName()
+    let variable = generateVariableName()
 
-    const math = `-${a}\\cdot (-${variable1})\\cdot (-${b})`
-    const answer = `-${a*b}${variable1}`       
+    const math = `-${a}\\cdot (-${variable})\\cdot (-${b})`
+    const answer = `-${a*b}${variable}`       
     const condition = undefined
   
     return {
@@ -107,10 +107,10 @@ const createExample6 = () =>  {
 const createExample7 = () => {
   let a = getRandomInt(2, 10);
   let b = getRandomInt(2, 10);
-  let variable1 = generateVariableName()
+  let variable = generateVariableName()
 
-  const math = `-${a}\\cdot (-${b}) \\cdot (-${variable1})`
-  const answer = `-${a*b}${variable1}`       
+  const math = `-${a}\\cdot (-${b}) \\cdot (-${variable})`
+  const answer = `-${a*b}${variable}`       
   const condition = undefined
 
   return {

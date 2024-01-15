@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, shuffleSingle } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -6,7 +6,7 @@ const createExample1 = () => {
         let c = getRandomInt(2, 10);
     
         const math = `y=${a}x+${c}`
-        const answer = `\\nearrow` 
+        const answer = `\\text{Возрастает}` 
         const condition = undefined
     
         return {
@@ -22,7 +22,7 @@ const createExample2 = () => {
     let c = getRandomInt(11, 20);
 
     const math = `y=${a}x+${c}`
-    const answer = `\\nearrow` 
+    const answer = `\\text{Возрастает}` 
     const condition = undefined
 
     return {
@@ -38,7 +38,7 @@ const createExample3 = () => {
     let c = getRandomInt(11, 20);
 
     const math = `y=${a}x+${c}`
-    const answer = `\\searrow` 
+    const answer = `\\text{Убывает}`  
     const condition = undefined
 
     return {
@@ -54,7 +54,7 @@ const createExample4 = () =>{
     let c = getRandomInt(-10, -2);
 
     const math = `y=${a}x${c}`
-    const answer = `\\searrow` 
+    const answer = `\\text{Убывает}`  
     const condition = undefined
 
     return {
@@ -68,7 +68,7 @@ const createExample4 = () =>{
 const createExample5 = () => {
 
     const math = `y=-x`
-    const answer = `\\searrow` 
+    const answer = `\\text{Убывает}`  
     const condition = undefined
 
     return {
@@ -83,7 +83,7 @@ const createExample6 = () => {
     let a = getRandomInt(11, 20);
 
     const math = `y=${a}x`
-    const answer = `\\nearrow` 
+    const answer = `\\text{Возрастает}` 
     const condition = undefined
 
     return {
@@ -99,7 +99,7 @@ const createExample7 = () => {
     let c = getRandomInt(2, 10);
 
     const math = `y=${c}+\\frac{1}{${a}}x`
-    const answer = `\\nearrow` 
+    const answer = `\\text{Возрастает}` 
     const condition = undefined
 
     return {
@@ -115,7 +115,7 @@ const createExample8 = () => {
     let c = getRandomInt(2, 10);
 
     const math = `y=${c}-\\frac{x}{${a}}`
-    const answer = `\\searrow` 
+    const answer = `\\text{Убывает}`  
     const condition = undefined
 
     return {
@@ -131,7 +131,7 @@ const createExample9 = () =>   {
     let c = getRandomInt(2, 9);
 
     const math = `y=${c/10}x+\\frac{1}{${a}}`
-    const answer = `\\nearrow` 
+    const answer = `\\text{Возрастает}` 
     const condition = undefined
 
     return {
@@ -147,7 +147,7 @@ const createExample10 = () =>  {
     let c = getRandomInt(11, 29, 20);
 
     const math = `y=-${c/10}x+\\frac{1}{${a}}`
-    const answer =  `\\searrow` 
+    const answer =  `\\text{Убывает}`  
     const condition = undefined
 
     return {

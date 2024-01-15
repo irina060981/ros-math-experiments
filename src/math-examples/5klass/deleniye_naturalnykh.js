@@ -128,10 +128,10 @@ const createExample8 = () => {
 }
 
 const createExample9 = () =>   {
-    let a = 2*getRandomInt(51, 555);
+    let a = 2*getRandomInt(51, 200);
    
     const math = `${a}:2`
-    const answer = `${a/10}` 
+    const answer = `${a/2}` 
     const condition = undefined
 
     return {

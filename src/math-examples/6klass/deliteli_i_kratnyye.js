@@ -1,11 +1,11 @@
-import { getRandomInt, generateVariableName, generateVariableNameTwo, generateVariableNameOne, shuffleSingle, NOD, DEL} from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle, DEL} from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
     let a = getRandomInt(2,6);
     let d = DEL(a)
 
-    const math = `deliteli ${a}`
+    const math = `\\text {Делители } ${a}`
     const answer = `${d}`
     const condition = undefined
   
@@ -21,7 +21,7 @@ const createExample2 = () =>   {
     let a = getRandomInt(7,12);
     let d = DEL(a)
 
-    const math = `deliteli ${a}`
+    const math = `\\text {Делители } ${a}`
     const answer = `${d}`
     const condition = undefined
   
@@ -37,7 +37,7 @@ const createExample3 = () =>    {
     let a = getRandomInt(13,21);
     let d = DEL(a)
 
-    const math = `deliteli ${a}`
+    const math = `\\text {Делители } ${a}`
     const answer = `${d}`
     const condition = undefined
   
@@ -54,7 +54,7 @@ const createExample4 = () =>  {
     let a = getRandomInt(22,31);
     let d = DEL(a)
 
-    const math = `deliteli ${a}`
+    const math = `\\text {Делители } ${a}`
     const answer = `${d}`
     const condition = undefined
   
@@ -72,7 +72,7 @@ const createExample5 = () =>  {
     let a = getRandomInt(32,45);
     let d = DEL(a)
 
-    const math = `deliteli ${a}`
+    const math = `\\text {Делители } ${a}`
     const answer = `${d}`
     const condition = undefined
   
@@ -87,7 +87,7 @@ const createExample5 = () =>  {
 const createExample6 = () =>  {
     let a = getRandomInt(2,6);
 
-    const math = `kratnyye ${a}`
+    const math = `\\text {Кратные } ${a}`
     const answer = `${a*2}, ${a*3}, ${a*4}...`
     const condition = undefined
   
@@ -102,7 +102,7 @@ const createExample6 = () =>  {
 const createExample7 = () =>  {
     let a = getRandomInt(7, 12);
 
-    const math = `kratnyye ${a}`
+    const math = `\\text {Кратные } ${a}`
     const answer = `${a*2}, ${a*3}, ${a*4}...`
     const condition = undefined
   
@@ -117,7 +117,7 @@ const createExample7 = () =>  {
 const createExample8 = () => {
     let a = getRandomInt(12, 21);
 
-    const math = `kratnyye ${a}`
+    const math = `\\text {Кратные } ${a}`
     const answer = `${a*2}, ${a*3}, ${a*4}...`
     const condition = undefined
   
@@ -132,7 +132,7 @@ const createExample8 = () => {
 const createExample9 = () =>   {
     let a = getRandomInt(22, 30);
 
-    const math = `kratnyye ${a}`
+    const math = `\\text {Кратные } ${a}`
     const answer = `${a*2}, ${a*3}, ${a*4}...`
     const condition = undefined
   
@@ -147,7 +147,7 @@ const createExample9 = () =>   {
 const createExample10 = () =>   {
     let a = getRandomInt(31, 35);
 
-    const math = `kratnyye ${a}`
+    const math = `\\text {Кратные } ${a}`
     const answer = `${a*2}, ${a*3}, ${a*4}...`
     const condition = undefined
   

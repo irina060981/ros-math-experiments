@@ -1,4 +1,4 @@
-import { getRandomInt, generateVariableName, shuffleSingle } from '@/utility/math-utitility.js'
+import { getRandomInt, shuffleSingle } from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
@@ -64,7 +64,6 @@ const createExample4 = () => {
       answer: answer
     }
 }
-
 
 const createExample5 = () =>  {
     let a = getRandomInt(2, 10);

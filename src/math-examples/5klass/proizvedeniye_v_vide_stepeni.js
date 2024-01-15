@@ -1,11 +1,5 @@
-import { getRandomInt, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffleSingle } from '@/utility/math-utitility.js'
+import { getRandomInt, generateVariableName, generateVariableNameOne, generateVariableNameTwo, shuffleSingle, repeatStr} from '@/utility/math-utitility.js'
 import { v4 as uuidv4 } from 'uuid'
-
-function repeatStr(str, n) {
-    var new_str = '';
-    while (n-- > 0) new_str += str;
-    return new_str;
-};
 
 const createExample1 = () => {
     let a = getRandomInt(2, 10);  
@@ -109,7 +103,7 @@ const createExample6 = () => {
 
 const createExample7 = () =>{
     let b = getRandomInt(3, 7);
-    let a = getRandomInt(-20, -2);
+    let a = getRandomInt(2, 10);
     let variable = generateVariableName()
     if(a > 0) a = '+'+a;
 
@@ -127,7 +121,7 @@ const createExample7 = () =>{
 
 const createExample8 = () => {
     let b = getRandomInt(3, 7);
-    let a = getRandomInt(-20, 20);
+    let a = getRandomInt(11, 20);
     let variable = generateVariableName()
 
     const math = repeatStr(`(${a}${variable})\\cdot`, `${b}`)+`(${a}${variable})`
