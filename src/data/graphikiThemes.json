@@ -1,0 +1,10 @@
+[
+    { 
+        "heading": "График 1",
+        "description": "Какой-то график 1", "charts": true
+    },
+    { 
+        "heading": "График 2",
+        "description": "Какой-то график 2", "charts": true
+    }
+]
