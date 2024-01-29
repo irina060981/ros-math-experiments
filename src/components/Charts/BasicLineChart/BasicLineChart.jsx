@@ -8,8 +8,8 @@ import { MathJax, MathJaxContext } from "better-react-mathjax"
 export default function BasicLineChart({ xAxisMin, xAxisMax, yAxisMin, yAxisMax, shkala, 
                                          a, b,
                                          xMinAdd, xMaxAdd, yMinAdd, yMaxAdd, 
-                                         yFn, chartColor, rebuildFlag,
-                                         textLegend, mathLegend
+                                         yFn, xFn, chartColor, rebuildFlag,
+                                         textLegend, mathAnswer
                                         }) {
 
     const chartColorLocal = chartColor ?? '#fdb462'                                        
@@ -17,10 +17,10 @@ export default function BasicLineChart({ xAxisMin, xAxisMax, yAxisMin, yAxisMax,
     const [seriesData, setSeriesData] = useState([])
   
     const generateChart = () => {
-      setXData(range(a+xMinAdd, a+xMaxAdd, 1))
-  
-      const yAdd = [...range(yMaxAdd, yMinAdd, -1), ...range(yMinAdd+1, yMaxAdd, 1)]
-      setSeriesData(yFn(b, yAdd))
+
+    const xAdd = setXData(xFn(a))
+    const yAdd = setSeriesData(yFn(b))
+    
     }
   
     useEffect(() => { 
@@ -36,10 +36,10 @@ export default function BasicLineChart({ xAxisMin, xAxisMax, yAxisMin, yAxisMax,
         dynamic
       >
         <Typography textAlign='center' >
-            {`\\(${mathLegend}\\)`}
+            {`\\(${textLegend}\\)`}
         </Typography>
         <Typography textAlign='center' >
-            {textLegend}
+            {`\\(${mathAnswer}\\)`}
         </Typography>
         <LineChart
           xAxis={[{ data: xData,  max: xAxisMax, min: xAxisMin, tickInterval: shkala}

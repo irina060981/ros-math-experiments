@@ -14,11 +14,12 @@ export default function LineChart() {
   let b = getRandomInt(-6, 2, 0)
   let c = ''
   let d = ''
-  
+  let t
+  {if (a>-3) {t = getRandomInt(-1, 1, 0)} else {t=1}}
 
   const [ xMinAdd, xMaxAdd ] = [-4, 4]
-  const [ yMinAdd, yMaxAdd ] = [0, 4]
-  const yFn = (b, arrY) => arrY.map(y => b+y*y)
+
+  const yFn = (b) => [b+16*t, b+9*t, b+4*t,  b+1*t, b, b+1*t, b+4*t, b+9*t, b+16*t]
 
   {if (a>0){c='+'}}
   {if (b>0){d='+'}}
