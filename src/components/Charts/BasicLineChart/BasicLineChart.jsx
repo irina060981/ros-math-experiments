@@ -2,7 +2,7 @@ import * as React from 'react';
 import { LineChart } from '@mui/x-charts/LineChart';
 import { getRandomInt, range } from '@/utility/math-utitility.js'
 import { useState, useEffect } from 'react'
-import { Box, Typography, Stack } from '@mui/material';
+import { Box, Typography, Stack, Button } from '@mui/material';
 import { MathJax, MathJaxContext } from "better-react-mathjax"
 
 export default function BasicLineChart({ xAxisMin, xAxisMax, yAxisMin, yAxisMax, shkala, 
@@ -15,18 +15,19 @@ export default function BasicLineChart({ xAxisMin, xAxisMax, yAxisMin, yAxisMax,
     const chartColorLocal = chartColor ?? '#fdb462'                                        
     const [xData, setXData] = useState([])
     const [seriesData, setSeriesData] = useState([])
+    const [showAnswerFlag, setshowAnswerFlag] = useState(false)
   
     const generateChart = () => {
-
-    const xAdd = setXData(xFn(a))
-    const yAdd = setSeriesData(yFn(b))
-    
+      setshowAnswerFlag(false)
+      const xAdd = setXData(xFn(a))
+      const yAdd = setSeriesData(yFn(b))
     }
   
     useEffect(() => { 
       generateChart() 
     }, [rebuildFlag])
   
+    const showAnswer = () => setshowAnswerFlag(true)
       //построение графика 
       //Ответ: y=\\left(x+${a}\\right)^2+${b}
     return (
@@ -38,9 +39,23 @@ export default function BasicLineChart({ xAxisMin, xAxisMax, yAxisMin, yAxisMax,
         <Typography textAlign='center' >
             {`\\(${textLegend}\\)`}
         </Typography>
-        <Typography textAlign='center' >
-            {`\\(${mathAnswer}\\)`}
-        </Typography>
+
+        <Typography 
+          sx = {{
+            visibility: showAnswerFlag ? 'initial' : 'hidden'
+          }}
+        >
+             {`\\(\\text{Ответ: }${mathAnswer}\\)`}
+          </Typography>
+
+          <Box >              
+                <Button variant="contained"
+                        onClick={(e) => showAnswer()}
+                >
+                    Показать ответ
+                </Button>
+          </Box>
+
         <LineChart
           xAxis={[{ data: xData,  max: xAxisMax, min: xAxisMin, tickInterval: shkala}
         ]}
