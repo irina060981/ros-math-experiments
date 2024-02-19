@@ -1,10 +1,26 @@
 [
     { 
-        "heading": "График 1",
-        "description": "Какой-то график 1", "charts": true
+        "heading": "Квадратичная функция",
+        "description": "Парабола. Свойства параболы.", "charts": true
     },
     { 
-        "heading": "График 2",
-        "description": "Какой-то график 2", "charts": true
+        "heading": "График линейной функции",
+        "description": "Прямая. Свойства линейной функции", "charts": true
+    },
+    { 
+        "heading": "Промежутки возрастания и убывания функции",
+        "description": "Исследование свойств функции.", "charts": true
+    },
+    { 
+        "heading": "Нули функции",
+        "description": "Исследование свойств функции.", "charts": true
+    },
+    { 
+        "heading": "Обратная пропорциональность",
+        "description": "Гипербола. Свойства функции.", "charts": true
+    },
+    { 
+        "heading": "Степенная функция",
+        "description": "Свойства стпеннной функции функции.", "charts": true
     }
 ]
