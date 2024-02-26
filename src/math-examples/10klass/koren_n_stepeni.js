@@ -2,11 +2,10 @@ import { getRandomInt, generateVariableName, shuffleSingle } from '@/utility/mat
 import { v4 as uuidv4 } from 'uuid'
 
 const createExample1 = () => {
-    let a = getRandomInt(2, 5);
-    let b = getRandomInt(2, 3);
+    let a = getRandomInt(3, 50);  
 
-    const math = `\\sqrt{${a*a*b}}`
-    const answer = `${a}\\sqrt{${b}}`;
+    const math = `\\sqrt[${a}]0`
+    const answer = `0`;
     const condition = undefined
   
     return {
@@ -17,12 +16,11 @@ const createExample1 = () => {
     }
   }
 
-const createExample2 = () =>  {
-    let a = getRandomInt(6, 9);
-    let b = getRandomInt(2, 3);
+const createExample2 = () => {
+    let a = getRandomInt(3, 50);  
 
-    const math = `\\sqrt{${a*a*b}}`
-    const answer = `${a}\\sqrt{${b}}`;
+    const math = `\\sqrt[${a}]1`
+    const answer = `1`;
     const condition = undefined
   
     return {
@@ -33,11 +31,11 @@ const createExample2 = () =>  {
     }
   }
 
-const createExample3 = () =>  {
-    let b = getRandomInt(2, 7, 4);
+const createExample3 = () => {
+    let a = 2*getRandomInt(3, 25)-1;  
 
-    const math = `\\sqrt{${100*b}}`
-    const answer = `10\\sqrt{${b}}`;
+    const math = `\\sqrt[${a}]{-1}`
+    const answer = `-1`;
     const condition = undefined
   
     return {
@@ -49,11 +47,11 @@ const createExample3 = () =>  {
   }
 
 const createExample4 = () => {
-    let b = getRandomInt(2, 7, 4);
-    let a = getRandomInt(2, 19, 10);
+    let a = getRandomInt(2, 4)**3; 
+    let c = Math.ceil(a**(1/3))  
 
-    const math = `${a/10}\\sqrt{${100*b}}`
-    const answer = `${a}\\sqrt{${b}}`;
+    const math = `\\sqrt[3]{${a}}`
+    const answer = `${c}`;
     const condition = undefined
   
     return {
@@ -64,11 +62,12 @@ const createExample4 = () => {
     }
   }
 
-const createExample5 = () =>  {
-    let a = getRandomInt(1, 5);  
+const createExample5 = () => {
+    let a = getRandomInt(5, 7)**3; 
+    let c = Math.ceil(a**(1/3)) 
 
-    const math = `\\sqrt{${a*a*2/100}}`
-    const answer = `${a/10}\\sqrt{2}`;
+    const math = `\\sqrt[3]{-${a}}`
+    const answer = `-${c}`;
     const condition = undefined
   
     return {
@@ -80,10 +79,11 @@ const createExample5 = () =>  {
   }
 
 const createExample6 = () => {
-    let a = getRandomInt(2, 5);
+    let a = (getRandomInt(2, 4)**3)*1000;  
+    let c = Math.ceil(Math.pow(a, 1/3));
 
-    const math = `\\sqrt{${a*a*10}}`
-    const answer = `${a}\\sqrt{${10}}`;
+    const math = `\\sqrt[3]{${a}}`
+    const answer = `${c}`
     const condition = undefined
   
     return {
@@ -94,11 +94,11 @@ const createExample6 = () => {
     }
   }
 
-const createExample7 = () =>  {
-    let a = getRandomInt(6, 10);
+const createExample7 = () =>{
+    let a = getRandomInt(2, 3)**4;  
 
-    const math = `\\sqrt{${a*a*10}}`
-    const answer = `${a}\\sqrt{${10}}`;
+    const math = `\\sqrt[4]{${a}}`
+    const answer = `${a**0.25}`;
     const condition = undefined
   
     return {
@@ -110,11 +110,10 @@ const createExample7 = () =>  {
   }
 
 const createExample8 = () =>  {
-    let a = getRandomInt(2, 5);
-    let b = getRandomInt(2, 3);
+    let a = getRandomInt(-5, 5, 0);  
 
-    const math = `\\frac{1}{${a}}\\sqrt{${a*a*b}}`
-    const answer = `\\sqrt{${b}}`;
+    const math = `\\sqrt[3]{${(a*a*a)/1000}}`
+    const answer = `${a/10}`;
     const condition = undefined
   
     return {
@@ -126,12 +125,12 @@ const createExample8 = () =>  {
   }
 
 const createExample9 = () => {
-    let variable1= generateVariableName()
-    let a = getRandomInt(3, 5)*2-1;
+    let a = getRandomInt(4, 5);  
+    let b = getRandomInt(2, 3); 
 
-    const math = `\\sqrt{${variable1}^{${a}}}`
-    const answer = `${variable1}^{${(a-1)/2}}\\sqrt{${variable1}}`;
-    const condition = `${variable1}\\geq0`
+    const math = `\\sqrt[3]{\\frac{${b*b*b}}{${a*a*a}}}`
+    const answer = `\\frac{${b}}{${a}}`;
+    const condition = undefined
   
     return {
       id: uuidv4(),
@@ -143,12 +142,12 @@ const createExample9 = () => {
 
 
 const createExample10 = () => {
-    let variable1= generateVariableName()
-    let a = getRandomInt(6, 11)*2-1;
+    let a = getRandomInt(1, 5);  
+    let b = getRandomInt(6, 11);  
 
-    const math = `\\sqrt{${variable1}^{${a}}}`
-    const answer = `${variable1}^{${(a-1)/2}}\\sqrt{${variable1}}`;
-    const condition = `${variable1}\\geq0`
+    const math = `\\sqrt[3]{${a*a*a/1000}}-\\sqrt{${b*b/100}}`
+    const answer = `${(a-b)/10}`;
+    const condition = undefined
   
     return {
       id: uuidv4(),

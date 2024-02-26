@@ -1,6 +1,7 @@
 import { RouterProvider } from "react-router-dom";
 import { router } from "@/routers/router.jsx"
 import { MathJaxContext } from "better-react-mathjax"
+import { ClassCProvider } from '@/contexts/classContext'
 
 import styles from './App.module.scss'
 
@@ -35,7 +36,9 @@ export default function App() {
         config={config}
       >
         <main className={styles.content}>
-          <RouterProvider router={router} />
+          <ClassCProvider>
+            <RouterProvider router={router} />
+          </ClassCProvider>
         </main>
       </MathJaxContext>
       <Footer />

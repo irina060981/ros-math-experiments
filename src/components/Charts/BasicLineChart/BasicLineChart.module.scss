@@ -1,0 +1,15 @@
+:global(.legendBox) {
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.legendBox {
+    // margin-left: 24px;
+    max-width: 600px;
+    text-align: center;
+
+    &  p {
+        margin-bottom: 10px;
+    }
+}

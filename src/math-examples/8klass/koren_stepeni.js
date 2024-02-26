@@ -22,7 +22,7 @@ const createExample2 = () => {
 
     const math = `(\\sqrt{${a}${variable1}})^2`
     const answer = `${a}${variable1}`;
-    const condition = undefined
+    const condition = `${variable1}\\geq0`
   
     return {
       id: uuidv4(),
@@ -83,7 +83,7 @@ const createExample6 = () =>  {
 
     const math = `${a}\\sqrt{${variable1}^2}`
     const answer = `${a}${variable1}`;
-    const condition = `${variable1}>0`
+    const condition = `${variable1}\\geq0`
   
     return {
       id: uuidv4(),

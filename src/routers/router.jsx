@@ -7,6 +7,8 @@ import Charts from '@/pages/Charts.jsx'
 import Charts2 from '@/pages/Charts2.jsx'
 import Charts3 from '@/pages/Charts3.jsx'
 
+import ChartExample from '@/pages/ChartExample.jsx';
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +25,10 @@ export const router = createBrowserRouter([
   {
     path: "/class/:classId/theme",
     element: <ClassGroup />
+  },
+  {
+    path: "/class/:classId/chart/:chartId",
+    element: <ChartExample />
   },
   {
     path: "/class/:classId/theme/:themeId",
