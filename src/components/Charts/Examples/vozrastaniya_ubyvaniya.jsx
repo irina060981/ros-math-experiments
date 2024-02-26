@@ -68,15 +68,13 @@ export default function LineChart() {
   
   return (
     <Box >
-        <Container maxWidth="lg">
-        <Box >              
+        <Box className="legendBox">              
                 <Button variant="contained"
                         onClick={(e) => generateCharts()}
                 >
                     Пересоздать график
                 </Button>
         </Box>
-        </Container>
       
       <BasicLineChart 
         xAxisMin = {xAxisMin} xAxisMax = {xAxisMax}

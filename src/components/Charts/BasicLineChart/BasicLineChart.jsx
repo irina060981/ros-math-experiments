@@ -4,6 +4,7 @@ import { getRandomInt, range } from '@/utility/math-utitility.js'
 import { useState, useEffect } from 'react'
 import { Box, Typography, Stack, Button } from '@mui/material';
 import { MathJax, MathJaxContext } from "better-react-mathjax"
+import styles from './BasicLineChart.module.scss'
 
 export default function BasicLineChart({ xAxisMin, xAxisMax, yAxisMin, yAxisMax, shkala, 
                                          a, b,
@@ -32,29 +33,32 @@ export default function BasicLineChart({ xAxisMin, xAxisMax, yAxisMin, yAxisMax,
       //Ответ: y=\\left(x+${a}\\right)^2+${b}
     return (
       <>
-      <MathJax hideUntilTypeset={"first"}
-        inline
-        dynamic
-      >
-        <Typography textAlign='center' >
-            {`\\(${textLegend}\\)`}
-        </Typography>
 
-        <Typography 
-          sx = {{
-            visibility: showAnswerFlag ? 'initial' : 'hidden'
-          }}
+      <Stack className={styles.legendBox}>  
+        <MathJax hideUntilTypeset={"first"}
+          dynamic
         >
-             {`\\(\\text{Ответ: }${mathAnswer}\\)`}
+          <Typography textAlign='center' >
+              {`\\(${textLegend}\\)`}
           </Typography>
 
-          <Box >              
-                <Button variant="contained"
-                        onClick={(e) => showAnswer()}
-                >
-                    Показать ответ
-                </Button>
-          </Box>
+          <Typography 
+            sx = {{
+              visibility: showAnswerFlag ? 'initial' : 'hidden'
+            }}
+          >
+              {`\\(\\text{Ответ: }${mathAnswer}\\)`}
+            </Typography>
+          </MathJax> 
+            <Box >              
+                  <Button variant="contained"
+                          onClick={(e) => showAnswer()}
+                  >
+                      Показать ответ
+                  </Button>
+            </Box>
+          
+        </Stack>  
 
         <LineChart
           xAxis={[{ data: xData,  max: xAxisMax, min: xAxisMin, tickInterval: shkala}
@@ -97,7 +101,7 @@ export default function BasicLineChart({ xAxisMin, xAxisMax, yAxisMin, yAxisMax,
     
     
         />
-      </MathJax> 
+      
     </>
     );
 } 
