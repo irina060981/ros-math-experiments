@@ -67,7 +67,7 @@ const createExample4 = () => {
 const createExample5 = () =>  {
     let b = getRandomInt(2, 5);
     let c = getRandomInt(2, 5);
-    let d = getRandomInt(2, 5); 
+    let d = getRandomInt(6, 9); 
     let n = NOK(b*d, b*c)
 
     const math = `\\frac{1}{${b*d}} \\text{ и }  \\frac{1}{${b*c}}`
