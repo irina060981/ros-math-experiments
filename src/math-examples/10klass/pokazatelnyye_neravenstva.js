@@ -6,8 +6,8 @@ const createExample1 = () => {
     let b = getRandomInt(2, 10);
     let variable = generateVariableName()
 
-    const math = `${a}^{${variable}}=${a}^{${b}}`
-    const answer = `${variable}=${b}`
+    const math = `${a}^{${variable}}>${a}^{${b}}`
+    const answer = `${variable}\\in \\left(${b};+\\infty\\right)`
         
     const condition = undefined
   
@@ -20,14 +20,15 @@ const createExample1 = () => {
   }
 
 const createExample2 = () => {
-    let a = getRandomInt(2, 20);  
+    let a = getRandomInt(2, 20); 
     let b = getRandomInt(2, 5);  
     let c = b*2-1; 
     
+
     let variable = generateVariableName()
 
-    const math = `${a}^{${variable}}=${a}^{\\frac{${b}}{${c}}}`
-    const answer = `${variable}=\\frac{${b}}{${c}}`
+    const math = `${a}^{${variable}}<${a}^{\\frac{${b}}{${c}}}`
+    const answer = `${variable}\\in \\left(-\\infty;\\frac{${b}}{${c}}\\right)`
         
     const condition = undefined
   
@@ -45,8 +46,8 @@ const createExample3 = () => {
     let c = b*getRandomInt(2, 5); 
     let variable = generateVariableName()
 
-    const math = `${a}^{${b}${variable}}=${a}^{${c}}`
-    const answer = `${variable}=${c/b}`
+    const math = `${a}^{${b}${variable}}\\leq${a}^{${c}}`
+    const answer = `${variable}\\in \\left(-\\infty;${c/b}\\right]`
         
     const condition = undefined
   
@@ -64,8 +65,8 @@ const createExample4 = () => {
     let c = b*getRandomInt(2, 5); 
     let variable = generateVariableName()
 
-    const math = `${a}^{-${b}${variable}}=${a}^{${c}}`
-    const answer = `${variable}=-${c/b}`
+    const math = `${a}^{-${b}${variable}}\\geq${a}^{${c}}`
+    const answer = `${variable}\\in \\left[-\\infty;-${c/b}\\right)`
         
     const condition = undefined
   
@@ -84,8 +85,8 @@ const createExample5 = () => {
     let c = b*getRandomInt(2, 5); 
     let variable = generateVariableName()
 
-    const math = `\\left (\\frac{${a}}{${t}}\\right)^{${c}}=\\left (\\frac{${a}}{${t}}\\right)^{${b}${variable}}`
-    const answer = `${variable}=${c/b}`
+    const math = `\\left (\\frac{${a}}{${t}}\\right)^{${c}}<\\left (\\frac{${a}}{${t}}\\right)^{${b}${variable}}`
+    const answer = `${variable}\\in \\left(${c/b};+\\infty\\right)`
         
     const condition = undefined
   
@@ -102,8 +103,8 @@ const createExample6 = () => {
     let b = getRandomInt(3, 20);
     let variable = generateVariableName()
 
-    const math = `${a}^{${variable}}=\\sqrt[${b}]{${a}}`
-    const answer = `${variable}=\\frac{1}{${b}}`
+    const math = `${a}^{${variable}}<\\sqrt[${b}]{${a}}`
+    const answer = `${variable}\\in \\left(-\\infty;\\frac{1}{${b}}\\right)`
         
     const condition = undefined
   
@@ -121,8 +122,8 @@ const createExample7 = () => {
     let c = getRandomInt(3, 10);
     let variable = generateVariableName()
 
-    const math = `${a}^{${variable}}=\\sqrt[${b}]{${a}^{${c}}}`
-    const answer = `${variable}=\\frac{${c}}{${b}}`
+    const math = `${a}^{${variable}}\\geq\\sqrt[${b}]{${a}^{${c}}}`
+    const answer = `${variable}\\in \\left[\\frac{${c}}{${b}};+\\infty\\right)`
         
     const condition = undefined
   
@@ -135,63 +136,59 @@ const createExample7 = () => {
   }
 
 const createExample8 = () => {
-    let a = getRandomInt(2, 5)*2;
-    let t = getRandomInt(2, 5)*2-1;  
-    let b = getRandomInt(2, 10);
-    let variable = generateVariableName()
+  let a = getRandomInt(2, 20);  
+  let b = getRandomInt(2, 10);
+  let variable = generateVariableName()
 
-    const math = `\\left (\\frac{${a}}{${t}}\\right)^{${b}${variable}}=1`
-    const answer = `${variable}=0`
-        
-    const condition = undefined
-  
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
+  const math = `${a}^{${variable}-${b}}\\leq 1`
+  const answer = `${variable}\\in \\left(-\\infty;${b}\\right]`
+      
+  const condition = undefined
+
+  return {
+    id: uuidv4(),
+    math: math, 
+    condition: condition, 
+    answer: answer
   }
+}
 
 const createExample9 = () =>{
-    let a = getRandomInt(2, 20);  
-    let b = getRandomInt(2, 10);
-    let c = b*getRandomInt(2, 5); 
-    let variable = generateVariableName()
-    let t = getRandomInt(2, 8, 4);
+  let a = getRandomInt(2, 20);  
+  let b = getRandomInt(2, 5);
+  let c = getRandomInt(7, 11);
+  let variable = generateVariableName()
 
-    const math = `(${a}\\sqrt{${t}})^{-${b}${variable}}=(${a}\\sqrt{${t}})^{-${c}}`
-    const answer = `${variable}=${c/b}`
-        
-    const condition = undefined
-  
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
+  const math = `${a}^{${variable}+${b}}>${a}^{${c}}`
+  const answer = `${variable}\\in \\left(${c-b};+\\infty\\right)`
+      
+  const condition = undefined
+
+  return {
+    id: uuidv4(),
+    math: math, 
+    condition: condition, 
+    answer: answer
   }
+}
 
-const createExample10 = () => {
-    let a = getRandomInt(2, 20);  
-    let b = getRandomInt(6, 10);
-    let c = b*getRandomInt(2, 5); 
-    let variable = generateVariableName()
-    let t = getRandomInt(2, 8, 4);
+const createExample10 = () =>  {
+  let a = getRandomInt(2, 20);  
+  let b = getRandomInt(2, 10);
+  let variable = generateVariableName()
 
-    const math = `(${a}+\\sqrt{${t}})^{-${b}${variable}}=(${a}+\\sqrt{${t}})^{${c}}`
-    const answer = `${variable}=-${c/b}`
-        
-    const condition = undefined
-  
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
+  const math = `${a}^{${variable}-${b}}<${a}`
+  const answer = `${variable}\\in \\left(-\\infty; ${b+1}\\right)`
+      
+  const condition = undefined
+
+  return {
+    id: uuidv4(),
+    math: math, 
+    condition: condition, 
+    answer: answer
   }
+}
 
 const examplesFn = [
   createExample1,

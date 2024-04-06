@@ -24,6 +24,7 @@ const createExample2 = () => {
     let b = getRandomInt(2, 5);  
     let c = b*2-1; 
     
+
     let variable = generateVariableName()
 
     const math = `${a}^{${variable}}=${a}^{\\frac{${b}}{${c}}}`
@@ -135,63 +136,59 @@ const createExample7 = () => {
   }
 
 const createExample8 = () => {
-    let a = getRandomInt(2, 5)*2;
-    let t = getRandomInt(2, 5)*2-1;  
-    let b = getRandomInt(2, 10);
-    let variable = generateVariableName()
+  let a = getRandomInt(2, 20);  
+  let b = getRandomInt(2, 10);
+  let variable = generateVariableName()
 
-    const math = `\\left (\\frac{${a}}{${t}}\\right)^{${b}${variable}}=1`
-    const answer = `${variable}=0`
-        
-    const condition = undefined
-  
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
+  const math = `${a}^{${variable}-${b}}=1`
+  const answer = `${variable}=${b}`
+      
+  const condition = undefined
+
+  return {
+    id: uuidv4(),
+    math: math, 
+    condition: condition, 
+    answer: answer
   }
+}
 
 const createExample9 = () =>{
-    let a = getRandomInt(2, 20);  
-    let b = getRandomInt(2, 10);
-    let c = b*getRandomInt(2, 5); 
-    let variable = generateVariableName()
-    let t = getRandomInt(2, 8, 4);
+  let a = getRandomInt(2, 20);  
+  let b = getRandomInt(2, 5);
+  let c = getRandomInt(7, 11);
+  let variable = generateVariableName()
 
-    const math = `(${a}\\sqrt{${t}})^{-${b}${variable}}=(${a}\\sqrt{${t}})^{-${c}}`
-    const answer = `${variable}=${c/b}`
-        
-    const condition = undefined
-  
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
+  const math = `${a}^{${variable}+${b}}=${a}^{${c}}`
+  const answer = `${variable}=${c-b}`
+      
+  const condition = undefined
+
+  return {
+    id: uuidv4(),
+    math: math, 
+    condition: condition, 
+    answer: answer
   }
+}
 
-const createExample10 = () => {
-    let a = getRandomInt(2, 20);  
-    let b = getRandomInt(6, 10);
-    let c = b*getRandomInt(2, 5); 
-    let variable = generateVariableName()
-    let t = getRandomInt(2, 8, 4);
+const createExample10 = () =>  {
+  let a = getRandomInt(2, 20);  
+  let b = getRandomInt(2, 10);
+  let variable = generateVariableName()
 
-    const math = `(${a}+\\sqrt{${t}})^{-${b}${variable}}=(${a}+\\sqrt{${t}})^{${c}}`
-    const answer = `${variable}=-${c/b}`
-        
-    const condition = undefined
-  
-    return {
-      id: uuidv4(),
-      math: math, 
-      condition: condition, 
-      answer: answer
-    }
+  const math = `${a}^{${variable}-${b}}=${a}`
+  const answer = `${variable}=${b+1}`
+      
+  const condition = undefined
+
+  return {
+    id: uuidv4(),
+    math: math, 
+    condition: condition, 
+    answer: answer
   }
+}
 
 const examplesFn = [
   createExample1,
